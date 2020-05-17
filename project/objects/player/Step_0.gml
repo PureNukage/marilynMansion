@@ -11,10 +11,20 @@ if hspd != 0 and states != states.aim {
 
 if states == states.walk {
 	x += hspd
+	if hspd != 0 {
+		image_speed = 1
+		sprite_index = s_person_walk
+	} else {
+		image_speed = 0
+		sprite_index = s_player_whole
+	}
 	if hspd > 0 image_xscale = 1
 	if hspd < 0 image_xscale = -1
 } else {
-	hspd = 0	
+	if states != states.aim {
+		hspd = 0
+		sprite_index = s_player_whole		
+	}
 }
 
 if mouse_right {
@@ -25,7 +35,7 @@ if mouse_right {
 		arm = s_player_aim_arm	
 	}
 } else {
-	if states != states.idle {
+	if states == states.aim {
 		states = states.idle	
 		sprite_index = s_player_whole
 		arm = -1
