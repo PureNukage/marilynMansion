@@ -12,5 +12,14 @@ with player {
 	}
 }
 
-//draw_set_colour(c_red);
-//physics_draw_debug();
+if place_meeting(x, y, projectile) {
+	var bullet = instance_place(x, y, projectile)
+	var xx = lengthdir_x(bullet.Speed*500, bullet.Direction)
+	var yy = lengthdir_y(bullet.Speed*10, bullet.Direction)
+	yy *= sign(yy)
+	
+	physics_apply_force(x,y, xx,yy)
+}
+
+draw_set_colour(c_red);
+physics_draw_debug();

@@ -47,11 +47,51 @@
             }
         },
         {
+            "Key": "027949c8-b696-4c52-9287-97d37093897c",
+            "Value": {
+                "id": "4352ff92-96aa-4759-ac5e-6cdd22e56c46",
+                "resourcePath": "objects\\zombieRightArmUpper\\zombieRightArmUpper.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "0fec1c27-4668-4596-8fee-82ada2b6414a",
+            "Value": {
+                "id": "17fbd163-930e-435e-8c53-be21d5e53116",
+                "resourcePath": "objects\\zombieBody\\zombieBody.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1287a411-b64b-4a02-9ae0-c07779f4ac14",
             "Value": {
                 "id": "2b9ed04c-0d5e-4d38-8a68-68c34e316ec7",
                 "resourcePath": "sprites\\s_zombie_left_arm_hand\\s_zombie_left_arm_hand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "167a3f39-fea3-4976-ba0a-284762906cc2",
+            "Value": {
+                "id": "7ad439d4-5519-4589-aff5-c52fc5aea1c9",
+                "resourcePath": "objects\\zombieLeftArmHand\\zombieLeftArmHand.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "16d2a476-fcf8-46ac-8253-dafa3a51b795",
+            "Value": {
+                "id": "4758717f-b390-484c-8dfe-b10c351b803b",
+                "resourcePath": "sprites\\s_muzzleFlash\\s_muzzleFlash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1c8c741b-20cc-4964-9b9e-5a739a083629",
+            "Value": {
+                "id": "764d3822-72da-40ac-93f2-b13cab1732f4",
+                "resourcePath": "objects\\zombieLeftArmUpper\\zombieLeftArmUpper.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -71,6 +111,14 @@
             }
         },
         {
+            "Key": "34257d16-525f-4ceb-9e4e-d287b8584565",
+            "Value": {
+                "id": "7914e6d0-1ce0-43cf-a567-606ac8f2c3d9",
+                "resourcePath": "objects\\zombieRightLegLower\\zombieRightLegLower.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "34b1346f-4f45-42a1-8fcd-99cdd6c5c234",
             "Value": {
                 "id": "9b535b8a-9fa2-4b1d-abb8-6f4b93c7e3f4",
@@ -84,6 +132,14 @@
                 "id": "e7a08abf-fde9-45ff-b093-b10ea4fc0367",
                 "resourcePath": "sprites\\s_zombie_left_leg_upper\\s_zombie_left_leg_upper.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3d749f69-f822-464c-a6f8-ce0e4b41b3e3",
+            "Value": {
+                "id": "c4c9b8c4-758c-4380-ac3c-2c9aaf048560",
+                "resourcePath": "objects\\zombieRightLegUpper\\zombieRightLegUpper.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -119,6 +175,14 @@
             }
         },
         {
+            "Key": "5c2f4619-508a-4c85-9534-48271d0a3130",
+            "Value": {
+                "id": "01865103-fe82-40b3-823d-d46c95268cae",
+                "resourcePath": "objects\\zombieLeftLegLower\\zombieLeftLegLower.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "603fd1c1-fbfb-48dc-9209-c7c1e40ce557",
             "Value": {
                 "id": "3392757b-e84f-4e12-8133-185967d2439b",
@@ -132,6 +196,14 @@
                 "id": "ce3f6d66-c52d-4737-8ecb-07d575cba3c9",
                 "resourcePath": "sprites\\s_zombie_left_leg_lower\\s_zombie_left_leg_lower.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "64a46c10-27b4-4f00-a004-72ba9587e42d",
+            "Value": {
+                "id": "5d4367e8-c89d-47b3-86ec-0082590a9860",
+                "resourcePath": "objects\\zombieRightArmLower\\zombieRightArmLower.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -215,6 +287,14 @@
             }
         },
         {
+            "Key": "895a3d0b-0d45-4aee-bd64-bb72f04a57b3",
+            "Value": {
+                "id": "2841b940-5e84-40b7-b602-ad90590d0277",
+                "resourcePath": "objects\\zombieHead\\zombieHead.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "91213e85-4bea-4cf3-89e5-00a3d28c659d",
             "Value": {
                 "id": "7ed802cd-807e-4f54-adf4-8653fe5de02b",
@@ -228,6 +308,14 @@
                 "id": "20c6dadc-19a6-487a-b819-d2ce02567eda",
                 "resourcePath": "options\\tvos\\options_tvos.yy",
                 "resourceType": "GMtvOSOptions"
+            }
+        },
+        {
+            "Key": "9557903d-1600-4835-a854-4ddc10ce9c85",
+            "Value": {
+                "id": "4546f6bf-a592-4f32-a8af-0caf97d9cda6",
+                "resourcePath": "sprites\\s_zombie_body\\s_zombie_body.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -283,6 +371,14 @@
             "Value": {
                 "id": "a7056e11-5f54-4ccf-8436-4a03327ed6df",
                 "resourcePath": "sprites\\s_bullet\\s_bullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bdd552a2-d093-4f93-8036-01f1e72756ad",
+            "Value": {
+                "id": "6165cc8b-e85e-4df8-b0af-fb960cb5f5e3",
+                "resourcePath": "sprites\\s_zombie_head\\s_zombie_head.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -343,6 +439,14 @@
             }
         },
         {
+            "Key": "cf1a4acb-719a-4cce-b072-cf47beeb8c0f",
+            "Value": {
+                "id": "70d92410-9a39-46da-b218-a07a31a9552d",
+                "resourcePath": "views\\cf1a4acb-719a-4cce-b072-cf47beeb8c0f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d5fe983a-a8f5-4ce9-960c-5779824d9e0b",
             "Value": {
                 "id": "9f2f8ea5-dded-4d60-a38f-029ee4b9f2c6",
@@ -372,6 +476,14 @@
                 "id": "66bcfd9b-6f63-4fdc-b56e-9be1ad849dee",
                 "resourcePath": "views\\dcd4012d-d9f0-4010-9d72-c36b050af8d4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e170e13b-a8ea-46b2-80b7-cd7bf26c461a",
+            "Value": {
+                "id": "5a4d9be1-f3d1-4ada-b147-4420d6a0d459",
+                "resourcePath": "objects\\zombieLeftArmLower\\zombieLeftArmLower.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -415,10 +527,26 @@
             }
         },
         {
+            "Key": "e9be2ce7-8ad9-4d21-b27b-d67a07b49dc7",
+            "Value": {
+                "id": "ff7ffcb0-1834-4164-ba0b-f39574ebaa98",
+                "resourcePath": "objects\\zombieLeftLegUpper\\zombieLeftLegUpper.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ecc75e19-0380-4f38-8c38-8b83c1e61559",
             "Value": {
                 "id": "79e5b941-4887-4154-944a-6205561fe73b",
                 "resourcePath": "objects\\projectile\\projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f0bc728a-2022-4cee-b131-b9c307496cf2",
+            "Value": {
+                "id": "ad8ae1f3-055e-4bcd-b1a5-e32fcc342e14",
+                "resourcePath": "objects\\zombieRightArmHand\\zombieRightArmHand.yy",
                 "resourceType": "GMObject"
             }
         },

@@ -14,7 +14,9 @@
         "7e2fddc9-d591-4fbc-8c85-97a786359fd7",
         "cdd04f7e-1d73-48d0-a201-20478ceb73c8",
         "3507e585-8111-4573-a482-e16e9e8749b2",
-        "643937df-f4de-44d9-84ef-1c50b67356a9"
+        "643937df-f4de-44d9-84ef-1c50b67356a9",
+        "bdd552a2-d093-4f93-8036-01f1e72756ad",
+        "9557903d-1600-4835-a854-4ddc10ce9c85"
     ],
     "filterType": "GMSprite",
     "folderName": "zombie parts",

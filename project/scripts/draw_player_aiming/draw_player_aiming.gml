@@ -30,8 +30,11 @@ if mouse_left_press {
 	var muzzleX = lengthdir_x(64, rotation)
 	var muzzleY = lengthdir_y(64, rotation)
 	var bullet = instance_create_layer(x+10+muzzleX,y-24+muzzleY,"Instances",projectile)
-	bullet.Speed = 10
+	bullet.Speed = 50
 	bullet.Direction = point_direction(x,y,mouse_x,mouse_y)
+	arm0 = s_muzzleFlash
+} else {
+	if arm0 != s_player_aim_right_arm arm0 = s_player_aim_right_arm	
 }
 
 ////	DEBUG
