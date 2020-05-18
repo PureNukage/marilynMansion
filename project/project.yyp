@@ -47,19 +47,59 @@
             }
         },
         {
-            "Key": "413efeb0-f1c0-4c18-af4d-fcb794c43ff5",
+            "Key": "1287a411-b64b-4a02-9ae0-c07779f4ac14",
             "Value": {
-                "id": "175c747c-91c6-45a6-ae51-37d596a74de9",
-                "resourcePath": "sprites\\s_player_aim_arm1\\s_player_aim_arm1.yy",
+                "id": "2b9ed04c-0d5e-4d38-8a68-68c34e316ec7",
+                "resourcePath": "sprites\\s_zombie_left_arm_hand\\s_zombie_left_arm_hand.yy",
                 "resourceType": "GMSprite"
             }
         },
         {
-            "Key": "45579350-58cd-48ec-b216-5a3d2471b297",
+            "Key": "1cdaa639-2bd1-4d9f-bc6f-184210d86a47",
             "Value": {
-                "id": "861732ce-0eaf-48c3-84eb-e88b544c48be",
-                "resourcePath": "sprites\\s_player_aim_arm\\s_player_aim_arm.yy",
+                "id": "a6ee2390-eaca-453a-aa53-3dc5f1257e04",
+                "resourcePath": "sprites\\s_block\\s_block.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "25c13585-f409-4874-b6a8-ba02867be15d",
+            "Value": {
+                "id": "f3f397b8-0b17-49f1-9714-a95c7f3b8f6f",
+                "resourcePath": "objects\\camera\\camera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "34b1346f-4f45-42a1-8fcd-99cdd6c5c234",
+            "Value": {
+                "id": "9b535b8a-9fa2-4b1d-abb8-6f4b93c7e3f4",
+                "resourcePath": "objects\\zombiePart\\zombiePart.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3507e585-8111-4573-a482-e16e9e8749b2",
+            "Value": {
+                "id": "e7a08abf-fde9-45ff-b093-b10ea4fc0367",
+                "resourcePath": "sprites\\s_zombie_left_leg_upper\\s_zombie_left_leg_upper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4fdb916f-1cd6-4eb3-aca2-7b32e49b94d1",
+            "Value": {
+                "id": "286d9a39-d5e3-49cc-93d7-937551d267c0",
+                "resourcePath": "views\\4fdb916f-1cd6-4eb3-aca2-7b32e49b94d1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "504d08de-bd5e-4dc5-b901-ade7db8c219f",
+            "Value": {
+                "id": "a526e90a-8a15-4971-a4d0-990531936592",
+                "resourcePath": "objects\\zombie\\zombie.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -87,6 +127,22 @@
             }
         },
         {
+            "Key": "643937df-f4de-44d9-84ef-1c50b67356a9",
+            "Value": {
+                "id": "ce3f6d66-c52d-4737-8ecb-07d575cba3c9",
+                "resourcePath": "sprites\\s_zombie_left_leg_lower\\s_zombie_left_leg_lower.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6b8ec526-3782-4414-b35a-c9cbf024b377",
+            "Value": {
+                "id": "772c8326-a846-469a-a162-71a840619a60",
+                "resourcePath": "scripts\\definitions\\definitions.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
             "Value": {
                 "id": "d6a931e5-de09-4edb-a03a-acf56d8f8234",
@@ -103,6 +159,14 @@
             }
         },
         {
+            "Key": "77b2bc4c-7933-4715-8355-6b8f241b0c0b",
+            "Value": {
+                "id": "6a9b628d-e5b2-44c4-8ea6-9444f910a16a",
+                "resourcePath": "objects\\zombieRagdoll\\zombieRagdoll.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "792f1278-1d48-42af-b4cc-6d8ea26aa352",
             "Value": {
                 "id": "4c8e395d-ef8c-42c4-8543-560e00701786",
@@ -116,6 +180,22 @@
                 "id": "acea68fb-b1a4-4a6e-93d5-92d46e08168a",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "7e2fddc9-d591-4fbc-8c85-97a786359fd7",
+            "Value": {
+                "id": "c0e1ce0b-b98e-48a0-a3e5-ac4adbc0ea27",
+                "resourcePath": "sprites\\s_zombie_right_leg_upper\\s_zombie_right_leg_upper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "80adb93e-f2f7-4708-9d90-ad4c2a809c19",
+            "Value": {
+                "id": "e91126b8-bf9e-4b29-b976-c91ed8fa1b78",
+                "resourcePath": "sprites\\s_zombie_right_arm_upper\\s_zombie_right_arm_upper.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -143,14 +223,6 @@
             }
         },
         {
-            "Key": "919ed449-6ee0-45b7-9873-955803d2d4f0",
-            "Value": {
-                "id": "0d791c6f-ebda-43f9-ae47-0c90767312d4",
-                "resourcePath": "sprites\\s_player_aim_arm2\\s_player_aim_arm2.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "93566aad-c3b3-48a9-8fa7-9c5ee19f74ac",
             "Value": {
                 "id": "20c6dadc-19a6-487a-b819-d2ce02567eda",
@@ -159,11 +231,35 @@
             }
         },
         {
+            "Key": "9dd62655-0e75-4e7b-8a6e-5b7a44778759",
+            "Value": {
+                "id": "3877df9f-6b93-4554-a151-1a8bd5b2979f",
+                "resourcePath": "sprites\\s_zombie_walk\\s_zombie_walk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "1816418e-7cfd-45aa-8559-d00664b659b9",
                 "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
                 "resourceType": "GMAmazonFireOptions"
+            }
+        },
+        {
+            "Key": "a7e5fef4-8808-4851-925b-cf77c6fe64b7",
+            "Value": {
+                "id": "fe0ce8b0-e1a2-4d65-a417-d352fed53da9",
+                "resourcePath": "sprites\\s_zombie_right_arm_lower\\s_zombie_right_arm_lower.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a855ab3b-ffae-4fa9-bb45-ebf148e56fb0",
+            "Value": {
+                "id": "f7943bcc-a5fd-48ca-9285-0a8053f70641",
+                "resourcePath": "sprites\\s_zombie_left_arm_upper\\s_zombie_left_arm_upper.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -183,6 +279,22 @@
             }
         },
         {
+            "Key": "b0c8ca92-d4ff-489e-89c5-67e91a38469a",
+            "Value": {
+                "id": "a7056e11-5f54-4ccf-8436-4a03327ed6df",
+                "resourcePath": "sprites\\s_bullet\\s_bullet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "beb9a29e-bc1c-4a7f-9c11-f3d8b6999a89",
+            "Value": {
+                "id": "673a9d44-a529-4f2d-98a0-8394f2981744",
+                "resourcePath": "sprites\\s_player_aim_right_arm\\s_player_aim_right_arm.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bfc09555-7be3-43a2-9223-39b5159f3acb",
             "Value": {
                 "id": "caba6c7e-63c4-463d-8751-34600460ffbb",
@@ -199,6 +311,14 @@
             }
         },
         {
+            "Key": "c33edce5-ecc8-4ef8-a29e-3749798d7848",
+            "Value": {
+                "id": "be9eb7f7-4282-4026-b2bc-a9c4c1cc0160",
+                "resourcePath": "objects\\block\\block.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cbd98077-a628-4f5b-8a41-d08403ccf0d4",
             "Value": {
                 "id": "d9ff62fd-2b49-40f2-a97f-9653f32b39f3",
@@ -212,6 +332,30 @@
                 "id": "26657332-d67e-497d-b83f-d9f8fc7dc202",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "cdd04f7e-1d73-48d0-a201-20478ceb73c8",
+            "Value": {
+                "id": "9c159c61-11e9-4ba4-a988-7e27b2bfc2c5",
+                "resourcePath": "sprites\\s_zombie_right_leg_lower\\s_zombie_right_leg_lower.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d5fe983a-a8f5-4ce9-960c-5779824d9e0b",
+            "Value": {
+                "id": "9f2f8ea5-dded-4d60-a38f-029ee4b9f2c6",
+                "resourcePath": "sprites\\s_zombie_torso\\s_zombie_torso.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d68e9627-4bd6-489b-8448-679e719a998d",
+            "Value": {
+                "id": "52bee90c-baee-48c5-9017-e999148ccda1",
+                "resourcePath": "sprites\\s_zombie_left_arm_lower\\s_zombie_left_arm_lower.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -247,6 +391,14 @@
             }
         },
         {
+            "Key": "e76ecf60-aeef-44cc-8c41-54a0035966af",
+            "Value": {
+                "id": "20daf0c2-759e-45ed-a212-c39ca3438103",
+                "resourcePath": "sprites\\s_player_aim_left_arm\\s_player_aim_left_arm.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e8e843ff-2f64-48b5-a14f-ac2d55a4f64a",
             "Value": {
                 "id": "4e18c0ab-504e-4f96-a3e3-441e835d53d1",
@@ -263,6 +415,14 @@
             }
         },
         {
+            "Key": "ecc75e19-0380-4f38-8c38-8b83c1e61559",
+            "Value": {
+                "id": "79e5b941-4887-4154-944a-6205561fe73b",
+                "resourcePath": "objects\\projectile\\projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f2162d14-19aa-452b-8a96-1838b5164ebc",
             "Value": {
                 "id": "5c8a42e7-3206-4432-a565-645ab5a62195",
@@ -271,11 +431,27 @@
             }
         },
         {
+            "Key": "f2e9f6a8-1512-46e9-b144-cba51dc49f7e",
+            "Value": {
+                "id": "b7bde7ac-9cb5-485b-a0eb-ffca89cb7e23",
+                "resourcePath": "scripts\\draw_player_aiming\\draw_player_aiming.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "b6e21f03-96c0-4840-8ba8-f8bf6ed54891",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f9f6d861-20d0-4a21-893f-b124ec7005b4",
+            "Value": {
+                "id": "6b39bdd9-4c95-4773-9ca2-7d79cc257d36",
+                "resourcePath": "sprites\\s_zombie_right_arm_hand\\s_zombie_right_arm_hand.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -288,7 +464,8 @@
         }
     ],
     "script_order": [
-        
+        "6b8ec526-3782-4414-b35a-c9cbf024b377",
+        "f2e9f6a8-1512-46e9-b144-cba51dc49f7e"
     ],
     "tutorial": ""
 }

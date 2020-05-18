@@ -7,7 +7,8 @@ enum states {
 	aim
 }
 
-arm = -1
+arm0 = -1
+arm1 = -1
 
 states = states.idle
 
