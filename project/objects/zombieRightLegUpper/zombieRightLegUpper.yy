@@ -12,7 +12,7 @@
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 3,
-    "physicsFriction": 0.2,
+    "physicsFriction": 5,
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
@@ -22,32 +22,32 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "70b8e3c0-52e1-4e42-98e0-fdd04b6f12dc",
+            "id": "195d9822-eeaa-4bd0-a6be-e9846ccd372b",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 50,
-            "y": 75
+            "x": 56,
+            "y": 81
         },
         {
-            "id": "a362805b-aaa9-465e-8834-2857b7c6f52b",
+            "id": "cb4330ef-e19f-42cd-b8bc-1bb6f3ae115f",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 73,
-            "y": 75
+            "x": 66,
+            "y": 81
         },
         {
-            "id": "9f77524f-cdd4-4acd-9a6f-ff021b72c40a",
+            "id": "4ef3a0eb-b16a-4514-bb4b-c7a669fe3bfc",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 73,
-            "y": 102
+            "x": 66,
+            "y": 100
         },
         {
-            "id": "427031cd-46e4-4454-a3d1-ebc7d9b863d5",
+            "id": "a7feb539-6767-4759-a121-521934b468ac",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 50,
-            "y": 102
+            "x": 56,
+            "y": 100
         }
     ],
     "physicsStartAwake": true,

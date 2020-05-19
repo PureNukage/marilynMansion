@@ -14,12 +14,19 @@ with player {
 
 if place_meeting(x, y, projectile) {
 	var bullet = instance_place(x, y, projectile)
-	var xx = lengthdir_x(bullet.Speed*500, bullet.Direction)
-	var yy = lengthdir_y(bullet.Speed*10, bullet.Direction)
-	yy *= sign(yy)
+	if !bullet.hit {
+		bullet.hit = true
+		var xx = lengthdir_x(bullet.Speed*500, bullet.Direction)
+		var yy = lengthdir_y(bullet.Speed*10, bullet.Direction)
+		yy *= sign(yy)
 	
-	physics_apply_force(x,y, xx,yy)
+		//draw_splat()
+		var Splat = instance_create_layer(bullet.x, bullet.y, "Instances", splat)
+		Splat.size = 0
+	
+		physics_apply_force(x,y, xx,yy)
+	}
 }
 
-draw_set_colour(c_red);
-physics_draw_debug();
+//draw_set_colour(c_red);
+//physics_draw_debug();

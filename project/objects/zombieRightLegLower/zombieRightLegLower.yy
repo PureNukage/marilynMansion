@@ -11,8 +11,8 @@
     "parentObjectId": "34b1346f-4f45-42a1-8fcd-99cdd6c5c234",
     "persistent": false,
     "physicsAngularDamping": 0.1,
-    "physicsDensity": 3,
-    "physicsFriction": 0.2,
+    "physicsDensity": 5,
+    "physicsFriction": 5,
     "physicsGroup": 0,
     "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
@@ -22,31 +22,31 @@
     "physicsShape": 1,
     "physicsShapePoints": [
         {
-            "id": "5ebe96c8-5b78-4fa5-84ed-6accf642e721",
+            "id": "403b0049-aff4-49ea-914e-7cadb4273092",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 49,
-            "y": 95
+            "x": 52,
+            "y": 104
         },
         {
-            "id": "4e47876c-38d2-4d6c-b2dc-1f8b0ea72931",
+            "id": "1e9102be-770b-455a-a400-c7fe996ff709",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 66,
-            "y": 95
+            "x": 62,
+            "y": 104
         },
         {
-            "id": "154d2e94-08b2-4d5a-b952-2c99820867e5",
+            "id": "5f6707c1-6c8e-4dd2-858e-a71068a97133",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 66,
+            "x": 62,
             "y": 126
         },
         {
-            "id": "56807e02-6686-4b6b-acc6-e26f5a019411",
+            "id": "0e908e2e-d226-4193-8a01-4c3c49b20318",
             "modelName": "GMPoint",
             "mvc": "1.0",
-            "x": 49,
+            "x": 52,
             "y": 126
         }
     ],
