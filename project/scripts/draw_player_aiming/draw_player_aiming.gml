@@ -29,9 +29,20 @@ if image_xscale != yscale image_xscale = yscale
 if mouse_left_press {
 	var muzzleX = lengthdir_x(64, rotation)
 	var muzzleY = lengthdir_y(64, rotation)
-	var bullet = instance_create_layer(x+10+muzzleX,y-24+muzzleY,"Instances",projectile)
-	bullet.Speed = 50
-	bullet.Direction = point_direction(x,y,mouse_x,mouse_y)
+	if image_xscale > 0 var XX = x-13 else if image_xscale < 0 var XX = x+13
+	var array = bulletFire(mouse_x,mouse_y,XX+muzzleX,y-34+muzzleY,zombieDamageParent,1)
+	if array[2] > -1 {
+		if array[2].object_index == zombie {
+			array[2].dead = 1
+		}	
+	}
+	
+	X = array[0]
+	Y = array[1]
+	bulletDrawTimer = 15
+	//var bullet = instance_create_layer(x+10+muzzleX,y-24+muzzleY,"Instances",projectile)
+	//bullet.Speed = 50
+	//bullet.Direction = point_direction(x,y,mouse_x,mouse_y)
 	arm0 = s_muzzleFlash
 } else {
 	if arm0 != s_player_aim_right_arm arm0 = s_player_aim_right_arm	

@@ -14,4 +14,8 @@ states = states.idle
 
 movespeed = 4
 
+X = -1
+Y = -1
+bulletDrawTimer = -1
+
 sprite_index = s_player_whole

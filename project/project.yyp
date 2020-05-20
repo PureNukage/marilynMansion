@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0713d0e7-36b5-49c5-9618-8770c5681413",
+            "Value": {
+                "id": "f46bd400-cd2e-491b-9ed0-2f5ba9d018bc",
+                "resourcePath": "views\\0713d0e7-36b5-49c5-9618-8770c5681413.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0fec1c27-4668-4596-8fee-82ada2b6414a",
             "Value": {
                 "id": "17fbd163-930e-435e-8c53-be21d5e53116",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "6f049c9f-9f36-4141-973b-ac930d9acc89",
+            "Value": {
+                "id": "e379fb78-2ef3-4045-9ba6-dba65e25b3cc",
+                "resourcePath": "scripts\\bulletFire\\bulletFire.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
             "Value": {
                 "id": "d6a931e5-de09-4edb-a03a-acf56d8f8234",
@@ -295,6 +311,14 @@
             }
         },
         {
+            "Key": "90d98b9c-f9cb-4603-a1af-965d22d6f84d",
+            "Value": {
+                "id": "c82b339a-deb3-42df-bade-41c66134be55",
+                "resourcePath": "objects\\zombieDamageParent\\zombieDamageParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "91213e85-4bea-4cf3-89e5-00a3d28c659d",
             "Value": {
                 "id": "7ed802cd-807e-4f54-adf4-8653fe5de02b",
@@ -364,6 +388,14 @@
                 "id": "b9c15900-4e18-4f58-9cd0-6d256c576338",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "ad0fa0b8-2043-4415-a38c-9f6940edd78c",
+            "Value": {
+                "id": "fe61e808-0693-49f1-bfc4-9845bae99c90",
+                "resourcePath": "scripts\\spawnRagdoll\\spawnRagdoll.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -609,7 +641,9 @@
     ],
     "script_order": [
         "6b8ec526-3782-4414-b35a-c9cbf024b377",
-        "f2e9f6a8-1512-46e9-b144-cba51dc49f7e"
+        "f2e9f6a8-1512-46e9-b144-cba51dc49f7e",
+        "6f049c9f-9f36-4141-973b-ac930d9acc89",
+        "ad0fa0b8-2043-4415-a38c-9f6940edd78c"
     ],
     "tutorial": ""
 }
