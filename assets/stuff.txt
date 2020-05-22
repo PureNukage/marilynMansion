@@ -1,0 +1,96 @@
+right arm upper
+
+19 by 28 
+
+52x42
+57x51
+
+right arm lower
+
+23 by 13
+
+63x62
+73x58
+
+right arm hand
+
+11 by 12
+
+82x54
+85x58
+
+left arm upper
+
+13 by 26
+
+80x46
+84x52
+
+left arm lower
+
+23 by 16 
+
+87x62
+94x57
+
+
+left arm hand
+
+14 by 15
+
+103x50
+108x55
+
+right leg upper
+
+14 by 25
+
+73x79
+73x90
+
+right leg lower
+
+13 by 25
+
+74x102
+76x114
+
+left leg upper
+
+18 by 25
+
+62x79
+62x89
+
+left leg lower
+
+18 by 29
+
+57x97
+57x111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
