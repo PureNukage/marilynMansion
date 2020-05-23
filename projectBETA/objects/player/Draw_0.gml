@@ -34,4 +34,17 @@ switch(states)
 		break	
 	#endregion
 }
+
+if bulletArcDraw > 0 {
+	bulletArcDraw--
+	draw_set_color(c_yellow)
+	var XX = x + (-15*image_xscale)
+	var YY = y - 34
+	var Direction = point_direction(bulletArray[2],bulletArray[3],bulletArray[0],bulletArray[1])
+	XX += lengthdir_x(64, Direction)
+	YY += lengthdir_y(64, Direction)
+	draw_line(XX,YY,bulletArray[0],bulletArray[1])
+} else {
+	bulletArcDraw = -1	
+}
 	
