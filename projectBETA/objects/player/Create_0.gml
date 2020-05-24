@@ -25,11 +25,17 @@ function fireGun() {
 	var startX = x + (-15 * image_xscale)
 	var startY = y - 34
 	
-	var endX = mouse_x
-	var endY = mouse_y
+	//var endX = mouse_x
+	//var endY = mouse_y
+	
+	var length = irandom_range(reticle.radiusMin,reticle.radius)
+	var durection = irandom_range(0,359)
+	
+	var endX = mouse_x + lengthdir_x(length, durection)
+	var endY = mouse_y + lengthdir_y(length, durection)
 	
 	var precision = 1
-	var Direction = point_direction(startX,startY,mouse_x,mouse_y)
+	var Direction = point_direction(startX,startY,endX,endY)
 	
 	var XX = startX
 	var YY = startY
@@ -56,7 +62,6 @@ function fireGun() {
 			//	Create bloodsplat particle
 			var Particle = instance_create_layer(XX+30,YY,"Instances",particle)
 			Particle.sprite_index = s_bloodsplat_0
-			//Particle.image_angle = irandom_range(0,359)
 			
 			return array
 		} else if point_distance(XX,YY, endX,endY) < 2 {
@@ -91,6 +96,10 @@ function fireGun() {
 		//radiusSpeed: -1,
 		radiusMin: 8,
 		radiusMax: 96,
+		X: -1,
+		Y: -1,
+		XPrevious: -1,
+		YPrevious: -1,
 		
 		firstCalculate: function() {
 			var XX = other.x + (-15*other.image_xscale)
@@ -118,6 +127,18 @@ function fireGun() {
 			
 			radius -= 0.5
 			
+			X = mouse_x
+			Y = mouse_y
+			if (X != XPrevious or Y != YPrevious) and (XPrevious != -1 and YPrevious != -1) {
+				radius += abs((XPrevious - X)+(YPrevious - Y))/5
+				XPrevious = X
+				YPrevious = Y
+			}
+			if XPrevious == -1 or YPrevious == -1 {
+				XPrevious = X
+				YPrevious = Y
+			}
+			
 			var distance = point_distance(XX,YY, mouse_x,mouse_y)
 			
 			var max_distance = 800
@@ -126,6 +147,7 @@ function fireGun() {
 				var reticleRatio = radiusMax * ratio
 				var Radius = reticleRatio
 				Radius = clamp(Radius,radiusMin,radiusMax)
+				Radius = radiusMax
 			} else Radius = radiusMax
 			
 			radius = clamp(radius,radiusMin,Radius)
