@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Ragdolls",
-    "path": "folders/Objects/Ragdolls.yy",
+    "path": "folders/Game/Ragdolls.yy",
   },
   "resourceVersion": "1.0",
   "name": "class_ragdoll",

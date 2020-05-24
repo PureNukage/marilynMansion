@@ -53,6 +53,11 @@ function fireGun() {
 			bulletArray[3] = startY
 			bulletArcDraw = 15
 			
+			//	Create bloodsplat particle
+			var Particle = instance_create_layer(XX+30,YY,"Instances",particle)
+			Particle.sprite_index = s_bloodsplat_0
+			//Particle.image_angle = irandom_range(0,359)
+			
 			return array
 		} else if point_distance(XX,YY, endX,endY) < 2 {
 			loop = false
@@ -62,6 +67,11 @@ function fireGun() {
 			bulletArray[2] = startX
 			bulletArray[3] = startY
 			bulletArcDraw = 15
+			
+			//	Create bulletScorch particle
+			var Particle = instance_create_layer(XX,YY,"Instances",particle)
+			Particle.sprite_index = s_bulletScorch
+			Particle.image_angle = irandom_range(0,359)
 			
 			return false
 		} else {
@@ -73,3 +83,53 @@ function fireGun() {
 	}
 	
 }
+
+#region Reticle
+
+	reticle = {
+		radius: 16,
+		//radiusSpeed: -1,
+		radiusMin: 8,
+		radiusMax: 96,
+		
+		firstCalculate: function() {
+			var XX = other.x + (-15*other.image_xscale)
+			var YY = other.y - 34
+			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
+			XX += lengthdir_x(64, Direction)
+			YY += lengthdir_y(64, Direction)
+			
+			var distance = point_distance(XX,YY, mouse_x,mouse_y)
+			
+			var max_distance = 800
+			if distance < max_distance {
+				var ratio = distance/max_distance
+				var reticleRatio = radiusMax * ratio
+				radius = reticleRatio
+			}	
+		},
+		
+		aimIncreasing: function() {
+			var XX = other.x + (-15*other.image_xscale)
+			var YY = other.y - 34
+			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
+			XX += lengthdir_x(64, Direction)
+			YY += lengthdir_y(64, Direction)
+			
+			radius -= 0.5
+			
+			var distance = point_distance(XX,YY, mouse_x,mouse_y)
+			
+			var max_distance = 800
+			if distance < max_distance {
+				var ratio = distance/max_distance
+				var reticleRatio = radiusMax * ratio
+				var Radius = reticleRatio
+				Radius = clamp(Radius,radiusMin,radiusMax)
+			} else Radius = radiusMax
+			
+			radius = clamp(radius,radiusMin,Radius)
+		}
+	}
+	
+#endregion

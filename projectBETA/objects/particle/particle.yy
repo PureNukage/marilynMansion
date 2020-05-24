@@ -18,17 +18,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"playerInput","path":"objects/playerInput/playerInput.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"playerInput","path":"objects/playerInput/playerInput.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"particle","path":"objects/particle/particle.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Game.yy",
+    "name": "Effects",
+    "path": "folders/Game/Effects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "playerInput",
+  "name": "particle",
   "tags": [],
   "resourceType": "GMObject",
 }

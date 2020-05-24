@@ -25,6 +25,7 @@ switch(states)
 			//	Aiming
 			if input.mouseRightPress {
 				states = states.aim	
+				reticle.firstCalculate()
 			}
 			
 			////	Collision Checking
@@ -52,10 +53,14 @@ switch(states)
 			if input.mouseRightRelease {
 				states = states.free
 			}
+				
+			arm0 = s_player_arm_aim
 			
 			//	Shoot gun
 			if input.mouseLeftPress {
 				var array = fireGun()
+				arm0 = s_player_arm_aim_fire
+				reticle.radius += 32
 				if is_array(array) {
 					array[0].die()
 					////	Check for if a bodypart is at the bullets x,y
@@ -80,7 +85,12 @@ switch(states)
 						 
 						if instance_position(XX, YY, ID) {
 							show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
-							with ID physics_apply_force(XX,YY, 50000,0)
+							var randomForce = irandom_range(45000,55000)
+							with ID physics_apply_force(XX,YY, randomForce,0)
+							
+							var Decal = instance_create_layer(XX,YY, "Instances",decal)
+							Decal.sprite_index = s_bloodhole_0
+							Decal.ID = ID
 						}
 					}
 					

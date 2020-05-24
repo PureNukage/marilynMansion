@@ -2,6 +2,8 @@ switch(states)
 {
 	#region Free
 		case states.free: 
+		
+			window_set_cursor(cr_default)
 
 			draw_self()
 
@@ -30,6 +32,14 @@ switch(states)
 			draw_sprite_ext(s_player_body,0,x,y,image_xscale,1,0,c_white,1)
 			
 			draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
+			
+			window_set_cursor(cr_none)
+			
+			depth = -5000
+			draw_set_color(c_black)
+			draw_circle(mouse_x,mouse_y,reticle.radius,true)	
+			
+			reticle.aimIncreasing()
 		
 		break	
 	#endregion
@@ -40,11 +50,12 @@ if bulletArcDraw > 0 {
 	draw_set_color(c_yellow)
 	var XX = x + (-15*image_xscale)
 	var YY = y - 34
-	var Direction = point_direction(bulletArray[2],bulletArray[3],bulletArray[0],bulletArray[1])
+	var Direction = point_direction(bulletArray[2],bulletArray[3], bulletArray[0],bulletArray[1])
 	XX += lengthdir_x(64, Direction)
 	YY += lengthdir_y(64, Direction)
-	draw_line(XX,YY,bulletArray[0],bulletArray[1])
+	if debug.on draw_line(XX,YY, bulletArray[0],bulletArray[1])
 } else {
 	bulletArcDraw = -1	
 }
-	
+
+//reticle.firstCalculate()

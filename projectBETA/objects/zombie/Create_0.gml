@@ -1,5 +1,8 @@
 event_inherited()
 
+sprite = s_zombie_walk
+sprite_index = sprite
+
 states = states.free
 
 #region Zombie Bodyparts
@@ -33,7 +36,7 @@ states = states.free
 		fix_height: 30,
 		fix_offsetX: 2,
 		fix_offsetY: -16,
-		fix_density: 3,
+		fix_density: 8,
 		fix_friction: 3,
 		angle: true,
 		min_angle: -20,

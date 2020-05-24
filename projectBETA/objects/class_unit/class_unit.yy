@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Units",
-    "path": "folders/Objects/Units.yy",
+    "path": "folders/Game/Units.yy",
   },
   "resourceVersion": "1.0",
   "name": "class_unit",

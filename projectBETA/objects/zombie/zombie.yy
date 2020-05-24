@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_zombie_walk",
-    "path": "sprites/s_zombie_walk/s_zombie_walk.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -31,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Units",
-    "path": "folders/Objects/Units.yy",
+    "path": "folders/Game/Units.yy",
   },
   "resourceVersion": "1.0",
   "name": "zombie",

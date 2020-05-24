@@ -33,6 +33,8 @@ function spawnRagdoll() {
 				
 				BodyPart.bodyParts = BodyPartEnum
 				BodyPart.image_xscale = image_xscale
+				BodyPart.spriteBase = sprite
+				BodyPart.sprite = sprite
 				BodyPart.sprite_index = sprite
 				BodyPart.mask_index = sprite
 				if BodyPartEnum == bodyParts.torso BodyPart.depth = 1
