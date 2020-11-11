@@ -18,9 +18,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"debug","path":"objects/debug/debug.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"debug","path":"objects/debug/debug.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"debug","path":"objects/debug/debug.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"sound","path":"objects/sound/sound.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -29,7 +27,7 @@
     "path": "folders/Game.yy",
   },
   "resourceVersion": "1.0",
-  "name": "debug",
+  "name": "sound",
   "tags": [],
   "resourceType": "GMObject",
 }

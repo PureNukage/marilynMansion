@@ -9,3 +9,5 @@ mouseLeftPress = mouse_check_button_pressed(mb_left)
 mouseRight = mouse_check_button(mb_right)
 mouseRightPress = mouse_check_button_pressed(mb_right)
 mouseRightRelease = mouse_check_button_released(mb_right)
+
+keyInteract = keyboard_check_pressed(ord("E"))

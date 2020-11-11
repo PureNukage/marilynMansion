@@ -28,6 +28,8 @@ function fireGun() {
 	//var endX = mouse_x
 	//var endY = mouse_y
 	
+	reticle.radiusSpeed = 0.5
+	
 	var length = irandom_range(reticle.radiusMin,reticle.radius)
 	var durection = irandom_range(0,359)
 	
@@ -93,7 +95,7 @@ function fireGun() {
 
 	reticle = {
 		radius: 16,
-		//radiusSpeed: -1,
+		radiusSpeed: 0.5,
 		radiusMin: 8,
 		radiusMax: 96,
 		X: -1,
@@ -125,7 +127,8 @@ function fireGun() {
 			XX += lengthdir_x(64, Direction)
 			YY += lengthdir_y(64, Direction)
 			
-			radius -= 0.5
+			radius -= radiusSpeed
+			radiusSpeed += 0.10
 			
 			X = mouse_x
 			Y = mouse_y

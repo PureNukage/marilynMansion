@@ -1,0 +1,1 @@
+if roomChangeStage > -1 __change_room()

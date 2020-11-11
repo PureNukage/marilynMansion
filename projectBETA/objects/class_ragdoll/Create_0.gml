@@ -53,7 +53,11 @@ function spawnRagdoll() {
 					} else {
 						physics_fixture_set_circle_shape(fixture, 8)
 					}
+					//physics_fixture_set_collision_group(fixture, instance_number(zombieRagdoll)*-1)
+					
 					physics_fixture_bind_ext(fixture, id, -fix_offsetX * image_xscale, -fix_offsetY)
+					
+					debug.log(string(instance_number(zombieRagdoll)*-1))
 					
 					if bind > -1 {
 						physics_joint_revolute_create(id, other.bodyparts[bind][bodyparts_id], x, y, min_angle, max_angle, angle, 0, 0, 0, 0)	

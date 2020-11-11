@@ -27,6 +27,9 @@ switch(states)
 				states = states.aim	
 				reticle.firstCalculate()
 			}
+			else {
+				reticle.radiusSpeed = 0.5	
+			}
 			
 			////	Collision Checking
 			if xx != 0 {
