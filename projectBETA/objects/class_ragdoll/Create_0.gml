@@ -3,13 +3,12 @@ function spawnRagdoll() {
 	switch(object_index)
 	{
 		case zombieRagdoll:
-			
-			
 			for(var b=0;b<array_length(bodyparts);b++) {
 				
 				var BodyPartEnum = bodyparts[b][bodyparts_enum]
 				var BodyPartID = bodyparts[b][bodyparts_id]
 				var BodyStruct = bodyparts[b][bodyparts_struct]
+				var BodyPartFixture = bodyparts[b][bodyparts_fixture]
 				
 				var sprite = BodyStruct.sprite
 				var fix_width = BodyStruct.fix_width
@@ -18,6 +17,7 @@ function spawnRagdoll() {
 				var fix_offsetY = BodyStruct.fix_offsetY
 				var fix_density = BodyStruct.fix_density
 				var fix_friction = BodyStruct.fix_friction
+				var fix_angle = BodyStruct.fix_angle
 				var min_angle = BodyStruct.min_angle
 				var max_angle = BodyStruct.max_angle
 				var angle = BodyStruct.angle
@@ -62,14 +62,13 @@ function spawnRagdoll() {
 					if bind > -1 {
 						physics_joint_revolute_create(id, other.bodyparts[bind][bodyparts_id], x, y, min_angle, max_angle, angle, 0, 0, 0, 0)	
 					}
+					
 				}
 				
 				bodyparts[b][bodyparts_id] = BodyPart
+				bodyparts[b][bodyparts_fixture] = BodyPart.fixture
 				
 			}
-			
-			
-			
 		break
 	}
 	

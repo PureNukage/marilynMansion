@@ -18,7 +18,7 @@ if roomChangeStage > -1 {
 		//if sizeAlpha < 0.5 sizeAlpha = 0
 	
 		//draw_surface_ext(surface,0,0, 1,1, 0,c_white, sizeAlpha)
-		draw_surface(surface,player.x,player.y)
+		//draw_surface(surface,player.x,player.y)
 	
 		surface_free(surface)	
 	}
@@ -36,7 +36,7 @@ if roomChangeStage > -1 {
 		
 		//if sizeAlpha < 0.5 sizeAlpha = 0
 	
-		draw_surface_ext(surface,0,0, 1,1, 0,c_white, sizeAlpha)
+		//draw_surface_ext(surface,0,0, 1,1, 0,c_white, sizeAlpha)
 		//draw_surface(surface,player.x,player.y)
 	
 		surface_free(surface)

@@ -1,0 +1,1 @@
+physics_fixture_bind_ext(fixture, id, -(bbox_right-bbox_left)/2,-(bbox_bottom-bbox_top)/2)

@@ -20,11 +20,13 @@ states = states.free
 		fix_offsetY: 0,
 		fix_density: 5,
 		fix_friction: 3,
+		fix_angle: 0,
 		min_angle: -1,
 		max_angle: -1,
 		angle: false,
 		bind: -1
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Head
@@ -38,11 +40,13 @@ states = states.free
 		fix_offsetY: -16,
 		fix_density: 8,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle: true,
 		min_angle: -20,
 		max_angle: 20,
 		bind: 0
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Right Arm Upper
@@ -56,11 +60,13 @@ states = states.free
 		fix_offsetY: 9,
 		fix_density: 3,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle: true,
 		min_angle: -75,
 		max_angle: 75,
 		bind: 0
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 
 	//	Right Arm Lower
@@ -74,11 +80,13 @@ states = states.free
 		fix_offsetY: -4,
 		fix_density: 2,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle: true,
 		min_angle: -45,
 		max_angle: 45,
 		bind: 2
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Right Arm Hand
@@ -92,11 +100,13 @@ states = states.free
 		fix_offsetY: 4,
 		fix_density: 2,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle: true,
 		min_angle: -45,
 		max_angle: 45,
 		bind: 3
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Left Arm Upper
@@ -110,11 +120,13 @@ states = states.free
 		fix_offsetY:  6,
 		fix_density: 3,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -75,
 		max_angle:  75,
 		bind:  0
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Left Arm Lower
@@ -128,11 +140,13 @@ states = states.free
 		fix_offsetY:  -5,
 		fix_density: 2,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -45,
 		max_angle:  45,
 		bind:  5
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Left Arm Hand
@@ -146,11 +160,13 @@ states = states.free
 		fix_offsetY:  5,
 		fix_density: 2,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -45,
 		max_angle:  45,
 		bind:  6
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Right Leg Upper
@@ -164,11 +180,13 @@ states = states.free
 		fix_offsetY:  11,
 		fix_density: 3,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -10,
 		max_angle:  10,
 		bind:  0
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Right Leg Lower
@@ -182,11 +200,13 @@ states = states.free
 		fix_offsetY:  12,
 		fix_density: 3,
 		fix_friction: 1,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -45,
 		max_angle:  45,
 		bind:  8
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Left Leg Upper
@@ -200,11 +220,13 @@ states = states.free
 		fix_offsetY:  10,
 		fix_density: 3,
 		fix_friction: 3,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -10,
 		max_angle:  10,
 		bind:  0
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 	b++
 	
 	//	Left Leg Lower
@@ -218,11 +240,13 @@ states = states.free
 		fix_offsetY:  14,
 		fix_density: 3,
 		fix_friction: 1,
+		fix_angle: 0,
 		angle:  true,
 		min_angle:  -45,
 		max_angle:  45,
 		bind:  10
 	}
+	bodyparts[b][bodyparts_fixture] = -1
 
 #endregion
 
