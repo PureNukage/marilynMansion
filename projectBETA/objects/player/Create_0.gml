@@ -66,6 +66,25 @@ function fireGun() {
 			Particle.sprite_index = s_bloodsplat_0
 			
 			return array
+		} else if instance_position(XX,YY, zombiePart) {
+			loop = false
+			var array = []
+			array[0] = instance_position(XX,YY, zombiePart)
+			array[1] = XX
+			array[2] = YY
+			
+			bulletArray[0] = XX
+			bulletArray[1] = YY
+			bulletArray[2] = startX
+			bulletArray[3] = startY
+			bulletArcDraw = 15
+			
+			//	Create bloodsplat particle
+			var Particle = instance_create_layer(XX+30,YY,"Instances",particle)
+			Particle.sprite_index = s_bloodsplat_0
+			
+			return array
+		
 		} else if point_distance(XX,YY, endX,endY) < 2 {
 			loop = false
 			

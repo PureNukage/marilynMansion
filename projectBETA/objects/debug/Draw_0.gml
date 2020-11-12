@@ -26,7 +26,7 @@ if on {
 		var xx = x+64
 		var yy = y-64
 		
-		draw_text(xx,yy, "physics: " + string(phy_active))
+		//draw_text(xx,yy, "physics: " + string(phy_active))
 		
 		//draw_text(xx,yy, "image_xscale: " + string(image_xscale))
 		

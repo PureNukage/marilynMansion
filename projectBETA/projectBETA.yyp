@@ -22,6 +22,7 @@
     {"id":{"name":"definitions","path":"scripts/definitions/definitions.yy",},"order":0,},
     {"id":{"name":"s_poster","path":"sprites/s_poster/s_poster.yy",},"order":10,},
     {"id":{"name":"s_bloodsplat_1","path":"sprites/s_bloodsplat_1/s_bloodsplat_1.yy",},"order":3,},
+    {"id":{"name":"s_debug_decal","path":"sprites/s_debug_decal/s_debug_decal.yy",},"order":9,},
     {"id":{"name":"playerInput","path":"objects/playerInput/playerInput.yy",},"order":2,},
     {"id":{"name":"s_zombie_part_left_arm_upper","path":"sprites/s_zombie_part_left_arm_upper/s_zombie_part_left_arm_upper.yy",},"order":6,},
     {"id":{"name":"s_zombie_part_left_arm_hand","path":"sprites/s_zombie_part_left_arm_hand/s_zombie_part_left_arm_hand.yy",},"order":8,},
