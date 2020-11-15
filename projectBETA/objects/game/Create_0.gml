@@ -1,3 +1,7 @@
+function scale_canvas(width, height) {
+	window_set_size(width, height)	
+}
+
 function cameraSetup() {
 
 		width = 640
@@ -58,7 +62,7 @@ function cameraSetup() {
 
 		#endregion
 	
-		//if !fullscreen scale_canvas(1920,1080)
+		if !fullscreen scale_canvas(1920,1080)
 
 		default_zoom_width = camera_get_view_width(camera)
 		default_zoom_height = camera_get_view_height(camera)

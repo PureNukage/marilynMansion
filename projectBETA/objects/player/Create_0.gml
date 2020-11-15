@@ -1,3 +1,5 @@
+event_inherited()
+
 input = instance_create_layer(0,0,"Instances",playerInput)
 
 hspd = 0
@@ -62,8 +64,13 @@ function fireGun() {
 			bulletArcDraw = 15
 			
 			//	Create bloodsplat particle
-			var Particle = instance_create_layer(XX+30,YY,"Instances",particle)
+			var Particle = instance_create_layer(XX,YY,"Instances",particle)
 			Particle.sprite_index = s_bloodsplat_0
+			Particle.image_angle = point_direction(startX,startY, XX,YY)
+			if x > array[0].x {
+				Particle.image_xscale = -1
+				Particle.image_angle += 180	
+			}
 			
 			return array
 		} else if instance_position(XX,YY, zombiePart) {
@@ -80,8 +87,13 @@ function fireGun() {
 			bulletArcDraw = 15
 			
 			//	Create bloodsplat particle
-			var Particle = instance_create_layer(XX+30,YY,"Instances",particle)
+			var Particle = instance_create_layer(XX,YY,"Instances",particle)
 			Particle.sprite_index = s_bloodsplat_0
+			Particle.image_angle = point_direction(startX,startY, XX,YY)
+			if x > array[0].x {
+				Particle.image_xscale = -1
+				Particle.image_angle += 180	
+			}
 			
 			return array
 		

@@ -81,7 +81,13 @@ switch(states)
 				
 				if is_array(array) {
 					if array[0].object_index == zombie {
-						array[0].die()
+						
+						array[0].hp -= 1
+						
+						if array[0].hp <= 0 {
+							array[0].die()	
+						}
+						
 						////	Check for if a bodypart is at the bullets x,y
 						for(var b=0;b<array_length(array[0].bodyparts);b++) {
 							var XX = array[1]
@@ -90,7 +96,8 @@ switch(states)
 						 
 							if instance_position(XX, YY, ID) {
 								show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
-								var randomForce = irandom_range(45000,55000)
+								var Direction = sign(ID.x - x)
+								var randomForce = irandom_range(45000,55000)  * Direction
 								with ID physics_apply_force(XX,YY, randomForce,0)
 							
 								var Decal = instance_create_layer(XX,YY, "Instances",decal)
@@ -135,3 +142,7 @@ switch(states)
 		break
 	#endregion
 }
+
+if !place_meeting(x,y-32,block) onGround = false
+
+if !onGround applyThrust()
