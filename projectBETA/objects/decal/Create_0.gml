@@ -4,7 +4,7 @@ ID = -1
 
 function applyDecal(instanceID) {
 	
-	var oldSprite = instanceID.sprite
+	var oldSprite = instanceID.sprite_index
 	
 	var spriteWidth = sprite_get_width(oldSprite)
 	var spriteHeight = sprite_get_height(oldSprite)

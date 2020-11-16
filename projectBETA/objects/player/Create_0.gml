@@ -72,6 +72,9 @@ function fireGun() {
 				Particle.image_angle += 180	
 			}
 			
+			//	Create blood decal
+			array[0].add_blood(XX,YY)
+			
 			return array
 		} else if instance_position(XX,YY, zombiePart) {
 			loop = false

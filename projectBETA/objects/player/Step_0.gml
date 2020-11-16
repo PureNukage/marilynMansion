@@ -97,7 +97,7 @@ switch(states)
 							if instance_position(XX, YY, ID) {
 								show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
 								var Direction = sign(ID.x - x)
-								var randomForce = irandom_range(45000,55000)  * Direction
+								var randomForce = irandom_range(85000,95000)  * Direction
 								with ID physics_apply_force(XX,YY, randomForce,0)
 							
 								var Decal = instance_create_layer(XX,YY, "Instances",decal)
@@ -118,7 +118,7 @@ switch(states)
 						var ID = array[0]
 						show_debug_message("applying force to object: " + e[array[0].bodyParts])
 						var Direction = sign(ID.x - x)
-						var randomForce = irandom_range(45000,55000) * Direction
+						var randomForce = irandom_range(85000,95000) * Direction
 						with ID physics_apply_force(XX,YY, randomForce,0)
 							
 						var Decal = instance_create_layer(XX,YY, "Instances",decal)
