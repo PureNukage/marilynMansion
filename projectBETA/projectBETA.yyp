@@ -41,6 +41,7 @@
     {"id":{"name":"s_zombie_part_left_leg_lower","path":"sprites/s_zombie_part_left_leg_lower/s_zombie_part_left_leg_lower.yy",},"order":12,},
     {"id":{"name":"s_zombie_part_left_leg_upper","path":"sprites/s_zombie_part_left_leg_upper/s_zombie_part_left_leg_upper.yy",},"order":11,},
     {"id":{"name":"s_player_walk","path":"sprites/s_player_walk/s_player_walk.yy",},"order":1,},
+    {"id":{"name":"tools","path":"scripts/tools/tools.yy",},"order":1,},
     {"id":{"name":"s_player_arm_support","path":"sprites/s_player_arm_support/s_player_arm_support.yy",},"order":5,},
     {"id":{"name":"sound","path":"objects/sound/sound.yy",},"order":5,},
     {"id":{"name":"s_zombie_part_torso","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"order":1,},
@@ -78,7 +79,7 @@
     {"name":"Room2","path":"rooms/Room2/Room2.yy",},
   ],
   "Folders": [
-    {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites.yy","order":2,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Game.yy","order":3,"resourceVersion":"1.0","name":"Game","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms.yy","order":4,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Game/Units.yy","order":7,"resourceVersion":"1.0","name":"Units","tags":[],"resourceType":"GMFolder",},

@@ -96,9 +96,11 @@ switch(states)
 						 
 							if instance_position(XX, YY, ID) {
 								show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
-								var Direction = sign(ID.x - x)
-								var randomForce = irandom_range(85000,95000)  * Direction
-								with ID physics_apply_force(XX,YY, randomForce,0)
+								var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
+
+								var xForce = lengthdir_x(irandom_range(85000,95000), Direction)
+								var yForce = lengthdir_y(irandom_range(85000,95000), Direction)
+								with ID physics_apply_force(XX,YY, xForce,yForce)
 							
 								var Decal = instance_create_layer(XX,YY, "Instances",decal)
 								Decal.sprite_index = s_bloodhole_0
@@ -117,9 +119,11 @@ switch(states)
 						var YY = array[2]
 						var ID = array[0]
 						show_debug_message("applying force to object: " + e[array[0].bodyParts])
-						var Direction = sign(ID.x - x)
-						var randomForce = irandom_range(85000,95000) * Direction
-						with ID physics_apply_force(XX,YY, randomForce,0)
+						var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
+
+						var xForce = lengthdir_x(irandom_range(85000,95000), Direction)
+						var yForce = lengthdir_y(irandom_range(85000,95000), Direction)
+						with ID physics_apply_force(XX,YY, xForce,yForce)
 							
 						var Decal = instance_create_layer(XX,YY, "Instances",decal)
 						Decal.sprite_index = s_bloodhole_0

@@ -332,6 +332,9 @@ function die() {
 		//}
 		
 		//	Reset the surface back to default sprite variables
+		surface_set_target(surfaceCropped)
+		draw_clear_alpha(c_white, 0)
+		surface_reset_target()
 		surface_copy_part(surfaceCropped,0,0, surface,XX,YY, Width,Height)
 		
 		surface_set_target(surfaceFinal)
