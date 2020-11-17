@@ -12,6 +12,8 @@ mouseRightRelease = mouse_check_button_released(mb_right)
 
 keyInteract = keyboard_check_pressed(ord("E"))
 
+keyFlashlight = keyboard_check_pressed(ord("F"))
+
 if keyboard_check_pressed(vk_space) {
 	game_restart()	
 }

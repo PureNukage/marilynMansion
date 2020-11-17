@@ -26,10 +26,23 @@ switch(states)
 			if input.mouseRightPress {
 				states = states.aim	
 				reticle.firstCalculate()
+				if !flashlight {
+					sprite_index = s_player_body
+				}
 			}
 			else {
 				reticle.radiusSpeed = 0.5	
 			}
+			
+			//	Flashlight
+			if input.keyFlashlight and !flashlight{
+				flashlight = true
+				//sprite_index = s_player_idle_nogun
+			}
+			else if input.keyFlashlight and flashlight {
+				flashlight = false	
+			}
+			//if flashlight sprite_index = s_player_idle_nogun
 			
 			////	Collision Checking
 			if xx != 0 {
@@ -37,7 +50,7 @@ switch(states)
 				for(var XX=0;XX<abs(xx);XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
-			
+						debug.log("collision")
 					}
 				}
 				xx = 0
@@ -56,11 +69,63 @@ switch(states)
 			if input.mouseRightRelease {
 				states = states.free
 			}
+			
+			if flashlight and (input.keyRight or input.keyLeft) {
+				hspd += input.keyRight - input.keyLeft
 				
-			arm0 = s_player_arm_aim
+				var flashlightClamp = 0
+				if (image_xscale and hspd < 0) or (image_xscale == -1 and hspd > 0) {
+					flashlightClamp = maxSpeed
+				}
+	
+				hspd = clamp(hspd,-(maxSpeed-flashlightClamp),maxSpeed-flashlightClamp)
+	
+				xx += hspd
+				
+				if hspd != 0 sprite_index = s_player_flashlight_walk
+				else sprite_index = s_player_flashlight
+			}
+				
+			else if flashlight {
+	
+				if abs(hspd) != 0 {
+					hspd = lerp(hspd,0,0.1)
+		
+					if abs(hspd) - maxSpeed < 0.5 hspd = 0
+		
+					xx += hspd		
+					
+					sprite_index = s_player_flashlight_walk
+				}
+				else {
+					sprite_index = s_player_flashlight	
+				}
+	
+			}
+				
+			if !flashlight {
+				arm0 = s_player_arm_aim
+				arm1 = s_player_arm_support
+			} else {
+				arm0 = s_player_arm_flashlight
+				arm1 = -1
+			}
+			
+			////	Collision Checking
+			if xx != 0 {
+	
+				for(var XX=0;XX<abs(xx);XX++) {
+					if !instance_place(x + sign(xx), y, block) x += sign(xx)
+					else {
+			
+					}
+				}
+				xx = 0
+	
+			}
 			
 			//	Shoot gun
-			if input.mouseLeftPress {
+			if !flashlight and input.mouseLeftPress {
 				var array = fireGun()
 				arm0 = s_player_arm_aim_fire
 				reticle.radius += 32

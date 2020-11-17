@@ -1,4 +1,6 @@
 var xx = 15
 var yy = 15
 
-//draw_text(xx,yy, "room_physics: ")
+if on {
+	draw_text_outlined(xx,yy, "player.y: "+string(player.y),c_white,c_black)		
+}

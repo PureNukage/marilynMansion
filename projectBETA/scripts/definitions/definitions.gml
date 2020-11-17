@@ -1,6 +1,6 @@
 enum states {
 	free,
-	aim
+	aim,
 }
 
 #macro bodyparts_enum 0

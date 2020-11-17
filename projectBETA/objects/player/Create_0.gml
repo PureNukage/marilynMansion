@@ -3,7 +3,9 @@ event_inherited()
 input = instance_create_layer(0,0,"Instances",playerInput)
 
 hspd = 0
-maxSpeed = 5
+maxSpeed = 3
+
+flashlight = false
 
 arm0 = s_player_arm_aim
 arm0_offsetX = -12
@@ -32,6 +34,8 @@ function fireGun() {
 	
 	reticle.radiusSpeed = 0.5
 	
+	lighting.gunFired = true
+	
 	var length = irandom_range(reticle.radiusMin,reticle.radius)
 	var durection = irandom_range(0,359)
 	
@@ -46,6 +50,8 @@ function fireGun() {
 	
 	startX += lengthdir_x(64, Direction)
 	startY += lengthdir_y(64, Direction)
+	
+	sound.playSoundEffect(choose(snd_45_1,snd_45_2,snd_45_3))
 	
 	var loop = true
 	while loop {
