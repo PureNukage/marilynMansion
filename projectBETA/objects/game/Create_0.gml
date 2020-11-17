@@ -2,6 +2,8 @@ function scale_canvas(width, height) {
 	window_set_size(width, height)	
 }
 
+states = states.free
+
 function cameraSetup() {
 
 		width = 640

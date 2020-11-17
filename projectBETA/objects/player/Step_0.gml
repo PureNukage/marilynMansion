@@ -37,6 +37,7 @@ switch(states)
 			//	Looting
 			if input.keyLoot {
 				states = states.looting
+				game.states = states.looting
 				lootingClampX1 = camera_get_view_x(game.camera)
 				lootingClampX2 = camera_get_view_x(game.camera) + camera_get_view_width(game.camera)
 				lootingClampY1 = camera_get_view_y(game.camera)
@@ -227,6 +228,7 @@ switch(states)
 			//	Stop looting
 			if input.keyLoot {
 				states = states.free
+				game.states = states.free
 				lootingClampX1 = -1
 				lootingClampX2 = -1
 				lootingClampY1 = -1

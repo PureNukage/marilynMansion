@@ -6,9 +6,9 @@ var clampY1 = 0
 var clampY2 = room_height
 
 if instance_exists(player) {
-	if player.states != states.looting {
+	if states == states.free {
 		var Lerp = 0.05
-		x = lerp(x, player.x, Lerp)
+		x = lerp(x, player.x + (player.image_xscale * 262), Lerp)
 		y = lerp(y, player.y, Lerp)
 		//x = player.x
 		//y = player.y
@@ -16,7 +16,7 @@ if instance_exists(player) {
 		var Lerp = 0.04
 		if point_distance(x,y, mouse_x,mouse_y) >= 50 {
 			//x = lerp(x, mouse_x, Lerp)
-		//	y = lerp(y, mouse_y, Lerp)
+			//	y = lerp(y, mouse_y, Lerp)
 			clampX1 = player.lootingClampX1
 			clampX2 = player.lootingClampX2
 			clampY1 = player.lootingClampY1
