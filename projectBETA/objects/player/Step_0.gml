@@ -163,8 +163,8 @@ switch(states)
 								show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
 								var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
 
-								var xForce = lengthdir_x(irandom_range(85000,95000), Direction)
-								var yForce = lengthdir_y(irandom_range(85000,95000), Direction)
+								var xForce = lengthdir_x(irandom_range(50000,100000), Direction)
+								var yForce = lengthdir_y(irandom_range(50000,100000), Direction)
 								with ID physics_apply_force(XX,YY, xForce,yForce)
 							
 								var Decal = instance_create_layer(XX,YY, "Instances",decal)
@@ -172,9 +172,9 @@ switch(states)
 								Decal.ID = ID
 								
 								//	DEBUG
-								var Decal = instance_create_layer(XX,YY, "Instances",particle)
-								Decal.sprite_index = s_debug_decal
-								Decal.depth = -200
+								//var Decal = instance_create_layer(XX,YY, "Instances",particle)
+								//Decal.sprite_index = s_debug_decal
+								//Decal.depth = -200
 							}
 						}
 					}
@@ -186,8 +186,8 @@ switch(states)
 						show_debug_message("applying force to object: " + e[array[0].bodyParts])
 						var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
 
-						var xForce = lengthdir_x(irandom_range(85000,95000), Direction)
-						var yForce = lengthdir_y(irandom_range(85000,95000), Direction)
+						var xForce = lengthdir_x(irandom_range(50000,100000), Direction)
+						var yForce = lengthdir_y(irandom_range(50000,100000), Direction)
 						with ID physics_apply_force(XX,YY, xForce,yForce)
 							
 						var Decal = instance_create_layer(XX,YY, "Instances",decal)
@@ -195,9 +195,9 @@ switch(states)
 						Decal.ID = ID
 						
 						//	DEBUG
-						var Decal = instance_create_layer(XX,YY, "Instances",particle)
-						Decal.sprite_index = s_debug_decal
-						Decal.depth = -200
+						//var Decal = instance_create_layer(XX,YY, "Instances",particle)
+						//Decal.sprite_index = s_debug_decal
+						//Decal.depth = -200
 					}
 					
 					show_debug_message("hit object "+object_get_name(array[0].object_index))

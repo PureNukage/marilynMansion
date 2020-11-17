@@ -71,7 +71,8 @@ function fireGun() {
 			
 			//	Create bloodsplat particle
 			var Particle = instance_create_layer(XX,YY,"Instances",particle)
-			Particle.sprite_index = s_bloodsplat_0
+			if array[0].hp - 1 <= 0 Particle.sprite_index = s_bloodsplat_0
+			else Particle.sprite_index = s_bloodsplat_1
 			Particle.image_angle = point_direction(startX,startY, XX,YY)
 			if x > array[0].x {
 				Particle.image_xscale = -1
@@ -97,7 +98,7 @@ function fireGun() {
 			
 			//	Create bloodsplat particle
 			var Particle = instance_create_layer(XX,YY,"Instances",particle)
-			Particle.sprite_index = s_bloodsplat_0
+			Particle.sprite_index = s_bloodsplat_1
 			Particle.image_angle = point_direction(startX,startY, XX,YY)
 			if x > array[0].x {
 				Particle.image_xscale = -1
