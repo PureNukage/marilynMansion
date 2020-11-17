@@ -5,7 +5,7 @@ input = instance_create_layer(0,0,"Instances",playerInput)
 hspd = 0
 maxSpeed = 3
 
-flashlight = false
+flashlight = true
 
 arm0 = s_player_arm_aim
 arm0_offsetX = -12
@@ -20,7 +20,16 @@ gunRotation = -1
 bulletArcDraw = -1
 bulletArray = []
 
+groundY = y
+
+lootingClampY1 = -1
+lootingClampY2 = -1
+lootingString = ""
+lootingID = -1
+lootingMoving = false
+
 xx = 0
+yy = 0
 
 states = states.free
 

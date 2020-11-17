@@ -8,6 +8,7 @@ instance_create_layer(0,0,"Instances",game)
 instance_create_layer(0,0,"Instances",debug)
 instance_create_layer(0,0,"Instances",sound)
 instance_create_layer(0,0,"Instances",lighting)
+instance_create_layer(0,0,"Instances",gui)
 
 if room == RoomAppStart {
 	room_goto(Room1)

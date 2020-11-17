@@ -45,6 +45,19 @@ switch(states)
 		
 		break	
 	#endregion
+	
+	#region Looting
+		case states.looting:
+			
+			draw_self()
+			
+			var ID = instance_position(mouse_x,mouse_y,class_grab)
+			if ID > -1 {
+				draw_sprite_ext(s_hand,0,mouse_x,mouse_y,.5,.5,0,c_white,1)	
+			}
+			
+		break
+	#endregion
 }
 
 if bulletArcDraw > 0 {

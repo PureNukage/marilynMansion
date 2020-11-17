@@ -40,7 +40,7 @@ if surface_exists(surface) {
 			var X = player.x + (player.arm0_offsetX*player.image_xscale) + lengthdir_x(rawDist, rawDirection)
 			var Y = player.y+player.arm0_offsetY + lengthdir_y(rawDist, rawDirection)
 			draw_sprite_ext(s_light_flashlight,0,X,Y,1,1,player.gunRotation,c_black,0.5)	
-			debug.log("FLASHLIGHT DEBUG player.gunRotation: "+string(player.gunRotation))
+			//debug.log("FLASHLIGHT DEBUG player.gunRotation: "+string(player.gunRotation))
 		}
 	}
 	

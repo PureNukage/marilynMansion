@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_door",
-    "path": "sprites/s_door/s_door.yy",
+    "name": "s_candle",
+    "path": "sprites/s_candle/s_candle.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,8 +24,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"door","path":"objects/door/door.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"door","path":"objects/door/door.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"candle","path":"objects/candle/candle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,7 +33,7 @@
     "path": "folders/Game.yy",
   },
   "resourceVersion": "1.0",
-  "name": "door",
+  "name": "candle",
   "tags": [],
   "resourceType": "GMObject",
 }

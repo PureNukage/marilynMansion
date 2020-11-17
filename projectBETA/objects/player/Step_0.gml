@@ -34,15 +34,23 @@ switch(states)
 				reticle.radiusSpeed = 0.5	
 			}
 			
+			//	Looting
+			if input.keyLoot {
+				states = states.looting
+				lootingClampX1 = camera_get_view_x(game.camera)
+				lootingClampX2 = camera_get_view_x(game.camera) + camera_get_view_width(game.camera)
+				lootingClampY1 = camera_get_view_y(game.camera)
+				lootingClampY2 = camera_get_view_y(game.camera) + camera_get_view_height(game.camera)
+				game.zoom_level = .7
+			}
+			
 			//	Flashlight
 			if input.keyFlashlight and !flashlight{
 				flashlight = true
-				//sprite_index = s_player_idle_nogun
 			}
 			else if input.keyFlashlight and flashlight {
 				flashlight = false	
 			}
-			//if flashlight sprite_index = s_player_idle_nogun
 			
 			////	Collision Checking
 			if xx != 0 {
@@ -50,7 +58,7 @@ switch(states)
 				for(var XX=0;XX<abs(xx);XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
-						debug.log("collision")
+
 					}
 				}
 				xx = 0
@@ -207,6 +215,103 @@ switch(states)
 			}
 			
 			
+			
+		break
+	#endregion
+	
+	#region Looting
+		case states.looting:
+		
+			//cursor_sprite = s_hand
+			
+			//	Stop looting
+			if input.keyLoot {
+				states = states.free
+				lootingClampX1 = -1
+				lootingClampX2 = -1
+				lootingClampY1 = -1
+				lootingClampY2 = -1
+				lootingID = -1
+				lootingMoving = false
+				game.zoom_level = 1
+			}
+			
+			var ID = instance_position(mouse_x,mouse_y,class_grab)
+			
+			if ID > -1 {
+				window_set_cursor(cr_none)
+				//cursor_sprite = s_hand
+				lootingString = object_get_name(ID.object_index)
+				
+				if input.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
+					//ID.interact(!ID.on)
+					lootingID = ID
+					lootingMoving = true
+				}
+			}
+			else {
+				window_set_cursor(cr_arrow)
+				cursor_sprite = -1
+				lootingString = ""	
+			}
+				
+			//	Moving to goal
+			if lootingMoving {
+				
+				//	Arrived at goal
+				if point_distance(x,y, lootingID.x,lootingID.y) < 20 {
+					lootingMoving = false
+					
+					if lootingID.object_index == candle
+					lootingID.interact(!lootingID.on)
+					
+					lootingID = -1
+				}
+				//	Moving to goal
+				else {
+				
+					hspd += sign(lootingID.x - x)
+				
+					hspd = clamp(hspd,-maxSpeed,maxSpeed)
+	
+					xx += hspd
+				}
+			}
+			else {
+				if abs(hspd) != 0 {
+					hspd = lerp(hspd,0,0.1)
+		
+					if abs(hspd) - maxSpeed < 0.5 hspd = 0
+		
+					xx += hspd		
+				}
+			}
+			
+			//	Determine sprite
+			if hspd != 0 {
+				if hspd > 0 image_xscale = 1
+				else image_xscale = -1
+				
+				if flashlight sprite_index = s_player_walk_nogun
+				else sprite_index = s_player_walk
+			}
+			else {
+				if flashlight sprite_index = s_player_idle_nogun
+				else sprite_index = s_player_idle
+			}
+			
+			////	Collision Checking
+			if xx != 0 {
+	
+				for(var XX=0;XX<abs(xx);XX++) {
+					if !instance_place(x + sign(xx), y, block) x += sign(xx)
+					else {
+
+					}
+				}
+				xx = 0
+	
+			}
 			
 		break
 	#endregion

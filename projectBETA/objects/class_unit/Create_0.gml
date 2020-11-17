@@ -7,6 +7,7 @@ hpMax = 3
 hp = hpMax
 maxSpeed = 0
 onGround = true
+groundY = y
 states = -1
 
 function setThrust(amount) {
@@ -31,6 +32,7 @@ function applyThrust() {
 		else {
 			onGround = true
 			thrust = 0
+			groundY = y
 		}
 	}
 	

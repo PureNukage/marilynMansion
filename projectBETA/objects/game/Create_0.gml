@@ -66,6 +66,10 @@ function cameraSetup() {
 
 		default_zoom_width = camera_get_view_width(camera)
 		default_zoom_height = camera_get_view_height(camera)
+		
+		dragging = false
+		anchorX = -1
+		anchorY = -1
 
 }
 	

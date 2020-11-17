@@ -10,6 +10,12 @@ mouseRight = mouse_check_button(mb_right)
 mouseRightPress = mouse_check_button_pressed(mb_right)
 mouseRightRelease = mouse_check_button_released(mb_right)
 
+mouseMiddle = mouse_check_button(mb_middle)
+mouseMiddlePress = mouse_check_button_pressed(mb_middle)
+mouseMiddleRelease = mouse_check_button_released(mb_middle)
+
 keyInteract = keyboard_check_pressed(ord("E"))
 
 keyFlashlight = keyboard_check_pressed(ord("F"))
+
+keyLoot = keyboard_check_pressed(vk_tab)

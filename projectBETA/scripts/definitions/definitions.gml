@@ -1,6 +1,7 @@
 enum states {
 	free,
 	aim,
+	looting
 }
 
 #macro bodyparts_enum 0
