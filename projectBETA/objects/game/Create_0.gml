@@ -2,7 +2,51 @@ function scale_canvas(width, height) {
 	window_set_size(width, height)	
 }
 
+depth = -300
+
 states = states.free
+
+lootingClampX1 = -1
+lootingClampX2 = -1
+lootingClampY1 = -1
+lootingClampY2 = -1
+lootingString = ""
+lootingID = -1
+lootingMoving = false
+function looting() {
+	
+	//	Stop looting
+	if playerInput.keyLoot {
+		states = states.free
+		lootingClampX1 = -1
+		lootingClampX2 = -1
+		lootingClampY1 = -1
+		lootingClampY2 = -1 
+		//lootingID = -1
+	    //lootingMoving = false
+		zoom_level = 1
+		window_set_cursor(cr_default)
+		exit
+	}
+	
+	//	Lets grab some stuff
+	var ID = instance_position(mouse_x,mouse_y,class_grab)
+	if ID > -1 {
+		window_set_cursor(cr_none)
+		lootingString = object_get_name(ID.object_index)
+				
+		if playerInput.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
+			//ID.interact(!ID.on)
+			lootingID = ID
+			lootingMoving = true
+		}
+	}
+	else {
+		window_set_cursor(cr_default)
+		lootingString = ""	
+	}
+	
+}
 
 function cameraSetup() {
 

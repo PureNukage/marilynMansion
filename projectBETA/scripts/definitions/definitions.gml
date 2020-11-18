@@ -27,3 +27,9 @@ enum bodyParts {
 	leftLegUpper,
 	leftLegLower,
 }
+
+enum item { 
+	flashlight,
+	gun,
+	hand,
+}

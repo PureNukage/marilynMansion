@@ -22,6 +22,8 @@ bulletArray = []
 
 groundY = y
 
+lootingClampX1 = -1
+lootingClampX2 = -1
 lootingClampY1 = -1
 lootingClampY2 = -1
 lootingString = ""
@@ -32,6 +34,40 @@ xx = 0
 yy = 0
 
 states = states.free
+
+function lootMoving() {
+	//	Moving to goal
+	if game.lootingMoving {
+				
+		//	Arrived at goal
+		if point_distance(x,y, game.lootingID.x,game.lootingID.y) < 20 {
+			game.lootingMoving = false
+					
+			if game.lootingID.object_index == candle
+			game.lootingID.interact(!game.lootingID.on)
+					
+			game.lootingID = -1
+		}
+		//	Moving to goal
+		else {
+				
+			hspd += sign(game.lootingID.x - x)
+				
+			hspd = clamp(hspd,-maxSpeed,maxSpeed)
+	
+			xx += hspd
+		}
+	}
+	else {
+		if abs(hspd) != 0 {
+			hspd = lerp(hspd,0,0.1)
+		
+			if abs(hspd) - maxSpeed < 0.5 hspd = 0
+		
+			xx += hspd		
+		}
+	}	
+}
 
 function fireGun() {
 	

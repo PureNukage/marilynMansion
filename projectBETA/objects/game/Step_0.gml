@@ -5,10 +5,22 @@ var clampX2 = room_width
 var clampY1 = 0
 var clampY2 = room_height
 
+//	Looting
+if playerInput.keyLoot and states == states.free {
+	states = states.looting
+	lootingClampX1 = camera_get_view_x(camera)
+	lootingClampX2 = camera_get_view_x(camera) + camera_get_view_width(camera)
+	lootingClampY1 = camera_get_view_y(camera)
+	lootingClampY2 = camera_get_view_y(camera) + camera_get_view_height(camera)
+	zoom_level = 0.7
+}
+else if states == states.looting looting()
+
 if instance_exists(player) {
 	if states == states.free {
 		var Lerp = 0.05
-		x = lerp(x, player.x + (player.image_xscale * 262), Lerp)
+		var xOffset = 0		// 262
+		x = lerp(x, player.x + (player.image_xscale * xOffset), Lerp)
 		y = lerp(y, player.y, Lerp)
 		//x = player.x
 		//y = player.y
@@ -17,16 +29,16 @@ if instance_exists(player) {
 		if point_distance(x,y, mouse_x,mouse_y) >= 50 {
 			//x = lerp(x, mouse_x, Lerp)
 			//	y = lerp(y, mouse_y, Lerp)
-			clampX1 = player.lootingClampX1
-			clampX2 = player.lootingClampX2
-			clampY1 = player.lootingClampY1
-			clampY2 = player.lootingClampY2
+			clampX1 = lootingClampX1
+			clampX2 = lootingClampX2
+			clampY1 = lootingClampY1
+			clampY2 = lootingClampY2
 		}
 	}
 }
 
 ////	Camera
-zoom_level = clamp((zoom_level + (mouse_wheel_down()-mouse_wheel_up())*0.1),0.25,1.0)
+//zoom_level = clamp((zoom_level + (mouse_wheel_down()-mouse_wheel_up())*0.1),0.25,1.0)
 
 camera_set_view_pos(camera,
 		clamp( camera_get_view_x(camera), 0, room_width - camera_get_view_width(camera) ),
@@ -48,7 +60,7 @@ if new_h & 1 {
 }
 
 //	Middle Mouse Drag
-if instance_exists(player) and player.states == states.looting {
+if instance_exists(player) and states == states.looting {
 	if playerInput.mouseMiddlePress and anchorX == -1 and !dragging {
 		dragging = true
 		anchorX = mouse_x

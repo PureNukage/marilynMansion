@@ -19,3 +19,7 @@ keyInteract = keyboard_check_pressed(ord("E"))
 keyFlashlight = keyboard_check_pressed(ord("F"))
 
 keyLoot = keyboard_check_pressed(vk_tab)
+
+keyLeftHand = keyboard_check_pressed(ord("1"))
+keyRightHand = keyboard_check_pressed(ord("2"))
+keyBothHand = keyboard_check_pressed(ord("3"))

@@ -2,8 +2,6 @@ switch(states)
 {
 	#region Free
 		case states.free: 
-		
-			window_set_cursor(cr_default)
 
 			draw_self()
 
@@ -37,26 +35,12 @@ switch(states)
 			
 			window_set_cursor(cr_none)
 			
-			depth = -5000
 			draw_set_color(c_black)
 			draw_circle(mouse_x,mouse_y,reticle.radius,true)	
 			
 			reticle.aimIncreasing()
 		
 		break	
-	#endregion
-	
-	#region Looting
-		case states.looting:
-			
-			draw_self()
-			
-			var ID = instance_position(mouse_x,mouse_y,class_grab)
-			if ID > -1 {
-				draw_sprite_ext(s_hand,0,mouse_x,mouse_y,.5,.5,0,c_white,1)	
-			}
-			
-		break
 	#endregion
 }
 
