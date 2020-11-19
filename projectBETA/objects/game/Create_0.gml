@@ -45,12 +45,19 @@ function looting() {
 		if ID > -1 {
 			//window_set_cursor(cr_none)
 			lootingString = object_get_name(ID.object_index)
-				
-			if playerInput.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
-				//ID.interact(!ID.on)
-				lootingID = ID
-				lootingMoving = true
-				player.states = states.free
+			
+			if playerInput.mouseLeftPress {
+				if ID.object_index == candle {
+					//ID.interact(!ID.on)
+					lootingID = ID
+					lootingMoving = true
+					player.states = states.free
+				}
+				else if ID.object_index == door {
+					lootingID = ID
+					lootingMoving = true
+					player.states = states.free
+				}
 			}
 		}
 		else {
@@ -122,7 +129,7 @@ function cameraSetup() {
 
 		#endregion
 	
-		//if !fullscreen scale_canvas(1920,1080)
+		if !fullscreen scale_canvas(1920,1080)
 
 		default_zoom_width = camera_get_view_width(camera)
 		default_zoom_height = camera_get_view_height(camera)
@@ -203,13 +210,13 @@ function __change_room() {
 	
 }
 	
-function change_room(next_room, duration) {	
+function change_room(next_room, duration, doorID) {	
 	roomChangeStage = 0
 	roomDuration = duration
 	roomChange = next_room
 	roomChangeBuffer1 = buffer_create(room_width*room_height*4, buffer_grow, 1)
 	roomChangeBuffer2 = buffer_create(room_width*room_height*4, buffer_grow, 1)
-	roomDoorID = other.ID
+	roomDoorID = doorID
 	
 	//	Take screenshot of current room
 	var surface = surface_create(room_width,room_height)

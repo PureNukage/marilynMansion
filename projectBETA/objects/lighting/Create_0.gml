@@ -2,7 +2,7 @@ surface = create_surface(room_width,room_height)
 
 gunFired = false
 
-worldDark = 0.99
+worldDark = 1
 //worldDark = .8
 
 surface_set_target(surface)

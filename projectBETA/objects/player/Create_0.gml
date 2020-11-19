@@ -1,5 +1,7 @@
 event_inherited()
 
+depth = -5
+
 input = instance_create_layer(0,0,"Instances",playerInput)
 
 hspd = 0
@@ -85,6 +87,9 @@ function lootMoving() {
 				if game.lootingID.on sound.playSoundEffect(snd_fire)
 				else sound.playSoundEffect(snd_woosh)
 			 	
+			}
+			else if game.lootingID.object_index == door {
+				game.lootingID.interact(game.lootingID.ID)	
 			}
 					
 			game.lootingID = -1
@@ -206,6 +211,17 @@ function fireGun() {
 			var Particle = instance_create_layer(XX,YY,"Instances",particle)
 			Particle.sprite_index = s_bulletScorch
 			Particle.image_angle = irandom_range(0,359)
+			
+			return false
+		} else if instance_place(XX,YY, lock) and !instance_place(XX,YY, lock).dead {
+			loop = false
+			
+			//bulletArray[0] = XX
+			//bulletArray[1] = YY
+			//bulletArray[2] = startX
+			//bulletArray[3] = startY
+			
+			instance_place(XX,YY, lock).die()
 			
 			return false
 		} else {
