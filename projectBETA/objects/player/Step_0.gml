@@ -118,6 +118,10 @@ switch(states)
 					if arm0 == s_player_arm_aim_fire arm0 = s_player_arm_aim	
 				break
 				case item.flashlight:
+				
+					//	Looting
+					if game.lootingMoving lootMoving()
+				
 					if input.keyRight or input.keyLeft {
 						hspd += input.keyRight - input.keyLeft
 				
@@ -130,11 +134,11 @@ switch(states)
 	
 						xx += hspd
 				
-						if hspd != 0 sprite_index = s_player_flashlight_walk
-						else sprite_index = s_player_flashlight	
+						//if hspd != 0 sprite_index = s_player_flashlight_walk
+						//else sprite_index = s_player_flashlight	
 					}
 					
-					else {
+					else if !game.lootingMoving {
 	
 						if abs(hspd) != 0 {
 							hspd = lerp(hspd,0,0.1)
@@ -150,6 +154,9 @@ switch(states)
 						}
 	
 					}
+					
+					if hspd != 0 sprite_index = s_player_flashlight_walk
+					else sprite_index = s_player_flashlight	
 				break
 			}
 			

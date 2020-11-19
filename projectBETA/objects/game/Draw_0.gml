@@ -1,4 +1,4 @@
-if player.inventory[player.inventoryIndex].item != item.gun {
+if (player.inventory[player.inventoryIndex].item != item.gun or player.states == states.free) {
 	var ID = instance_position(mouse_x,mouse_y,class_grab)
 	var Scale = 0.5
 	if ID > -1 {

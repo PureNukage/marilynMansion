@@ -23,45 +23,39 @@ lootingMoving = false
 function looting() {
 	
 	//	Stop looting
-	if player.inventory[player.inventoryIndex].item == item.gun {
-		states = states.free
-		lootingClampX1 = -1
-		lootingClampX2 = -1
-		lootingClampY1 = -1
-		lootingClampY2 = -1 
-		//lootingID = -1
-	    //lootingMoving = false
-		zoom_level = 1
-		//window_set_cursor(cr_default)
-		exit
-	}
+	//if player.inventory[player.inventoryIndex].item == item.gun {
+	//	states = states.free
+	//	lootingClampX1 = -1
+	//	lootingClampX2 = -1
+	//	lootingClampY1 = -1
+	//	lootingClampY2 = -1 
+	//	//lootingID = -1
+	//    //lootingMoving = false
+	//	zoom_level = 1
+	//	//window_set_cursor(cr_default)
+	//	exit
+	//}
 	
 	//	Lets grab some stuff
-	if player.inventory[player.inventoryIndex].item != item.gun {
-		//window_set_cursor(cr_none)
+	if (player.inventory[player.inventoryIndex].item != item.gun or player.states == states.free) {
 		var old_mask_index = mask_index
 		mask_index = cursor
 		var ID = instance_position(mouse_x,mouse_y,class_grab)
 		if ID > -1 {
-			//window_set_cursor(cr_none)
 			lootingString = object_get_name(ID.object_index)
 			
 			if playerInput.mouseLeftPress {
 				if ID.object_index == candle {
-					//ID.interact(!ID.on)
 					lootingID = ID
 					lootingMoving = true
-					player.states = states.free
 				}
 				else if ID.object_index == door {
 					lootingID = ID
 					lootingMoving = true
-					player.states = states.free
 				}
 			}
 		}
 		else {
-			//window_set_cursor(cr_default)
 			lootingString = ""	
 		}
 		mask_index = old_mask_index

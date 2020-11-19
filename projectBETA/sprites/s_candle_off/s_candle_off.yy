@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "path": "folders/Game/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_candle_off",

@@ -25,14 +25,14 @@ else if states == states.looting looting()
 if instance_exists(player) {
 	if states == states.free {
 		var Lerp = 0.05
-		var xOffset = 0		// 262
+		var xOffset = player.image_xscale*width/4		// 262
 		x = lerp(x, player.x + (player.image_xscale * xOffset), Lerp)
 		y = lerp(y, player.y, Lerp)
 		//x = player.x
 		//y = player.y
 	} else {
 		var Lerp = 0.04
-		x = lerp(x, player.x, Lerp)
+		x = lerp(x, player.x + (player.image_xscale*width/4), Lerp)
 		y = lerp(y, player.y, Lerp)
 		
 		//clampX1 = lootingClampX1
