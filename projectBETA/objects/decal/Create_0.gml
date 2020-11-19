@@ -62,10 +62,10 @@ function applyDecal(instanceID) {
 		
 	instanceID.sprite_index = instanceID.sprite
 	
-	sprite_save(instanceID.sprite_index,0,"decal.png")
+	//sprite_save(instanceID.sprite_index,0,"decal.png")
 	
-	surface_save(surfaceCrop,"decalSurfaceCrop.png")
-	surface_save(Surface,"decalSurface.png")
+	//surface_save(surfaceCrop,"decalSurfaceCrop.png")
+	//surface_save(Surface,"decalSurface.png")
 	
 	surface_free(surface)
 	surface_free(surfaceCrop)
@@ -75,7 +75,7 @@ function applyDecal(instanceID) {
 	
 	sprite_delete(Sprite)
 	
-	sprite_save(bloodSprite,0,"decalBloodSprite.png")
+	//sprite_save(bloodSprite,0,"decalBloodSprite.png")
 	
 	sprite_delete(bloodSprite)
 	

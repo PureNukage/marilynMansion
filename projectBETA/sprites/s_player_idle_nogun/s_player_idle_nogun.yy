@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "player",
-    "path": "folders/Game/Sprites/player.yy",
+    "path": "folders/Sprites/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_player_idle_nogun",

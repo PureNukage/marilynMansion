@@ -355,8 +355,8 @@ function die() {
 		//ID.sprite = Sprite
 		
 		//surface_save(surface, string(b)+".png")
-		surface_save(surfaceCropped, string(b)+"cropped.png")
-		sprite_save(Sprite,0, string(b)+"sprite.png")
+		//surface_save(surfaceCropped, string(b)+"cropped.png")
+		//sprite_save(Sprite,0, string(b)+"sprite.png")
 		//sprite_save(bloodSprite,0, "bloodSprite.png")
 		//surface_save(bloodSurface, "bloodSurface.png")
 		

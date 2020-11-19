@@ -72,7 +72,7 @@
   ],
   "parent": {
     "name": "furniture",
-    "path": "folders/Game/Sprites/furniture.yy",
+    "path": "folders/Sprites/furniture.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_warddrobe_rightdoor",
