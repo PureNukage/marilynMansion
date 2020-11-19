@@ -8,7 +8,8 @@ cursor = -1
 
 Player = {
 	flashlightOn : false,
-	inventoryIndex : 2
+	inventoryIndex : 2,
+	image_xscale : 1
 }
 
 states = states.free
@@ -21,20 +22,6 @@ lootingString = ""
 lootingID = -1
 lootingMoving = false
 function looting() {
-	
-	//	Stop looting
-	//if player.inventory[player.inventoryIndex].item == item.gun {
-	//	states = states.free
-	//	lootingClampX1 = -1
-	//	lootingClampX2 = -1
-	//	lootingClampY1 = -1
-	//	lootingClampY2 = -1 
-	//	//lootingID = -1
-	//    //lootingMoving = false
-	//	zoom_level = 1
-	//	//window_set_cursor(cr_default)
-	//	exit
-	//}
 	
 	//	Lets grab some stuff
 	if (player.inventory[player.inventoryIndex].item != item.gun or player.states == states.free) {
@@ -211,6 +198,9 @@ function change_room(next_room, duration, doorID) {
 	roomChangeBuffer1 = buffer_create(room_width*room_height*4, buffer_grow, 1)
 	roomChangeBuffer2 = buffer_create(room_width*room_height*4, buffer_grow, 1)
 	roomDoorID = doorID
+	
+	//	Player variables
+	game.Player.image_xscale = player.image_xscale
 	
 	//	Take screenshot of current room
 	var surface = surface_create(room_width,room_height)
