@@ -32,7 +32,7 @@ if surface_exists(surface) {
 	
 	//	Flashlight
 	if instance_exists(player) {
-		if player.flashlight and player.states == states.aim {
+		if player.flashlightOn and player.inventory[player.inventoryIndex].item == item.flashlight {
 			var rawDirection = point_direction(player.x + (player.arm0_offsetX*player.image_xscale),player.y+player.arm0_offsetY, player.x + (-3 * player.image_xscale),player.y-33)
 			var rawDist = point_distance(player.x + (player.arm0_offsetX*player.image_xscale),player.y+player.arm0_offsetY, player.x + (-3 * player.image_xscale),player.y-33)
 			if player.image_xscale rawDirection += player.gunRotation

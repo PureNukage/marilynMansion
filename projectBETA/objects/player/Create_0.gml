@@ -5,7 +5,7 @@ input = instance_create_layer(0,0,"Instances",playerInput)
 hspd = 0
 maxSpeed = 3
 
-flashlight = true
+flashlightOn = false
 
 arm0 = s_player_arm_aim
 arm0_offsetX = -12
@@ -21,6 +21,39 @@ bulletArcDraw = -1
 bulletArray = []
 
 groundY = y
+
+inventory[0] = new create_item(item.hand)
+inventory[1] = new create_item(item.gun)
+inventory[2] = new create_item(item.flashlight)
+
+inventoryIndex = 0
+
+function change_inventory(new_index) {
+	var new_item = inventory[new_index].item
+	switch(new_item) {
+		case item.hand:
+			arm0 = -1
+			arm1 = -1
+		break
+		case item.gun:
+			arm0 = s_player_arm_aim
+			arm1 = s_player_arm_support
+		break
+		case item.flashlight:
+			arm0 = s_player_arm_flashlight
+			arm1 = -1
+		break
+	}
+	var e = []
+	e[item.hand] = "hand"
+	e[item.gun] = "gun"
+	e[item.flashlight] = "flashlight"
+	debug.log("changing hand from: "+string_upper(e[inventoryIndex])+" to "+string_upper(e[new_index]))
+	
+	inventoryIndex = new_index
+}
+
+change_inventory(0)
 
 lootingClampX1 = -1
 lootingClampX2 = -1
@@ -176,6 +209,7 @@ function fireGun() {
 	}
 	
 }
+
 
 #region Reticle
 

@@ -6,6 +6,8 @@ if on {
 	
 	draw_set_color(c_yellow)
 	
+	if instance_exists(game) draw_circle(game.x,game.y,16,false)
+	
 	if instance_exists(player) with player {
 		
 		var xx = x+64

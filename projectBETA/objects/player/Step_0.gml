@@ -22,28 +22,67 @@ switch(states)
 	
 			}
 				
+			//	Sprite determination
+			if hspd != 0 {
+				var old_xscale = image_xscale
+				image_xscale = sign(hspd)
+				image_speed = abs(hspd)/maxSpeed
+				switch(inventory[inventoryIndex].item) {
+					case item.hand: sprite_index = s_player_walk_nogun break
+					case item.gun: sprite_index = s_player_walk break
+					case item.flashlight: 
+						sprite_index = s_player_flashlight_walk 
+						if old_xscale != image_xscale {
+							var X = (x + (arm0_offsetX*old_xscale)) + lengthdir_x(50, gunRotation)
+							var Y = y+arm0_offsetY + lengthdir_y(50, gunRotation)
+							var newWidth = abs(X - (x + (arm0_offsetX*old_xscale)))
+							var newX = (x + (arm0_offsetX*image_xscale)) + (image_xscale * newWidth)
+							gunRotation = point_direction((x + (arm0_offsetX*image_xscale)),y+arm0_offsetY, newX,Y)
+							//gunRotation -= 180
+						}
+					break
+				}
+			}
+			else {
+				switch(inventory[inventoryIndex].item) {
+					case item.hand: sprite_index = s_player_idle_nogun break
+					case item.gun: sprite_index = s_player_idle break
+					case item.flashlight: sprite_index = s_player_flashlight break
+				}
+			}
+				
 			//	Aiming
 			if input.mouseRightPress {
 				states = states.aim	
 				reticle.firstCalculate()
-				if !flashlight {
-					sprite_index = s_player_body
+				switch(inventory[inventoryIndex].item) {
+					case item.hand:
+						sprite_index = s_player_idle_nogun
+					break
+					case item.gun:
+						sprite_index = s_player_body
+					break
+					case item.flashlight:
+						sprite_index = s_player_flashlight
+					break
 				}
 			}
 			else {
 				reticle.radiusSpeed = 0.5	
 			}
 			
+			//	Flashlight
+			if input.mouseLeftPress and inventory[inventoryIndex].item == item.flashlight {
+				flashlightOn = !flashlightOn
+			}
+			
 			//	Looting
 			if game.lootingMoving lootMoving()
 			
-			//	Flashlight
-			if input.keyFlashlight and !flashlight{
-				flashlight = true
-			}
-			else if input.keyFlashlight and flashlight {
-				flashlight = false	
-			}
+			//	Change hand slots
+			if input.keyLeftHand change_inventory(0)
+			else if input.keyRightHand change_inventory(1)
+			else if input.keyBothHand change_inventory(2)
 			
 			////	Collision Checking
 			if xx != 0 {
@@ -64,7 +103,7 @@ switch(states)
 	#region Aim
 		case states.aim:
 			
-			gunRotation = point_direction(x,y, mouse_x,mouse_y)
+			gunRotation = point_direction(x+arm0_offsetX,y+arm0_offsetY, mouse_x,mouse_y)
 			
 			//	Stop aiming
 			if input.mouseRightRelease {
@@ -72,45 +111,47 @@ switch(states)
 				window_set_cursor(cr_default)
 			}
 			
-			if flashlight and (input.keyRight or input.keyLeft) {
-				hspd += input.keyRight - input.keyLeft
+			switch(inventory[inventoryIndex].item) {
+				case item.hand:
 				
-				var flashlightClamp = 0
-				if (image_xscale and hspd < 0) or (image_xscale == -1 and hspd > 0) {
-					flashlightClamp = maxSpeed
-				}
-	
-				hspd = clamp(hspd,-(maxSpeed-flashlightClamp),maxSpeed-flashlightClamp)
-	
-				xx += hspd
+				break
+				case item.gun:
+					if arm0 == s_player_arm_aim_fire arm0 = s_player_arm_aim	
+				break
+				case item.flashlight:
+					if input.keyRight or input.keyLeft {
+						hspd += input.keyRight - input.keyLeft
 				
-				if hspd != 0 sprite_index = s_player_flashlight_walk
-				else sprite_index = s_player_flashlight
-			}
-				
-			else if flashlight {
+						var flashlightClamp = 0
+						if (image_xscale and hspd < 0) or (image_xscale == -1 and hspd > 0) {
+							flashlightClamp = maxSpeed
+						}
 	
-				if abs(hspd) != 0 {
-					hspd = lerp(hspd,0,0.1)
-		
-					if abs(hspd) - maxSpeed < 0.5 hspd = 0
-		
-					xx += hspd		
+						hspd = clamp(hspd,-(maxSpeed-flashlightClamp),maxSpeed-flashlightClamp)
+	
+						xx += hspd
+				
+						if hspd != 0 sprite_index = s_player_flashlight_walk
+						else sprite_index = s_player_flashlight	
+					}
 					
-					sprite_index = s_player_flashlight_walk
-				}
-				else {
-					sprite_index = s_player_flashlight	
-				}
+					else {
 	
-			}
-				
-			if !flashlight {
-				arm0 = s_player_arm_aim
-				arm1 = s_player_arm_support
-			} else {
-				arm0 = s_player_arm_flashlight
-				arm1 = -1
+						if abs(hspd) != 0 {
+							hspd = lerp(hspd,0,0.1)
+		
+							if abs(hspd) - maxSpeed < 0.5 hspd = 0
+		
+							xx += hspd		
+					
+							sprite_index = s_player_flashlight_walk
+						}
+						else {
+							sprite_index = s_player_flashlight	
+						}
+	
+					}
+				break
 			}
 			
 			////	Collision Checking
@@ -126,8 +167,9 @@ switch(states)
 	
 			}
 			
-			//	Shoot gun
-			if !flashlight and input.mouseLeftPress {
+			//	Use item in hand
+			if input.mouseLeftPress {
+				if inventory[inventoryIndex].item == item.gun {
 				var array = fireGun()
 				arm0 = s_player_arm_aim_fire
 				reticle.radius += 32
@@ -205,10 +247,12 @@ switch(states)
 					show_debug_message("hit object "+object_get_name(array[0].object_index))
 					show_debug_message(string(array[1]))
 					show_debug_message(string(array[2]))
+				}	
+				}
+				else if inventory[inventoryIndex].item == item.flashlight {
+					//flashlightOn = !flashlightOn
 				}
 			}
-			
-			
 			
 		break
 	#endregion

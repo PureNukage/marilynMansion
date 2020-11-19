@@ -16,7 +16,7 @@ lootingMoving = false
 function looting() {
 	
 	//	Stop looting
-	if playerInput.keyLoot {
+	if player.states != states.aim {
 		states = states.free
 		lootingClampX1 = -1
 		lootingClampX2 = -1
@@ -29,21 +29,34 @@ function looting() {
 		exit
 	}
 	
+	//	Update the clamp to account for the player moving
+	//var extraX1 = 0
+	//var extraX2 = 0
+	//extraX1 = -width
+	//extraX2 = width
+	//lootingClampX1 = player.x - width/2 + extraX1
+	//lootingClampX2 = player.x + width/2 + extraX2
+	//lootingClampY1 = player.y - height/2
+	//lootingClampY2 = player.y + height/2
+	
 	//	Lets grab some stuff
-	var ID = instance_position(mouse_x,mouse_y,class_grab)
-	if ID > -1 {
-		window_set_cursor(cr_none)
-		lootingString = object_get_name(ID.object_index)
+	if player.inventory[player.inventoryIndex].item != item.gun {
+		var ID = instance_position(mouse_x,mouse_y,class_grab)
+		if ID > -1 {
+			window_set_cursor(cr_none)
+			lootingString = object_get_name(ID.object_index)
 				
-		if playerInput.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
-			//ID.interact(!ID.on)
-			lootingID = ID
-			lootingMoving = true
+			if playerInput.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
+				//ID.interact(!ID.on)
+				lootingID = ID
+				lootingMoving = true
+				player.states = states.free
+			}
 		}
-	}
-	else {
-		window_set_cursor(cr_default)
-		lootingString = ""	
+		else {
+			window_set_cursor(cr_default)
+			lootingString = ""	
+		}
 	}
 	
 }
@@ -112,10 +125,6 @@ function cameraSetup() {
 
 		default_zoom_width = camera_get_view_width(camera)
 		default_zoom_height = camera_get_view_height(camera)
-		
-		dragging = false
-		anchorX = -1
-		anchorY = -1
 
 }
 	

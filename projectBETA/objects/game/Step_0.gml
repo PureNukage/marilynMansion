@@ -6,13 +6,17 @@ var clampY1 = 0
 var clampY2 = room_height
 
 //	Looting
-if playerInput.keyLoot and states == states.free {
+if (player.states == states.aim) and states == states.free {
 	states = states.looting
 	lootingClampX1 = camera_get_view_x(camera)
 	lootingClampX2 = camera_get_view_x(camera) + camera_get_view_width(camera)
 	lootingClampY1 = camera_get_view_y(camera)
 	lootingClampY2 = camera_get_view_y(camera) + camera_get_view_height(camera)
-	zoom_level = 0.7
+	
+	lootingClampX1 += -width
+	lootingClampX2 += width
+	
+	zoom_level = 1
 }
 else if states == states.looting looting()
 
@@ -26,14 +30,13 @@ if instance_exists(player) {
 		//y = player.y
 	} else {
 		var Lerp = 0.04
-		if point_distance(x,y, mouse_x,mouse_y) >= 50 {
-			//x = lerp(x, mouse_x, Lerp)
-			//	y = lerp(y, mouse_y, Lerp)
-			clampX1 = lootingClampX1
-			clampX2 = lootingClampX2
-			clampY1 = lootingClampY1
-			clampY2 = lootingClampY2
-		}
+		x = lerp(x, player.x, Lerp)
+		y = lerp(y, player.y, Lerp)
+		
+		clampX1 = lootingClampX1
+		clampX2 = lootingClampX2
+		clampY1 = lootingClampY1
+		clampY2 = lootingClampY2
 	}
 }
 
@@ -57,31 +60,6 @@ if new_w & 1 {
 }
 if new_h & 1 {
 	new_h++	
-}
-
-//	Middle Mouse Drag
-if instance_exists(player) and states == states.looting {
-	if playerInput.mouseMiddlePress and anchorX == -1 and !dragging {
-		dragging = true
-		anchorX = mouse_x
-		anchorY = mouse_y
-	} 
-	if playerInput.mouseMiddle and dragging {
-		var new_xview = camera_get_view_x(camera) + anchorX - mouse_x
-		var new_yview = camera_get_view_y(camera) + anchorY - mouse_y
-		new_xview = clamp(new_xview, clampX1, clampX2 - camera_get_view_width(camera))
-		new_yview = clamp(new_yview, clampY1, clampY2-(camera_get_view_height(camera)))
-		camera_set_view_pos(camera,new_xview,new_yview)
-		var edgeX = camera_get_view_x(camera)+camera_get_view_width(camera)/2
-		var edgeY = camera_get_view_y(camera)+camera_get_view_height(camera)/2
-		x = edgeX
-		y = edgeY
-	}
-	if playerInput.mouseMiddleRelease and anchorX > -1 {
-		dragging = false
-		anchorX = -1
-		anchorY = -1
-	}
 }
 
 camera_set_view_size(camera, new_w, new_h)

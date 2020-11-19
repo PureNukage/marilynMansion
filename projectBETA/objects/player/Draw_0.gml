@@ -1,22 +1,17 @@
 switch(states)
 {
 	#region Free
-		case states.free: 
-
-			draw_self()
-
-			if abs(hspd) > 0 {
-				image_xscale = sign(hspd)
-	
-				image_speed = abs(hspd)/maxSpeed
-	
-				if !flashlight sprite_index = s_player_walk
-				else sprite_index = s_player_walk_nogun
-			} 
-
+		case states.free:
+			
+			if inventory[inventoryIndex].item == item.flashlight {
+				if arm1 > -1 draw_sprite_ext(arm1,0,x + (arm1_offsetX*image_xscale), y + arm1_offsetY, image_xscale,1,gunRotation+gunRotation,c_white,1)
+			
+				draw_self()
+			
+				if arm0 > -1 draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
+			}
 			else {
-				if !flashlight sprite_index = s_player_idle	
-				else sprite_index = s_player_idle_nogun
+				draw_self()	
 			}
 		
 		break
@@ -33,12 +28,16 @@ switch(states)
 			
 			if arm0 > -1 draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
 			
-			window_set_cursor(cr_none)
+			if inventory[inventoryIndex].item == item.gun {
 			
-			draw_set_color(c_black)
-			draw_circle(mouse_x,mouse_y,reticle.radius,true)	
+				window_set_cursor(cr_none)
 			
-			reticle.aimIncreasing()
+				draw_set_color(c_black)
+				draw_circle(mouse_x,mouse_y,reticle.radius,true)	
+			
+				reticle.aimIncreasing()
+				
+			}
 		
 		break	
 	#endregion

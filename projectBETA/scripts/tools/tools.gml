@@ -78,3 +78,7 @@ function create_surface(width, height) {
 	surface_reset_target()
 	return surface
 }
+	
+function create_item(item_index) constructor {
+	item = item_index
+}
