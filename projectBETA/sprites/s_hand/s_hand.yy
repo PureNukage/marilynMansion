@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "hands",
-    "path": "folders/Sprites/hands.yy",
+    "path": "folders/Game/Sprites/hands.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_hand",

@@ -3,6 +3,10 @@ switch(states)
 	#region Free 
 		case states.free:
 			if input.keyRight or input.keyLeft {
+				if game.lootingMoving {
+					game.lootingMoving = false
+					game.lootingID = -1
+				}
 				hspd += input.keyRight - input.keyLeft
 	
 				hspd = clamp(hspd,-maxSpeed,maxSpeed)

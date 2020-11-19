@@ -8,9 +8,9 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 61,
-  "bbox_right": 226,
-  "bbox_top": 30,
-  "bbox_bottom": 126,
+  "bbox_right": 239,
+  "bbox_top": 21,
+  "bbox_bottom": 167,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1d63364e-0e71-42ee-aeae-0a222b5e3832","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1d63364e-0e71-42ee-aeae-0a222b5e3832","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"LayerId":{"name":"570aa04a-6000-48ab-a9fb-fcad0644899c","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_tutorial_blood_flashlight","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","name":"1d63364e-0e71-42ee-aeae-0a222b5e3832","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"05005d7b-776d-4796-a737-157923652570","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"05005d7b-776d-4796-a737-157923652570","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"LayerId":{"name":"a7bdef77-b2a0-4ef0-8dfb-6385b77d87d6","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_tutorial_blood_flashlight","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","name":"05005d7b-776d-4796-a737-157923652570","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_tutorial_blood_flashlight","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5e7bcf6d-987e-4642-96f9-1a4205a2362b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1d63364e-0e71-42ee-aeae-0a222b5e3832","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"14fbb771-b299-41e1-b6d8-d53c899bd267","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05005d7b-776d-4796-a737-157923652570","path":"sprites/s_tutorial_blood_flashlight/s_tutorial_blood_flashlight.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,11 +65,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"570aa04a-6000-48ab-a9fb-fcad0644899c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a7bdef77-b2a0-4ef0-8dfb-6385b77d87d6","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",
-    "path": "folders/Game/Sprites.yy",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_tutorial_blood_flashlight",

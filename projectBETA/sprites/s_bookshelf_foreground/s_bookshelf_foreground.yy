@@ -75,7 +75,7 @@
   ],
   "parent": {
     "name": "furniture",
-    "path": "folders/Sprites/furniture.yy",
+    "path": "folders/Game/Sprites/furniture.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_bookshelf_foreground",

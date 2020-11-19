@@ -97,7 +97,7 @@
   ],
   "parent": {
     "name": "zombie",
-    "path": "folders/Sprites/zombie.yy",
+    "path": "folders/Game/Sprites/zombie.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_zombie_walk",

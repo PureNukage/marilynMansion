@@ -71,7 +71,7 @@
   ],
   "parent": {
     "name": "Sprites",
-    "path": "folders/Game/Sprites.yy",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_lock",

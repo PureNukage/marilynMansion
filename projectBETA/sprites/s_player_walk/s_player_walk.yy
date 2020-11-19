@@ -101,7 +101,7 @@
   ],
   "parent": {
     "name": "player",
-    "path": "folders/Sprites/player.yy",
+    "path": "folders/Game/Sprites/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_player_walk",
