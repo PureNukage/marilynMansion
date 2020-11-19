@@ -21,6 +21,15 @@ if surface_exists(surface) {
 	draw_rectangle(0,0,room_width,room_height,false)
 	draw_rectangle(0,0,room_width,room_height,false)
 	
+	//	Prep body surface if the flashlight is on
+	if instance_exists(player) and player.flashlightOn and player.inventory[player.inventoryIndex].item == item.flashlight {
+		//var playerSurface = create_surface(player.sprite_width,player.sprite_height)
+		//surface_set_target(playerSurface)
+		//var originX = sprite_get_xoffset(player.sprite_index)
+		//var originY = sprite_get_yoffset(player.sprite_index)
+		//draw_sprite_ext(player.sprite_index,player.image_xscale,originX,originY,player.image_xscale,player.image_yscale,player.image_angle,c_white,1)
+	}
+	
 	gpu_set_blendmode(bm_subtract)
 	if instance_exists(class_light) with class_light {
 		var scatterX = irandom_range(-5,5)
@@ -40,6 +49,14 @@ if surface_exists(surface) {
 			var X = player.x + (player.arm0_offsetX*player.image_xscale) + lengthdir_x(rawDist, rawDirection)
 			var Y = player.y+player.arm0_offsetY + lengthdir_y(rawDist, rawDirection)
 			draw_sprite_ext(s_light_flashlight,0,X,Y,1,1,player.gunRotation,c_black,0.5)	
+			
+			//	Lighten the players body sprite
+			var Scale = 0.25
+			X += lengthdir_x(8, player.gunRotation)
+			Y += lengthdir_y(8, player.gunRotation)
+			//draw_sprite_ext(player.sprite_index,player.image_index,player.x,player.y,player.image_xscale,player.image_yscale,player.image_angle,c_black,0.5)
+			draw_sprite_ext(s_light_gradient,0,X,Y,Scale,Scale,0,c_black,0.5)
+			
 			//debug.log("FLASHLIGHT DEBUG player.gunRotation: "+string(player.gunRotation))
 		}
 	}
