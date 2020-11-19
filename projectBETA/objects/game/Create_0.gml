@@ -8,7 +8,7 @@ cursor = -1
 
 Player = {
 	flashlightOn : false,
-	inventoryIndex : 2,
+	inventoryIndex : 0,
 	image_xscale : 1
 }
 
