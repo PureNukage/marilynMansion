@@ -1,5 +1,5 @@
 if background {
-	depth = 200
+	depth = 101
 }
 else {
 	depth = -100	

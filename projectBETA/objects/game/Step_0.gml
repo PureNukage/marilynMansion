@@ -1,12 +1,14 @@
 if roomChangeStage > -1 __change_room()
 
+if !audio_is_playing(snd_wind) sound.playSoundEffect(snd_wind)
+
 var clampX1 = 0
 var clampX2 = room_width
 var clampY1 = 0
 var clampY2 = room_height
 
 //	Looting
-if (player.states == states.aim) and states == states.free {
+if (player.inventory[player.inventoryIndex].item != item.gun) and states == states.free {
 	states = states.looting
 	lootingClampX1 = camera_get_view_x(camera)
 	lootingClampX2 = camera_get_view_x(camera) + camera_get_view_width(camera)
@@ -33,10 +35,10 @@ if instance_exists(player) {
 		x = lerp(x, player.x, Lerp)
 		y = lerp(y, player.y, Lerp)
 		
-		clampX1 = lootingClampX1
-		clampX2 = lootingClampX2
-		clampY1 = lootingClampY1
-		clampY2 = lootingClampY2
+		//clampX1 = lootingClampX1
+		//clampX2 = lootingClampX2
+		//clampY1 = lootingClampY1
+		//clampY2 = lootingClampY2
 	}
 }
 

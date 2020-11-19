@@ -5,7 +5,7 @@ input = instance_create_layer(0,0,"Instances",playerInput)
 hspd = 0
 maxSpeed = 3
 
-flashlightOn = false
+flashlightOn = game.Player.flashlightOn
 
 arm0 = s_player_arm_aim
 arm0_offsetX = -12
@@ -51,9 +51,11 @@ function change_inventory(new_index) {
 	debug.log("changing hand from: "+string_upper(e[inventoryIndex])+" to "+string_upper(e[new_index]))
 	
 	inventoryIndex = new_index
+	
+	game.Player.inventoryIndex = inventoryIndex
 }
 
-change_inventory(0)
+change_inventory(game.Player.inventoryIndex)
 
 lootingClampX1 = -1
 lootingClampX2 = -1
@@ -73,11 +75,17 @@ function lootMoving() {
 	if game.lootingMoving {
 				
 		//	Arrived at goal
-		if point_distance(x,y, game.lootingID.x,game.lootingID.y) < 20 {
+		if abs(x - game.lootingID.x) < 20 {
 			game.lootingMoving = false
 					
-			if game.lootingID.object_index == candle
-			game.lootingID.interact(!game.lootingID.on)
+			if game.lootingID.object_index == candle {
+				game.lootingID.interact(!game.lootingID.on)
+			
+				//	Sound
+				if game.lootingID.on sound.playSoundEffect(snd_fire)
+				else sound.playSoundEffect(snd_woosh)
+			 	
+			}
 					
 			game.lootingID = -1
 		}

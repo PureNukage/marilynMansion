@@ -2,6 +2,6 @@ x -= 1
 
 image_xscale = -1
 
-//if hp <= 0 {
-//	die()	
-//}
+if !place_meeting(x,y-32,block) onGround = false
+
+if !onGround applyThrust()

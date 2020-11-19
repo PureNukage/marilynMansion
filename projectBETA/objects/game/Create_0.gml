@@ -4,6 +4,13 @@ function scale_canvas(width, height) {
 
 depth = -300
 
+cursor = -1
+
+Player = {
+	flashlightOn : false,
+	inventoryIndex : 2
+}
+
 states = states.free
 
 lootingClampX1 = -1
@@ -16,7 +23,7 @@ lootingMoving = false
 function looting() {
 	
 	//	Stop looting
-	if player.states != states.aim {
+	if player.inventory[player.inventoryIndex].item == item.gun {
 		states = states.free
 		lootingClampX1 = -1
 		lootingClampX2 = -1
@@ -25,25 +32,18 @@ function looting() {
 		//lootingID = -1
 	    //lootingMoving = false
 		zoom_level = 1
-		window_set_cursor(cr_default)
+		//window_set_cursor(cr_default)
 		exit
 	}
 	
-	//	Update the clamp to account for the player moving
-	//var extraX1 = 0
-	//var extraX2 = 0
-	//extraX1 = -width
-	//extraX2 = width
-	//lootingClampX1 = player.x - width/2 + extraX1
-	//lootingClampX2 = player.x + width/2 + extraX2
-	//lootingClampY1 = player.y - height/2
-	//lootingClampY2 = player.y + height/2
-	
 	//	Lets grab some stuff
 	if player.inventory[player.inventoryIndex].item != item.gun {
+		//window_set_cursor(cr_none)
+		var old_mask_index = mask_index
+		mask_index = cursor
 		var ID = instance_position(mouse_x,mouse_y,class_grab)
 		if ID > -1 {
-			window_set_cursor(cr_none)
+			//window_set_cursor(cr_none)
 			lootingString = object_get_name(ID.object_index)
 				
 			if playerInput.mouseLeftPress and ID.object_index == candle and lootingID == -1 {
@@ -54,9 +54,10 @@ function looting() {
 			}
 		}
 		else {
-			window_set_cursor(cr_default)
+			//window_set_cursor(cr_default)
 			lootingString = ""	
 		}
+		mask_index = old_mask_index
 	}
 	
 }

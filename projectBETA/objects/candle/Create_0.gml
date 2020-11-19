@@ -3,7 +3,7 @@ event_inherited()
 on = false
 light = -1
 
-depth = 200
+depth = 100
 
 function interact(on_or_off) {
 	//	On

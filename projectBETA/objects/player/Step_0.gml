@@ -30,17 +30,14 @@ switch(states)
 				switch(inventory[inventoryIndex].item) {
 					case item.hand: sprite_index = s_player_walk_nogun break
 					case item.gun: sprite_index = s_player_walk break
-					case item.flashlight: 
-						sprite_index = s_player_flashlight_walk 
-						if old_xscale != image_xscale {
-							var X = (x + (arm0_offsetX*old_xscale)) + lengthdir_x(50, gunRotation)
-							var Y = y+arm0_offsetY + lengthdir_y(50, gunRotation)
-							var newWidth = abs(X - (x + (arm0_offsetX*old_xscale)))
-							var newX = (x + (arm0_offsetX*image_xscale)) + (image_xscale * newWidth)
-							gunRotation = point_direction((x + (arm0_offsetX*image_xscale)),y+arm0_offsetY, newX,Y)
-							//gunRotation -= 180
-						}
-					break
+					case item.flashlight: sprite_index = s_player_flashlight_walk break
+				}
+				if old_xscale != image_xscale {
+					var X = (x + (arm0_offsetX*old_xscale)) + lengthdir_x(50, gunRotation)
+					var Y = y+arm0_offsetY + lengthdir_y(50, gunRotation)
+					var newWidth = abs(X - (x + (arm0_offsetX*old_xscale)))
+					var newX = (x + (arm0_offsetX*image_xscale)) + (image_xscale * newWidth)
+					gunRotation = point_direction((x + (arm0_offsetX*image_xscale)),y+arm0_offsetY, newX,Y)
 				}
 			}
 			else {
@@ -72,8 +69,10 @@ switch(states)
 			}
 			
 			//	Flashlight
-			if input.mouseLeftPress and inventory[inventoryIndex].item == item.flashlight {
+			if input.keyFlashlight and inventory[inventoryIndex].item == item.flashlight {
 				flashlightOn = !flashlightOn
+				game.Player.flashlightOn = flashlightOn
+				sound.playSoundEffect(snd_click)
 			}
 			
 			//	Looting

@@ -25,7 +25,7 @@ if surface_exists(surface) {
 	if instance_exists(class_light) with class_light {
 		var scatterX = irandom_range(-5,5)
 		var scatterY = irandom_range(-5,5)
-		draw_sprite_ext(sprite_index,0,x+scatterX,y+scatterY,image_xscale,image_yscale,image_angle,c_black,brightness)
+		draw_sprite_ext(sprite_index,0,x+scatterX,y+scatterY,1.5,1.5,image_angle,c_black,brightness)
 		//draw_set_alpha(brightness)
 		//draw_circle(x+scatterX,y+scatterY,128,false)
 	}
