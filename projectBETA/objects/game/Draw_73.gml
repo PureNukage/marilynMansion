@@ -10,7 +10,7 @@ if roomChangeStage > -1 {
 		surface_set_target(surface)
 		draw_clear_alpha(c_black, 0)
 		surface_reset_target()
-		buffer_set_surface(roomChangeBuffer2, surface, 0,0,0)
+		buffer_set_surface(roomChangeBuffer2, surface, 0)
 		
 		//var sizeRatio = 0 + (roomTime / roomDuration)
 		var sizeAlpha = (roomTime / roomDuration)
@@ -29,7 +29,7 @@ if roomChangeStage > -1 {
 		draw_clear_alpha(c_black, 0)
 		surface_reset_target()
 		
-		buffer_set_surface(roomChangeBuffer1, surface, 0,0,0)
+		buffer_set_surface(roomChangeBuffer1, surface, 0)
 	
 		//var sizeRatio = 1 + (roomTime / roomDuration)
 		var sizeAlpha = 1 - (roomTime / roomDuration)

@@ -159,7 +159,7 @@ function __change_room() {
 				//draw_surface(application_surface, 0,0)
 				surface_reset_target()
 			
-				buffer_get_surface(roomChangeBuffer2, surface, 0,0,0)
+				buffer_get_surface(roomChangeBuffer2, surface, 0)
 			
 				surface_free(surface)
 			
@@ -215,7 +215,7 @@ function change_room(next_room, duration, doorID) {
 	//draw_surface(application_surface, 0,0)
 	surface_reset_target()
 			
-	buffer_get_surface(roomChangeBuffer1, surface, 0,0,0)
+	buffer_get_surface(roomChangeBuffer1, surface, 0)
 			
 	surface_free(surface)
 	
