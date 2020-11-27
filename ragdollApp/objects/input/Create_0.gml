@@ -9,3 +9,5 @@ mouseRight = mouse_check_button(mb_right)
 debugToggle = keyboard_check_pressed(vk_control)
 
 spawnZombie = keyboard_check(ord("Z"))
+
+keyWind = keyboard_check(ord("W"))

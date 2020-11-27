@@ -1,3 +1,8 @@
+if wind {
+	draw_set_color(c_yellow)
+	draw_circle(mouse_x,mouse_y,windRadius,true)	
+}
+
 if on {
 	
 	if selectedBodypart > -1 {

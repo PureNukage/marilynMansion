@@ -4,6 +4,11 @@ if input.debugToggle {
 	//physics_pause_enable(on)
 }
 
+if input.keyWind and input.mouseLeft {
+	wind = true
+}
+else if wind wind = false
+
 
 //	Select a bodypart
 if on {

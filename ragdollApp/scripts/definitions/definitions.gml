@@ -3,6 +3,12 @@
 
 #macro animation_end (image_index > image_number - 1)
 
+enum state {
+	idle,
+	free,
+	walk
+}
+
 #macro bodyparts_enum 0
 #macro bodyparts_id 1
 #macro bodyparts_struct 2

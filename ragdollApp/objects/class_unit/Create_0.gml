@@ -7,8 +7,34 @@ hp = hpMax
 maxSpeed = 0
 onGround = true
 groundY = y
-states = -1
-bodyparts = -1
+
+function setThrust(amount) {
+	thrust = amount
+	onGround = false
+}
+
+function applyThrust() {
+	
+	//	Going up
+	if thrust > 0 {
+		y -= thrust
+		thrust--
+	}
+	//	Going down
+	else {
+		if !place_meeting(x,y-thrust,block) {
+			y -= thrust
+			thrust--
+		}
+		//	Landed
+		else {
+			onGround = true
+			thrust = 0
+			groundY = y
+		}
+	}
+	
+}
 
 function create_bodypart_struct(_sprite, _fix_density, _fix_friction, _fix_angle, _min_angle, 
 _max_angle, _angle, _bind) constructor {

@@ -1,5 +1,12 @@
 event_inherited()
 
+state = state.idle
+timer = irandom_range(90,180)
+goalX = -1
+maxSpeed = 1
+
+image_index = irandom_range(0,image_number)
+
 //	Create bodyparts for zombie
 for(var b=0;b<12;b++) {
 	switch(b) {
@@ -15,12 +22,12 @@ for(var b=0;b<12;b++) {
 		break
 		//	Front Arm Upper
 		case 2:
-			var struct = new create_bodypart_struct(s_zombie_front_arm_upper, 5,5, 0,-20,20, true,0)
+			var struct = new create_bodypart_struct(s_zombie_front_arm_upper, 5,5, 0,-90,90, true,0)
 			create_bodypart(b, bodypart.front_arm_upper, -1, struct)
 		break
 		//	Front Arm Lower
 		case 3:
-			var struct = new create_bodypart_struct(s_zombie_front_arm_lower, 5,5, 0,-20,20, true,2)
+			var struct = new create_bodypart_struct(s_zombie_front_arm_lower, 5,5, 0,-45,45, true,2)
 			create_bodypart(b, bodypart.front_arm_lower, -1, struct)
 		break
 		//	Front Arm Hand
@@ -30,12 +37,12 @@ for(var b=0;b<12;b++) {
 		break
 		//	Back Arm Upper
 		case 5:
-			var struct = new create_bodypart_struct(s_zombie_back_arm_upper, 5,5, 0,-20,20, true,0)
+			var struct = new create_bodypart_struct(s_zombie_back_arm_upper, 5,5, 0,-90,90, true,0)
 			create_bodypart(b, bodypart.back_arm_upper, -1, struct)
 		break
 		//	Back Arm Lower
 		case 6:
-			var struct = new create_bodypart_struct(s_zombie_back_arm_lower, 5,5, 0,-20,20, true,5)
+			var struct = new create_bodypart_struct(s_zombie_back_arm_lower, 5,5, 0,-45,45, true,5)
 			create_bodypart(b, bodypart.back_arm_lower, -1, struct)
 		break
 		//	Back Arm Hand

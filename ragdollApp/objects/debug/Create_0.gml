@@ -5,6 +5,9 @@ selectedBodypart = -1
 physics_on = false
 phy_fix_on = false
 
+wind = false
+windRadius = 32
+
 function log(String) {
 	
 	var Time = "[" + string(time.stream) + "] "

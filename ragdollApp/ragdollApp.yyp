@@ -163,6 +163,7 @@
     {"folderPath":"folders/Art/zombie.yy","order":0,"resourceVersion":"1.0","name":"zombie","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Art/zombie/idle.yy","order":1,"resourceVersion":"1.0","name":"idle","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Art/zombie/walk.yy","order":2,"resourceVersion":"1.0","name":"walk","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Game/package.yy","order":11,"resourceVersion":"1.0","name":"package","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
