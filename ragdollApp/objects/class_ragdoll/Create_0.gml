@@ -10,15 +10,11 @@ function spawn_ragdoll() {
 		var BodyPartFixture = bodyparts[b][bodyparts_fixture]
 				
 		var sprite = BodyStruct.sprite
-		var fix_width = BodyStruct.fix_width
-		var fix_height = BodyStruct.fix_height
-		var fix_offsetX = BodyStruct.fix_offsetX
-		var fix_offsetY = BodyStruct.fix_offsetY
 		var fix_density = BodyStruct.fix_density
 		var fix_friction = BodyStruct.fix_friction
 		var fix_angle = BodyStruct.fix_angle
 		var min_angle = BodyStruct.min_angle
-		var max_angle = BodyStruct.max_angle
+		var max_angle = BodyStruct.max_angle 
 		var angle = BodyStruct.angle
 		var bind = BodyStruct.bind
 				
@@ -50,18 +46,20 @@ function spawn_ragdoll() {
 					
 			physics_fixture_set_density(fixture, fix_density)
 			physics_fixture_set_friction(fixture, fix_friction)
-			if BodyPartEnum != bodypart.front_leg_lower and BodyPartEnum != bodypart.back_leg_lower {
-				physics_fixture_set_polygon_shape(fixture)
-				physics_fixture_add_point(fixture, -fix_width/2, -fix_height/2)
-				physics_fixture_add_point(fixture, fix_width/2, -fix_height/2)
-				physics_fixture_add_point(fixture, fix_width/2, fix_height/2)
-				physics_fixture_add_point(fixture, -fix_width/2, fix_height/2)
-			} else {
-				physics_fixture_set_circle_shape(fixture, 8)
-			}
-			//physics_fixture_set_collision_group(fixture, instance_number(zombieRagdoll)*-1)
+
+			physics_fixture_set_polygon_shape(fixture)
+			var x1 = -(x - bbox_left)
+			var y1 = -(y - bbox_top)
+			var x2 = (x - bbox_right)*-1
+			var y2 = (y - bbox_bottom)*-1
+			physics_fixture_add_point(fixture, x1, y1)
+			physics_fixture_add_point(fixture, x2, y1)
+			physics_fixture_add_point(fixture, x2, y2)
+			physics_fixture_add_point(fixture, x1, y2)
+
+			physics_fixture_set_collision_group(fixture, instance_number(class_ragdoll)*-1)
 					
-			physics_fixture_bind_ext(fixture, id, -fix_offsetX * image_xscale, -fix_offsetY)
+			physics_fixture_bind_ext(fixture, id, 0, 0)
 					
 			//debug.log(string(instance_number(class_ragdoll)*-1))
 					

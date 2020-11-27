@@ -3,64 +3,64 @@ event_inherited()
 //	Create bodyparts for zombie
 for(var b=0;b<12;b++) {
 	switch(b) {
-		//	Head
-		case 0:
-			var struct = new create_bodypart_struct(s_zombie_head, 5,5, 0,0, 5,5, 0,0,0, 0,1)
-			create_bodypart(b, bodypart.head, -1, struct)
-		break
 		//	Torso
-		case 1:
-			var struct = new create_bodypart_struct(s_zombie_torso, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+		case 0:
+			var struct = new create_bodypart_struct(s_zombie_torso, 5,5, 0,-1,-1, 0,-1)
 			create_bodypart(b, bodypart.torso, -1, struct)
+		break
+		//	Head
+		case 1:
+			var struct = new create_bodypart_struct(s_zombie_head, 5,5, 0,-20,20, true,0)
+			create_bodypart(b, bodypart.head, -1, struct)
 		break
 		//	Front Arm Upper
 		case 2:
-			var struct = new create_bodypart_struct(s_zombie_front_arm_upper, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_front_arm_upper, 5,5, 0,-20,20, true,0)
 			create_bodypart(b, bodypart.front_arm_upper, -1, struct)
 		break
 		//	Front Arm Lower
 		case 3:
-			var struct = new create_bodypart_struct(s_zombie_front_arm_lower, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_front_arm_lower, 5,5, 0,-20,20, true,2)
 			create_bodypart(b, bodypart.front_arm_lower, -1, struct)
 		break
 		//	Front Arm Hand
 		case 4:
-			var struct = new create_bodypart_struct(s_zombie_front_arm_hand, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_front_arm_hand, 5,5, 0,-20,20, true,3)
 			create_bodypart(b, bodypart.front_arm_hand, -1, struct)
 		break
 		//	Back Arm Upper
 		case 5:
-			var struct = new create_bodypart_struct(s_zombie_back_arm_upper, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_back_arm_upper, 5,5, 0,-20,20, true,0)
 			create_bodypart(b, bodypart.back_arm_upper, -1, struct)
 		break
 		//	Back Arm Lower
 		case 6:
-			var struct = new create_bodypart_struct(s_zombie_back_arm_lower, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_back_arm_lower, 5,5, 0,-20,20, true,5)
 			create_bodypart(b, bodypart.back_arm_lower, -1, struct)
 		break
 		//	Back Arm Hand
 		case 7:
-			var struct = new create_bodypart_struct(s_zombie_back_arm_hand, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_back_arm_hand, 5,5, 0,-20,20, true,6)
 			create_bodypart(b, bodypart.back_arm_hand, -1, struct)
 		break
 		//	Front Leg Upper
 		case 8:
-			var struct = new create_bodypart_struct(s_zombie_front_leg_upper, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_front_leg_upper, 5,5, 0,-20,20, true,0)
 			create_bodypart(b, bodypart.front_leg_upper, -1, struct)
 		break
 		//	Front Leg Lower
 		case 9:
-			var struct = new create_bodypart_struct(s_zombie_front_leg_lower, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_front_leg_lower, 5,5, 0,-20,20, true,8)
 			create_bodypart(b, bodypart.front_leg_lower, -1, struct)
 		break
 		//	Back Leg Upper
 		case 10:
-			var struct = new create_bodypart_struct(s_zombie_back_leg_upper, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_back_leg_upper, 5,5, 0,-20,20, true,0)
 			create_bodypart(b, bodypart.back_leg_upper, -1, struct)
 		break
 		//	Back Leg Lower
 		case 11:
-			var struct = new create_bodypart_struct(s_zombie_back_leg_lower, 5,5, 0,0, 5,5, 0,0,0, 0,-1)
+			var struct = new create_bodypart_struct(s_zombie_back_leg_lower, 5,5, 0,-20,20, true,10)
 			create_bodypart(b, bodypart.back_leg_lower, -1, struct)
 		break
 	}

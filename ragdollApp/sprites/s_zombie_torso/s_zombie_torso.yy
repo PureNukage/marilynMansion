@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d6ce66f2-7e47-4bfe-858c-949eaebf1bd7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Art",
-    "path": "folders/Art.yy",
+    "name": "idle",
+    "path": "folders/Art/zombie/idle.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_zombie_torso",

@@ -7,3 +7,5 @@ mouseRightRelease = mouse_check_button_released(mb_right)
 mouseRight = mouse_check_button(mb_right)
 
 debugToggle = keyboard_check_pressed(vk_control)
+
+spawnZombie = keyboard_check(ord("Z"))

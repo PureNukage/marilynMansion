@@ -1,0 +1,1 @@
+physics_pause_enable(!physics_on)

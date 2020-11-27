@@ -2,7 +2,8 @@ on = false
 
 selectedBodypart = -1
 
-physics_on = true
+physics_on = false
+phy_fix_on = false
 
 function log(String) {
 	

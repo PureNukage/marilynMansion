@@ -11,8 +11,14 @@ if on {
 	boolean[1] = "true"
 	
 	if selectedBodypart > -1 {
+		yy += 45
+		var Object = object_get_name(selectedBodypart.ragdoll.unit_index)
+		draw_text(xx,yy, Object)
 		yy += 15
-		draw_text(xx,yy, object_get_name(selectedBodypart.ragdoll.unit_index))	
+		var Sprite = sprite_get_name(selectedBodypart.sprite_index)
+		var copyLength = 3 + string_length(Object) + 1
+		var text = string_copy(Sprite,copyLength,string_length(Sprite))
+		draw_text(xx,yy, text)
 	}
 	
 	
@@ -33,6 +39,13 @@ if on {
 	if _physics_on and input.mouseLeftPress {
 		physics_on = !physics_on	
 		physics_pause_enable(!physics_on)
+	}
+	
+	//	Physics fixtures
+	yy += 25
+	var _phy_fix_on = button(xx,yy,130,20,"phy fix: "+boolean[phy_fix_on])
+	if _phy_fix_on and input.mouseLeftPress {
+		phy_fix_on = !phy_fix_on	
 	}
 	
 	draw_reset()
