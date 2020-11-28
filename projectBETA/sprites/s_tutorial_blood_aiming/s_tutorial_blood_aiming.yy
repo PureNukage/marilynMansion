@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 22,
-  "bbox_right": 244,
-  "bbox_top": 41,
-  "bbox_bottom": 205,
+  "bbox_left": 1,
+  "bbox_right": 236,
+  "bbox_top": 33,
+  "bbox_bottom": 206,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":{"name":"95d07b7f-0fdc-461b-bf0a-6e3898135e07","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":{"name":"1a3783a3-1670-461e-b516-de6f758dec67","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_tutorial_blood_aiming","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,6 +66,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"1a3783a3-1670-461e-b516-de6f758dec67","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"95d07b7f-0fdc-461b-bf0a-6e3898135e07","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {

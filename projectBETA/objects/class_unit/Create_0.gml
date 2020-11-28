@@ -37,3 +37,22 @@ function applyThrust() {
 	}
 	
 }
+
+function create_bodypart_struct(_sprite, _fix_density, _fix_friction, _fix_angle, _min_angle, 
+_max_angle, _angle, _bind) constructor {
+	sprite = _sprite
+	fix_density = _fix_density
+	fix_friction = _fix_friction
+	fix_angle = _fix_angle
+	min_angle = _min_angle
+	max_angle = _max_angle
+	angle = _angle
+	bind = _bind
+}
+
+function create_bodypart(index, type_enum, id, struct) {
+	bodyparts[index][bodyparts_enum] = type_enum
+	bodyparts[index][bodyparts_id] = -1
+	bodyparts[index][bodyparts_struct] = struct
+	bodyparts[index][bodyparts_fixture] = -1	
+}

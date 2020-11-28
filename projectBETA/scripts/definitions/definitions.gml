@@ -9,23 +9,23 @@ enum states {
 #macro bodyparts_struct 2
 #macro bodyparts_fixture 3
 
-enum bodyParts {
+enum bodypart {
 	torso,
 	head,
 	
-	rightArmUpper,
-	rightArmLower,
-	rightArmHand,
+	front_arm_upper,
+	front_arm_lower,
+	front_arm_hand,
 	
-	leftArmUpper,
-	leftArmLower,
-	leftArmHand,
+	back_arm_upper,
+	back_arm_lower,
+	back_arm_hand,
 	
-	rightLegUpper,
-	rightLegLower,
+	front_leg_upper,
+	front_leg_lower,
 	
-	leftLegUpper,
-	leftLegLower,
+	back_leg_upper,
+	back_leg_lower,
 }
 
 enum item { 

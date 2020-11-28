@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 56,
+  "bbox_right": 28,
   "bbox_top": 0,
-  "bbox_bottom": 127,
+  "bbox_bottom": 64,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 57,
-  "height": 128,
+  "width": 29,
+  "height": 65,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"6039d470-4549-4a8a-86f0-5c3fdeebded4","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"2308c4a2-955f-4770-b6f8-654ce89a3d89","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"1ab2543d-48d4-4d6d-b271-9ec9b2f56647","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"dc09781d-634d-438e-b84a-c71e1e26c430","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"2308c4a2-955f-4770-b6f8-654ce89a3d89","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"LayerId":{"name":"6039d470-4549-4a8a-86f0-5c3fdeebded4","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_bookshelf_tall_foreground","path":"sprites/s_bookshelf_tall_foreground/s_bookshelf_tall_foreground.yy",},"resourceVersion":"1.0","name":"c9b8ccd8-9e6c-44eb-a383-646c2c1f8727","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {

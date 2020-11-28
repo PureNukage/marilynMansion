@@ -1,4 +1,6 @@
-if !onGround applyThrust()
+if !onGround {
+	applyThrust()
+}
 
 if dead {
 	if !onGround {

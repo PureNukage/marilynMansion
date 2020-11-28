@@ -52,8 +52,8 @@ function looting() {
 
 function cameraSetup() {
 
-		width = 640
-		height = 360
+		width = 320
+		height = 180
 		zoom_level = 1
 		
 		var fullscreen = false
@@ -110,7 +110,8 @@ function cameraSetup() {
 
 		#endregion
 	
-		if !fullscreen scale_canvas(1920,1080)
+		//if !fullscreen scale_canvas(1920,1080)
+		if !fullscreen scale_canvas(1280, 720)
 
 		default_zoom_width = camera_get_view_width(camera)
 		default_zoom_height = camera_get_view_height(camera)

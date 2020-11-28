@@ -1,21 +1,23 @@
 event_inherited()
 
+mask_index = s_player_collision
+
 depth = -5
 
 input = instance_create_layer(0,0,"Instances",playerInput)
 
 hspd = 0
-maxSpeed = 3
+maxSpeed = 1.5
 
 flashlightOn = game.Player.flashlightOn
 
 arm0 = s_player_arm_aim
-arm0_offsetX = -12
-arm0_offsetY = -22
+arm0_offsetX = -6
+arm0_offsetY = -11
 
 arm1 = s_player_arm_support
-arm1_offsetX = 12
-arm1_offsetY = -23
+arm1_offsetX = 6
+arm1_offsetY = -11
 
 gunRotation = -1
 
@@ -117,8 +119,8 @@ function lootMoving() {
 
 function fireGun() {
 	
-	var startX = x + (-15 * image_xscale)
-	var startY = y - 34
+	var startX = x + (-8 * image_xscale)
+	var startY = y - 17
 	
 	//var endX = mouse_x
 	//var endY = mouse_y
@@ -139,8 +141,8 @@ function fireGun() {
 	var XX = startX
 	var YY = startY
 	
-	startX += lengthdir_x(64, Direction)
-	startY += lengthdir_y(64, Direction)
+	startX += lengthdir_x(32, Direction)
+	startY += lengthdir_y(32, Direction)
 	
 	sound.playSoundEffect(choose(snd_45_1,snd_45_2,snd_45_3))
 	
@@ -240,7 +242,7 @@ function fireGun() {
 	reticle = {
 		radius: 16,
 		radiusSpeed: 0.5,
-		radiusMin: 8,
+		radiusMin: 4,
 		radiusMax: 96,
 		X: -1,
 		Y: -1,
@@ -248,8 +250,8 @@ function fireGun() {
 		YPrevious: -1,
 		
 		firstCalculate: function() {
-			var XX = other.x + (-15*other.image_xscale)
-			var YY = other.y - 34
+			var XX = other.x + (-8*other.image_xscale)
+			var YY = other.y - 17
 			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
 			XX += lengthdir_x(64, Direction)
 			YY += lengthdir_y(64, Direction)
@@ -265,8 +267,8 @@ function fireGun() {
 		},
 		
 		aimIncreasing: function() {
-			var XX = other.x + (-15*other.image_xscale)
-			var YY = other.y - 34
+			var XX = other.x + (-8*other.image_xscale)
+			var YY = other.y - 17
 			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
 			XX += lengthdir_x(64, Direction)
 			YY += lengthdir_y(64, Direction)

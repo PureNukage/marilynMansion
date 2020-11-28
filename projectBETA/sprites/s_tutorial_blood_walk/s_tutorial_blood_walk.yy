@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4eda483d-89f7-455d-a788-1c301e58cc2d","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4eda483d-89f7-455d-a788-1c301e58cc2d","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"LayerId":{"name":"235cccce-ee89-4cfa-a258-d4d5b810c2e8","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_tutorial_blood_walk","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","name":"4eda483d-89f7-455d-a788-1c301e58cc2d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cfba3cdc-08cf-47e2-ad13-f6ccbeb65a1b","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cfba3cdc-08cf-47e2-ad13-f6ccbeb65a1b","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"LayerId":{"name":"90d37b62-1829-4ac5-b7aa-55fb942a7305","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_tutorial_blood_walk","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","name":"cfba3cdc-08cf-47e2-ad13-f6ccbeb65a1b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_tutorial_blood_walk","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a7f6ecc8-6f59-4d76-b6fd-e827229bdfdd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4eda483d-89f7-455d-a788-1c301e58cc2d","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"65167237-74af-4a55-bbcb-cc16750a2679","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cfba3cdc-08cf-47e2-ad13-f6ccbeb65a1b","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 136,
-    "yorigin": 123,
+    "xorigin": 128,
+    "yorigin": 128,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_tutorial_blood_walk","path":"sprites/s_tutorial_blood_walk/s_tutorial_blood_walk.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"235cccce-ee89-4cfa-a258-d4d5b810c2e8","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90d37b62-1829-4ac5-b7aa-55fb942a7305","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Sprites",

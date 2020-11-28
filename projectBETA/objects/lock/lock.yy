@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "furniture",
-    "path": "folders/Game/furniture.yy",
+    "name": "Game",
+    "path": "folders/Game.yy",
   },
   "resourceVersion": "1.0",
   "name": "lock",

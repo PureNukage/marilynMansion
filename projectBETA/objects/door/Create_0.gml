@@ -19,7 +19,7 @@ function _lock(on_or_off) {
 	if on_or_off {
 		locked = true
 		
-		var Lock = instance_create_layer(x+10, y+71,"Instances",lock)
+		var Lock = instance_create_layer(x+5, y+35,"Instances",lock)
 		Lock.myDoor = id
 	}
 	else {

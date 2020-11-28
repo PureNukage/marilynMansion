@@ -6,7 +6,15 @@ if on {
 	
 	draw_set_color(c_yellow)
 	
-	if instance_exists(game) draw_circle(game.x,game.y,16,false)
+	var gameScale = 0.1
+	if instance_exists(game) draw_sprite_ext(s_debug_camera,0,game.x,game.y,gameScale,gameScale,0,c_white,1)
+	
+	if instance_exists(zombie) with zombie {
+		draw_set_color(c_yellow)
+		var x1 = x-sprite_get_xoffset(sprite_index)
+		var y1 = y-sprite_get_yoffset(sprite_index)
+		draw_rectangle(x1,y1, x1+sprite_get_width(sprite_index),y1+sprite_get_height(sprite_index),true)
+	}
 	
 	if instance_exists(player) with player {
 		

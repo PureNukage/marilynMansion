@@ -1,6 +1,10 @@
 event_inherited()
 
-sprite = s_zombie_walk
+timer = irandom_range(90,180)
+goalX = -1
+maxSpeed = 0.5
+
+sprite = zombie_walk
 sprite_index = sprite
 
 bloodSurface = -1
@@ -32,262 +36,87 @@ function add_blood(x, y) {
 			surface_reset_target()
 		}
 		
+		surface_save(bloodSurface,"zombieBloodSurface.png")
+		
 	//}
 	
 }
 
 states = states.free
 
-#region Zombie Bodyparts
-
-	var b = 0 // Part Index
-
-	//	Torso
-	bodyparts[b][bodyparts_enum] = bodyParts.torso
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite: s_zombie_part_torso,
-		fix_width: 30,
-		fix_height: 45,
-		fix_offsetX: 0,
-		fix_offsetY: 0,
-		fix_density: 10,
-		fix_friction: 10,
-		fix_angle: 0,
-		min_angle: -1,
-		max_angle: -1,
-		angle: false,
-		bind: -1
+//	Create bodyparts for zombie
+for(var b=0;b<12;b++) {
+	switch(b) {
+		//	Torso
+		case 0:
+			var struct = new create_bodypart_struct(Zombie_torso, 5,5, 0,-1,-1, 0,-1)
+			create_bodypart(b, bodypart.torso, -1, struct)
+		break
+		//	Head
+		case 1:
+			var struct = new create_bodypart_struct(Zombie_head, 5,5, 0,-20,20, true,0)
+			create_bodypart(b, bodypart.head, -1, struct)
+		break
+		//	Front Arm Upper
+		case 2:
+			var struct = new create_bodypart_struct(Zombie_Front_Arm_front_upper_arm, 5,5, 0,-90,90, true,0)
+			create_bodypart(b, bodypart.front_arm_upper, -1, struct)
+		break
+		//	Front Arm Lower
+		case 3:
+			var struct = new create_bodypart_struct(Zombie_Front_Arm_front_lower_arm, 5,5, 0,-45,45, true,2)
+			create_bodypart(b, bodypart.front_arm_lower, -1, struct)
+		break
+		//	Front Arm Hand
+		case 4:
+			var struct = new create_bodypart_struct(Zombie_Front_Arm_front_hand, 5,5, 0,-20,20, true,3)
+			create_bodypart(b, bodypart.front_arm_hand, -1, struct)
+		break
+		//	Back Arm Upper
+		case 5:
+			var struct = new create_bodypart_struct(Zombie_Back_arm_back_upper_arm, 5,5, 0,-90,90, true,0)
+			create_bodypart(b, bodypart.back_arm_upper, -1, struct)
+		break
+		//	Back Arm Lower
+		case 6:
+			var struct = new create_bodypart_struct(Zombie_Back_arm_back_lower_arm, 5,5, 0,-45,45, true,5)
+			create_bodypart(b, bodypart.back_arm_lower, -1, struct)
+		break
+		//	Back Arm Hand
+		case 7:
+			var struct = new create_bodypart_struct(Zombie_Back_arm_back_hand, 5,5, 0,-20,20, true,6)
+			create_bodypart(b, bodypart.back_arm_hand, -1, struct)
+		break
+		//	Front Leg Upper
+		case 8:
+			var struct = new create_bodypart_struct(Zombie_Front_Leg_front_upper_leg, 5,5, 0,-20,20, true,0)
+			create_bodypart(b, bodypart.front_leg_upper, -1, struct)
+		break
+		//	Front Leg Lower
+		case 9:
+			var struct = new create_bodypart_struct(Zombie_Front_Leg_front_lower_leg, 5,5, 0,-20,20, true,8)
+			create_bodypart(b, bodypart.front_leg_lower, -1, struct)
+		break
+		//	Back Leg Upper
+		case 10:
+			var struct = new create_bodypart_struct(Zombie_Back_Leg_back_upper_leg, 5,5, 0,-20,20, true,0)
+			create_bodypart(b, bodypart.back_leg_upper, -1, struct)
+		break
+		//	Back Leg Lower
+		case 11:
+			var struct = new create_bodypart_struct(Zombie_Back_Leg_back_lower_leg, 5,5, 0,-20,20, true,10)
+			create_bodypart(b, bodypart.back_leg_lower, -1, struct)
+		break
 	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Head
-	bodyparts[b][bodyparts_enum] = bodyParts.head
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite: s_zombie_part_head,
-		fix_width: 30,
-		fix_height: 30,
-		fix_offsetX: 2,
-		fix_offsetY: -16,
-		fix_density: 16,
-		fix_friction: 6,
-		fix_angle: 0,
-		angle: true,
-		min_angle: -20,
-		max_angle: 20,
-		bind: 0
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Right Arm Upper
-	bodyparts[b][bodyparts_enum] = bodyParts.rightArmUpper
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite: s_zombie_part_right_arm_upper,
-		fix_width: 19,
-		fix_height: 28,
-		fix_offsetX: 5,
-		fix_offsetY: 9,
-		fix_density: 6,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle: true,
-		min_angle: -75,
-		max_angle: 75,
-		bind: 0
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-
-	//	Right Arm Lower
-	bodyparts[b][bodyparts_enum] = bodyParts.rightArmLower
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite: s_zombie_part_right_arm_lower,
-		fix_width: 23,
-		fix_height: 13,
-		fix_offsetX: 10,
-		fix_offsetY: -4,
-		fix_density: 4,
-		fix_friction: 6,
-		fix_angle: 0,
-		angle: true,
-		min_angle: -45,
-		max_angle: 45,
-		bind: 2
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Right Arm Hand
-	bodyparts[b][bodyparts_enum] = bodyParts.rightArmHand
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite: s_zombie_part_right_arm_hand,
-		fix_width: 11,
-		fix_height: 12,
-		fix_offsetX: 3,
-		fix_offsetY: 8,
-		fix_density: 2,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle: true,
-		min_angle: -45,
-		max_angle: 45,
-		bind: 3
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Left Arm Upper
-	bodyparts[b][bodyparts_enum] = bodyParts.leftArmUpper
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_left_arm_upper,
-		fix_width:  13,
-		fix_height:  26,
-		fix_offsetX:  4,
-		fix_offsetY:  6,
-		fix_density: 6,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -75,
-		max_angle:  75,
-		bind:  0
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Left Arm Lower
-	bodyparts[b][bodyparts_enum] = bodyParts.leftArmLower
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_left_arm_lower,
-		fix_width:  23,
-		fix_height:  16,
-		fix_offsetX:  7,
-		fix_offsetY:  -5,
-		fix_density: 4,
-		fix_friction: 6,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -45,
-		max_angle:  45,
-		bind:  5
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Left Arm Hand
-	bodyparts[b][bodyparts_enum] = bodyParts.leftArmHand
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_left_arm_hand,
-		fix_width:  14,
-		fix_height:  15,
-		fix_offsetX:  5,
-		fix_offsetY:  5,
-		fix_density: 8,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -45,
-		max_angle:  45,
-		bind:  6
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Right Leg Upper
-	bodyparts[b][bodyparts_enum] = bodyParts.rightLegUpper
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_right_leg_upper,
-		fix_width:  14,
-		fix_height:  25,
-		fix_offsetX:  0,
-		fix_offsetY:  11,
-		fix_density: 6,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -10,
-		max_angle:  10,
-		bind:  0
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Right Leg Lower
-	bodyparts[b][bodyparts_enum] = bodyParts.rightLegLower
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_right_leg_lower,
-		fix_width:  13,
-		fix_height:  25,
-		fix_offsetX:  2,
-		fix_offsetY:  12,
-		fix_density: 6,
-		fix_friction: 6,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -45,
-		max_angle:  45,
-		bind:  8
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Left Leg Upper
-	bodyparts[b][bodyparts_enum] = bodyParts.leftLegUpper
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_left_leg_upper,
-		fix_width:  18,
-		fix_height:  25,
-		fix_offsetX:  0,
-		fix_offsetY:  10,
-		fix_density: 6,
-		fix_friction: 10,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -10,
-		max_angle:  10,
-		bind:  0
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-	b++
-	
-	//	Left Leg Lower
-	bodyparts[b][bodyparts_enum] = bodyParts.leftLegLower
-	bodyparts[b][bodyparts_id] = -1
-	bodyparts[b][bodyparts_struct] = {
-		sprite:  s_zombie_part_left_leg_lower,
-		fix_width:  18,
-		fix_height:  29,
-		fix_offsetX:  0,
-		fix_offsetY:  14,
-		fix_density: 6,
-		fix_friction: 6,
-		fix_angle: 0,
-		angle:  true,
-		min_angle:  -45,
-		max_angle:  45,
-		bind:  10
-	}
-	bodyparts[b][bodyparts_fixture] = -1
-
-#endregion
+}
 
 function die() {
-	var ragDoll = instance_create_layer(x,y,"Instances",zombieRagdoll)
+	var ragDoll = instance_create_layer(x,y,"Instances",class_ragdoll)
+	ragDoll.unit_index = object_index
+	ragDoll.sprite_index = sprite_index
 	ragDoll.bodyparts = bodyparts
 	ragDoll.image_xscale = image_xscale
-	ragDoll.spawnRagdoll()
+	ragDoll.spawn_ragdoll()	
 	
 	//	Blood surface
 	for(var b=0;b<array_length(ragDoll.bodyparts);b++) {

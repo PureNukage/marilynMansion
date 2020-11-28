@@ -185,18 +185,18 @@ switch(states)
 				reticle.radius += 32
 				
 				var e = []
-				e[bodyParts.torso] = "torso"
-				e[bodyParts.head] = "head"
-				e[bodyParts.rightArmUpper] = "rightArmUpper"
-				e[bodyParts.rightArmLower] = "rightArmLower"
-				e[bodyParts.rightArmHand] = "rightArmHand"
-				e[bodyParts.leftArmUpper] = "leftArmUpper"
-				e[bodyParts.leftArmLower] = "leftArmLower"
-				e[bodyParts.leftArmHand] = "leftArmHand"
-				e[bodyParts.rightLegUpper] = "rightLegUpper"
-				e[bodyParts.rightLegLower] = "rightLegLower"
-				e[bodyParts.leftLegUpper] = "leftLegUpper"
-				e[bodyParts.leftLegLower] = "leftLegLower"
+				e[bodypart.torso] = "torso"
+				e[bodypart.head] = "head"
+				e[bodypart.front_arm_upper] = "rightArmUpper"
+				e[bodypart.front_arm_lower] = "rightArmLower"
+				e[bodypart.front_arm_lower] = "rightArmHand"
+				e[bodypart.back_arm_upper] = "leftArmUpper"
+				e[bodypart.back_arm_lower] = "leftArmLower"
+				e[bodypart.back_arm_hand] = "leftArmHand"
+				e[bodypart.front_leg_upper] = "rightLegUpper"
+				e[bodypart.front_leg_lower] = "rightLegLower"
+				e[bodypart.back_leg_upper] = "leftLegUpper"
+				e[bodypart.back_leg_lower] = "leftLegLower"
 				
 				if is_array(array) {
 					if array[0].object_index == zombie {
