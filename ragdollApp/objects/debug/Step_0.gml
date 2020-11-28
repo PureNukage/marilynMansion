@@ -4,10 +4,16 @@ if input.debugToggle {
 	//physics_pause_enable(on)
 }
 
+//	Wind
 if input.keyWind and input.mouseLeft {
 	wind = true
 }
 else if wind wind = false
+
+//	Gun
+if input.keyGun and input.mouseLeftPress {
+	fireGun(mouse_x,mouse_y)	
+}
 
 
 //	Select a bodypart

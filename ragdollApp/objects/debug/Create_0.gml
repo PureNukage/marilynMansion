@@ -8,6 +8,8 @@ phy_fix_on = false
 wind = false
 windRadius = 32
 
+gunRadius = 4
+
 function log(String) {
 	
 	var Time = "[" + string(time.stream) + "] "
@@ -43,5 +45,26 @@ function button(x,y,width,height,text) {
 	draw_text(x+width/2,y+height/2,text)
 	
 	return mouseover
+	
+}
+	
+function fireGun(x, y) {
+	
+	var XX = x + irandom_range(-gunRadius,gunRadius)
+	var YY = y + irandom_range(-gunRadius,gunRadius)
+	
+	//	Hit a zombie
+	if instance_position(XX,YY,zombie) {
+		
+	} 
+	//	Hit a ragdoll
+	else if instance_position(XX,YY,class_bodypart) {
+		
+	} 
+	//	Missed
+	else {
+		var Particle = instance_create_layer(XX,YY,"Instances",class_particle)
+		Particle.sprite_index = s_gunscorch
+	}
 	
 }

@@ -11,3 +11,5 @@ debugToggle = keyboard_check_pressed(vk_control)
 spawnZombie = keyboard_check(ord("Z"))
 
 keyWind = keyboard_check(ord("W"))
+
+keyGun = keyboard_check(ord("G"))
