@@ -70,3 +70,11 @@ function draw_reset() {
 	draw_set_valign(fa_top)
 	
 }
+	
+function create_surface(width, height) {
+	var surface = surface_create(width, height)
+	surface_set_target(surface)
+	draw_clear_alpha(c_white, 0)
+	surface_reset_target()
+	return surface
+}

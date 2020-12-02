@@ -32,7 +32,7 @@ switch(state) {
 		case state.walk:
 			
 			if abs(goalX - x) > 5 {
-				hspd += sign(goalX - x)
+				hspd += sign(goalX - x) * 0.05
 				hspd = clamp(hspd,-maxSpeed,maxSpeed)
 				x += hspd
 				image_xscale = sign(hspd)
@@ -40,8 +40,8 @@ switch(state) {
 			}
 			else {
 				if hspd != 0 {
-					if hspd > 0 hspd--
-					if hspd < 0 hspd++
+					if hspd > 0 hspd -= min(0.1,abs(hspd))
+					if hspd < 0 hspd += min(0.1,abs(hspd))
 				}
 				else {
 					state = state.idle
