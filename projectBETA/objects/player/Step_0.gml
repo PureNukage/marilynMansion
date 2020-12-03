@@ -192,7 +192,9 @@ switch(states)
 					fireGun()
 					arm0 = s_player_arm_aim_fire
 					
-					reticle.radius += reticle.radius/2 + 8
+					//reticle.radius += reticle.radius/2 + 8
+					var dist = point_distance(x,y, mouse_x,mouse_y)
+					reticle.radius += (dist/360) * 20
 					reticle.radiusSpeed -= .25
 					reticle.speedDelay = 0
 				
