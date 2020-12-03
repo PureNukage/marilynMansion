@@ -23,6 +23,12 @@ switch(states) {
 			image_xscale = sign(goalX - x)
 			sprite_index = zombie_walk
 			
+			//	Slow speed after each foot step
+			if floor(image_index) == 1 or floor(image_index) == 5 {
+				if hspd > 0 hspd -= min(0.1,abs(hspd))
+				if hspd < 0 hspd += min(0.1,abs(hspd)) 
+			}
+			
 			x += hspd
 		}
 		else {

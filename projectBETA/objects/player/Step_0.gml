@@ -12,6 +12,7 @@ switch(states)
 				hspd = clamp(hspd,-maxSpeed,maxSpeed)
 	
 				xx += hspd
+				
 			}
 
 			else if !game.lootingMoving {
@@ -186,23 +187,23 @@ switch(states)
 			//	Use item in hand
 			if input.mouseLeftPress {
 				if inventory[inventoryIndex].item == item.gun {
-				var array = fireGun()
-				arm0 = s_player_arm_aim_fire
-				reticle.radius += 32
+					fireGun()
+					arm0 = s_player_arm_aim_fire
+					reticle.radius += 32
 				
-				var e = []
-				e[bodypart.torso] = "torso"
-				e[bodypart.head] = "head"
-				e[bodypart.front_arm_upper] = "rightArmUpper"
-				e[bodypart.front_arm_lower] = "rightArmLower"
-				e[bodypart.front_arm_hand] = "rightArmHand"
-				e[bodypart.back_arm_upper] = "leftArmUpper"
-				e[bodypart.back_arm_lower] = "leftArmLower"
-				e[bodypart.back_arm_hand] = "leftArmHand"
-				e[bodypart.front_leg_upper] = "rightLegUpper"
-				e[bodypart.front_leg_lower] = "rightLegLower"
-				e[bodypart.back_leg_upper] = "leftLegUpper"
-				e[bodypart.back_leg_lower] = "leftLegLower"
+					var e = []
+					e[bodypart.torso] = "torso"
+					e[bodypart.head] = "head"
+					e[bodypart.front_arm_upper] = "rightArmUpper"
+					e[bodypart.front_arm_lower] = "rightArmLower"
+					e[bodypart.front_arm_hand] = "rightArmHand"
+					e[bodypart.back_arm_upper] = "leftArmUpper"
+					e[bodypart.back_arm_lower] = "leftArmLower"
+					e[bodypart.back_arm_hand] = "leftArmHand"
+					e[bodypart.front_leg_upper] = "rightLegUpper"
+					e[bodypart.front_leg_lower] = "rightLegLower"
+					e[bodypart.back_leg_upper] = "leftLegUpper"
+					e[bodypart.back_leg_lower] = "leftLegLower"
 				
 				}
 			}
