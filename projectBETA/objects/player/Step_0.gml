@@ -7,7 +7,7 @@ switch(states)
 					game.lootingMoving = false
 					game.lootingID = -1
 				}
-				hspd += input.keyRight - input.keyLeft
+				hspd += (input.keyRight - input.keyLeft) * 0.10
 	
 				hspd = clamp(hspd,-maxSpeed,maxSpeed)
 	
@@ -15,14 +15,20 @@ switch(states)
 			}
 
 			else if !game.lootingMoving {
-	
-				if abs(hspd) != 0 {
-					hspd = lerp(hspd,0,0.1)
-		
-					if abs(hspd) - maxSpeed < 0.5 hspd = 0
-		
-					xx += hspd		
+				
+				if hspd != 0 {
+					if hspd > 0 hspd -= min(0.1,abs(hspd))
+					if hspd < 0 hspd += min(0.1,abs(hspd))
 				}
+				xx += hspd
+	
+				//if abs(hspd) != 0 {
+				//	hspd = lerp(hspd,0,0.1)
+		
+				//	if abs(hspd) - maxSpeed < 0.5 hspd = 0
+		
+				//	xx += hspd		
+				//}
 	
 			}
 				
@@ -189,7 +195,7 @@ switch(states)
 				e[bodypart.head] = "head"
 				e[bodypart.front_arm_upper] = "rightArmUpper"
 				e[bodypart.front_arm_lower] = "rightArmLower"
-				e[bodypart.front_arm_lower] = "rightArmHand"
+				e[bodypart.front_arm_hand] = "rightArmHand"
 				e[bodypart.back_arm_upper] = "leftArmUpper"
 				e[bodypart.back_arm_lower] = "leftArmLower"
 				e[bodypart.back_arm_hand] = "leftArmHand"
@@ -198,69 +204,6 @@ switch(states)
 				e[bodypart.back_leg_upper] = "leftLegUpper"
 				e[bodypart.back_leg_lower] = "leftLegLower"
 				
-				if is_array(array) {
-					if array[0].object_index == zombie {
-						
-						array[0].hp -= 1
-						
-						if array[0].hp <= 0 {
-							array[0].die()	
-						}
-						
-						////	Check for if a bodypart is at the bullets x,y
-						for(var b=0;b<array_length(array[0].bodyparts);b++) {
-							var XX = array[1]
-							var YY = array[2]
-							var ID = array[0].bodyparts[b][bodyparts_id]
-						 
-							if instance_position(XX, YY, ID) {
-								show_debug_message("applying force to object: "+e[array[0].bodyparts[b][bodyparts_enum]])
-								var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
-
-								var xForce = lengthdir_x(irandom_range(50000,100000), Direction)
-								var yForce = lengthdir_y(irandom_range(50000,100000), Direction)
-								with ID physics_apply_force(XX,YY, xForce,yForce)
-							
-								var Decal = instance_create_layer(XX,YY, "Instances",decal)
-								Decal.sprite_index = s_bloodhole_0
-								Decal.ID = ID
-								
-								//	DEBUG
-								//var Decal = instance_create_layer(XX,YY, "Instances",particle)
-								//Decal.sprite_index = s_debug_decal
-								//Decal.depth = -200
-							}
-						}
-					}
-					//	A body part
-					else {
-						var XX = array[1]
-						var YY = array[2]
-						var ID = array[0]
-						show_debug_message("applying force to object: " + e[array[0].bodyParts])
-						var Direction = point_direction(player.x + (-15 * player.image_xscale),player.y-34, XX,YY)
-
-						var xForce = lengthdir_x(irandom_range(50000,100000), Direction)
-						var yForce = lengthdir_y(irandom_range(50000,100000), Direction)
-						with ID physics_apply_force(XX,YY, xForce,yForce)
-							
-						var Decal = instance_create_layer(XX,YY, "Instances",decal)
-						Decal.sprite_index = s_bloodhole_0
-						Decal.ID = ID
-						
-						//	DEBUG
-						//var Decal = instance_create_layer(XX,YY, "Instances",particle)
-						//Decal.sprite_index = s_debug_decal
-						//Decal.depth = -200
-					}
-					
-					show_debug_message("hit object "+object_get_name(array[0].object_index))
-					show_debug_message(string(array[1]))
-					show_debug_message(string(array[2]))
-				}	
-				}
-				else if inventory[inventoryIndex].item == item.flashlight {
-					//flashlightOn = !flashlightOn
 				}
 			}
 			

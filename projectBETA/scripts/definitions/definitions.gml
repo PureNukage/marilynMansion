@@ -1,8 +1,11 @@
 enum states {
 	free,
 	aim,
-	looting
+	looting,
+	walk
 }
+
+#macro animation_end (image_index > image_number - 1)
 
 #macro bodyparts_enum 0
 #macro bodyparts_id 1

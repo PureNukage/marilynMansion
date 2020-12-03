@@ -1,7 +1,3 @@
-//if point_in_rectangle(mouse_x,mouse_y,bbox_left,bbox_top,bbox_right,bbox_bottom) and input.mouseLeftPress { 
-//	die()
-//}
-
 if !onGround applyThrust()
 
 if !place_meeting(x,y,block) and onGround onGround = false

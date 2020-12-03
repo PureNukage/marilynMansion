@@ -5,9 +5,6 @@ timer = irandom_range(90,180)
 goalX = -1
 maxSpeed = 0.5
 
-bloodSurface = create_surface(sprite_get_width(sprite_index),sprite_get_height(sprite_index))
-bloodSprite = -1
-
 image_index = irandom_range(0,image_number)
 
 //	Create bodyparts for zombie
@@ -84,24 +81,4 @@ function die() {
 	ragDoll.image_xscale = image_xscale
 	ragDoll.spawn_ragdoll()	
 	instance_destroy()
-}
-	
-function add_blood(_x, _y) {
-	if surface_exists(bloodSurface) {
-		
-		surface_set_target(bloodSurface)
-		
-		var genX = x - sprite_get_xoffset(sprite_index)
-		var genY = y - sprite_get_yoffset(sprite_index)
-		
-		var drawX = _x - genX 
-		var drawY = _y - genY 
-		
-		draw_sprite(s_bullethole,0,drawX,drawY)
-		
-		surface_reset_target()
-		
-		surface_save(bloodSurface, "bloodSurface.png")
-		
-	}
 }
