@@ -62,7 +62,7 @@ switch(states)
 			//	Aiming
 			if input.mouseRightPress {
 				states = states.aim	
-				reticle.firstCalculate()
+				reticle.first_calculate()
 				switch(inventory[inventoryIndex].item) {
 					case item.hand:
 						sprite_index = s_player_idle_nogun
@@ -76,7 +76,7 @@ switch(states)
 				}
 			}
 			else {
-				reticle.radiusSpeed = 0.5	
+				//reticle.radiusSpeed = 0.5	
 			}
 			
 			//	Flashlight
@@ -104,6 +104,8 @@ switch(states)
 					}
 				}
 				xx = 0
+				
+				//reticle.radius += 2
 	
 			}
 		
@@ -189,7 +191,10 @@ switch(states)
 				if inventory[inventoryIndex].item == item.gun {
 					fireGun()
 					arm0 = s_player_arm_aim_fire
-					reticle.radius += 32
+					
+					reticle.radius += reticle.radius/2 + 8
+					reticle.radiusSpeed -= .25
+					reticle.speedDelay = 0
 				
 					var e = []
 					e[bodypart.torso] = "torso"

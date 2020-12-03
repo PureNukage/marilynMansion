@@ -35,7 +35,7 @@ switch(states)
 				draw_set_color(c_black)
 				draw_circle(mouse_x,mouse_y,reticle.radius,true)	
 			
-				reticle.aimIncreasing()
+				reticle.aim_calculate()
 				
 			}
 		

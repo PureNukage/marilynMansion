@@ -122,17 +122,17 @@ function fireGun() {
 	var startX = x + (-8 * image_xscale)
 	var startY = y - 17
 	
-	reticle.radiusSpeed = 0.5
+	//reticle.radiusSpeed = 0.5
 	
 	lighting.gunFired = true
 	
-	var length = irandom_range(reticle.radiusMin,reticle.radius)
+	var length = irandom_range(reticle.radiusMinBase,reticle.radius)
 	var durection = irandom_range(0,359)
 	
 	var endX = mouse_x + lengthdir_x(length, durection)
 	var endY = mouse_y + lengthdir_y(length, durection)
 	
-	var precision = 1
+	//var precision = 1
 	var Direction = point_direction(startX,startY,endX,endY)
 	
 	var XX = endX
@@ -241,7 +241,6 @@ function fireGun() {
 			//	Create blood decal
 			//array[0].add_blood(XX,YY)
 			
-			return array
 		} else if instance_position(XX,YY, class_bodypart) {
 			//loop = false
 			var ID = instance_position(XX,YY,class_bodypart) 
@@ -280,7 +279,6 @@ function fireGun() {
 				physics_apply_force(XX,YY, xForce,0)	
 			}
 			
-			return array
 		
 		} else if instance_place(XX,YY, lock) and !instance_place(XX,YY, lock).dead {
 			//loop = false
@@ -292,7 +290,6 @@ function fireGun() {
 			
 			instance_place(XX,YY, lock).die()
 			
-			return false
 		
 		} else if point_distance(XX,YY, endX,endY) < 2 {
 			//loop = false
@@ -308,178 +305,80 @@ function fireGun() {
 			Particle.sprite_index = s_bulletScorch
 			Particle.image_angle = irandom_range(0,359)
 			
-			return false
-		} //else if instance_place(XX,YY, lock) and !instance_place(XX,YY, lock).dead {
-		//	//loop = false
-			
-		//	//bulletArray[0] = XX
-		//	//bulletArray[1] = YY
-		//	//bulletArray[2] = startX
-		//	//bulletArray[3] = startY
-			
-		//	instance_place(XX,YY, lock).die()
-			
-		//	return false
-		//} else {
-		//	XX += lengthdir_x(precision, Direction)
-		//	YY += lengthdir_y(precision, Direction)		
-		//}
-	
-	//var loop = true
-	//while loop {
-		
-		//if instance_position(XX,YY, zombie) {
-		//	loop = false
-		//	var array = []
-		//	array[0] = instance_position(XX,YY, zombie)
-		//	array[1] = XX
-		//	array[2] = YY
-			
-		//	bulletArray[0] = XX
-		//	bulletArray[1] = YY
-		//	bulletArray[2] = startX
-		//	bulletArray[3] = startY
-		//	bulletArcDraw = 15
-			
-		//	//	Create bloodsplat particle
-		//	var Particle = instance_create_layer(XX,YY,"Instances",particle)
-		//	if array[0].hp - 1 <= 0 Particle.sprite_index = s_bloodsplat_0
-		//	else Particle.sprite_index = s_bloodsplat_1
-		//	Particle.image_angle = point_direction(startX,startY, XX,YY)
-		//	if x > array[0].x {
-		//		Particle.image_xscale = -1
-		//		Particle.image_angle += 180	
-		//	}
-			
-		//	//	Create blood decal
-		//	array[0].add_blood(XX,YY)
-			
-		//	return array
-		//} else if instance_position(XX,YY, zombiePart) {
-		//	loop = false
-		//	var array = []
-		//	array[0] = instance_position(XX,YY, zombiePart)
-		//	array[1] = XX
-		//	array[2] = YY
-			
-		//	bulletArray[0] = XX
-		//	bulletArray[1] = YY
-		//	bulletArray[2] = startX
-		//	bulletArray[3] = startY
-		//	bulletArcDraw = 15
-			
-		//	//	Create bloodsplat particle
-		//	var Particle = instance_create_layer(XX,YY,"Instances",particle)
-		//	Particle.sprite_index = s_bloodsplat_1
-		//	Particle.image_angle = point_direction(startX,startY, XX,YY)
-		//	if x > array[0].x {
-		//		Particle.image_xscale = -1
-		//		Particle.image_angle += 180	
-		//	}
-			
-		//	return array
-		
-		//} else if point_distance(XX,YY, endX,endY) < 2 {
-		//	loop = false
-			
-		//	bulletArray[0] = XX
-		//	bulletArray[1] = YY
-		//	bulletArray[2] = startX
-		//	bulletArray[3] = startY
-		//	bulletArcDraw = 15
-			
-		//	//	Create bulletScorch particle
-		//	var Particle = instance_create_layer(XX,YY,"Instances",particle)
-		//	Particle.sprite_index = s_bulletScorch
-		//	Particle.image_angle = irandom_range(0,359)
-			
-		//	return false
-		//} else if instance_place(XX,YY, lock) and !instance_place(XX,YY, lock).dead {
-		//	loop = false
-			
-		//	//bulletArray[0] = XX
-		//	//bulletArray[1] = YY
-		//	//bulletArray[2] = startX
-		//	//bulletArray[3] = startY
-			
-		//	instance_place(XX,YY, lock).die()
-			
-		//	return false
-		//} else {
-		//	XX += lengthdir_x(precision, Direction)
-		//	YY += lengthdir_y(precision, Direction)		
-		//}
-		
-		
-	//}
+		}
 	
 }
-
-
-#region Reticle
-
-	reticle = {
-		radius: 16,
-		radiusSpeed: 0.5,
-		radiusMin: 4,
-		radiusMax: 96,
-		X: -1,
-		Y: -1,
-		XPrevious: -1,
-		YPrevious: -1,
-		
-		firstCalculate: function() {
-			var XX = other.x + (-8*other.image_xscale)
-			var YY = other.y - 17
-			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
-			XX += lengthdir_x(64, Direction)
-			YY += lengthdir_y(64, Direction)
-			
-			var distance = point_distance(XX,YY, mouse_x,mouse_y)
-			
-			var max_distance = 800
-			if distance < max_distance {
-				var ratio = distance/max_distance
-				var reticleRatio = radiusMax * ratio
-				radius = reticleRatio
-			}	
-		},
-		
-		aimIncreasing: function() {
-			var XX = other.x + (-8*other.image_xscale)
-			var YY = other.y - 17
-			var Direction = point_direction(XX,YY, mouse_x,mouse_y)
-			XX += lengthdir_x(64, Direction)
-			YY += lengthdir_y(64, Direction)
-			
-			radius -= radiusSpeed
-			radiusSpeed += 0.10
-			
-			X = mouse_x
-			Y = mouse_y
-			if (X != XPrevious or Y != YPrevious) and (XPrevious != -1 and YPrevious != -1) {
-				radius += abs((XPrevious - X)+(YPrevious - Y))/5
-				XPrevious = X
-				YPrevious = Y
-			}
-			if XPrevious == -1 or YPrevious == -1 {
-				XPrevious = X
-				YPrevious = Y
-			}
-			
-			var distance = point_distance(XX,YY, mouse_x,mouse_y)
-			
-			var max_distance = 800
-			if distance < max_distance {
-				var ratio = distance/max_distance
-				var reticleRatio = radiusMax * ratio
-				var Radius = reticleRatio
-				Radius = clamp(Radius,radiusMin,radiusMax)
-				Radius = radiusMax
-			} else Radius = radiusMax
-			
-			radius = clamp(radius,radiusMin,Radius)
-		}
-	}
 	
-#endregion
+reticle = {
+	radiusMinBase: 4,
+	radiusMaxBase: 96,
+	radiusMin: 4,
+	radiusMax: 96,
+	radiusSpeed: 0.5,
+	radiusSpeedMax: 1,
+	radius: 4,
+	
+	speedDelay: 0,
+	
+	x_prev: -1,
+	y_prev: -1,
+	
+	x_prev_gui: -1,
+	y_prev_gui: -1,
+	
+	aim_calculate: function() {
+		
+		var distToPlayer = point_distance(other.x,other.y, mouse_x,mouse_y)
+		
+		//	The first frame of us aiming
+		if (x_prev == -1 or y_prev == -1) {
+			x_prev = mouse_x
+			y_prev = mouse_y
+		}
+		//	Every other frame
+		else {
+			var tolerance = 25
+			//	If we haven't moved mouse x,y within a tolerance, decrease the reticle
+			if abs(mouse_gui_x - x_prev_gui) <= tolerance and abs(mouse_gui_y - y_prev_gui) <= tolerance {
+				radius -= radiusSpeed
+				if radiusMin > radiusMinBase radiusMin -= radiusSpeed
+				speedDelay++
+				if speedDelay >= 5 {
+					radiusSpeed += .05
+					speedDelay = 0
+				}
+				radiusSpeedMax = 0.8
+			}
+			//	Adjusted aim, lets increase reticle
+			else {
+				//	Increase radius if we're aiming further away
+				var oldDist = point_distance(other.x,other.y, x_prev,y_prev)
+				if distToPlayer > oldDist {
+					radius += radius/4 + 4
+				}
+				else radius += 2
+				x_prev = mouse_x
+				y_prev = mouse_y
+				x_prev_gui = mouse_gui_x
+				y_prev_gui = mouse_gui_y
+				radiusSpeed -= 0.40
+			}
+		}
+		
+		radius = clamp(radius,radiusMin,radiusMax)
+		radiusMin = clamp(radiusMin,radiusMinBase,radiusMin)
+		radiusMax = clamp(radiusMax,radiusMinBase, radiusMaxBase)
+		
+		radiusSpeed = clamp(radiusSpeed,0,radiusSpeedMax)
+		
+	},
+		
+	first_calculate: function() {
+		var distToPlayer = point_distance(other.x,other.y, mouse_x,mouse_y)
+		radius = (distToPlayer / 360) * radiusMax/2
+		radiusSpeed = 0
+		
+		x_prev_gui = mouse_gui_x
+		y_prev_gui = mouse_gui_y
+	}
+}
