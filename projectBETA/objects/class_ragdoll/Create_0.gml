@@ -17,6 +17,10 @@ function spawn_ragdoll() {
 		var max_angle = BodyStruct.max_angle 
 		var angle = BodyStruct.angle
 		var bind = BodyStruct.bind
+		
+		var firstString = string_copy(sprite_get_name(sprite_index),string_pos("_",sprite_get_name(sprite_index))+1,string_length(sprite_get_name(sprite_index))-string_pos("_",sprite_get_name(sprite_index))+1 )
+		var spriteString = firstString + BodyStruct.sprite + string(floor(image_index + 1))
+		sprite = asset_get_index(spriteString)
 				
 		var _x = sprite_get_xoffset(sprite)
 		var _y = sprite_get_yoffset(sprite)

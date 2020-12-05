@@ -25,7 +25,7 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"7406ebee-34da-46ce-9229-77b09af39fc5","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"LayerId":null,"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7406ebee-34da-46ce-9229-77b09af39fc5","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"LayerId":{"name":"06f20b21-2afc-47c1-a231-05f1e468bf63","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"7406ebee-34da-46ce-9229-77b09af39fc5","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"LayerId":{"name":"06f20b21-2afc-47c1-a231-05f1e468bf63","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_zombie_part_right_arm_upper","path":"sprites/s_zombie_part_right_arm_upper/s_zombie_part_right_arm_upper.yy",},"resourceVersion":"1.0","name":"7406ebee-34da-46ce-9229-77b09af39fc5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"06f20b21-2afc-47c1-a231-05f1e468bf63","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "zombie",
-    "path": "folders/Sprites/zombie.yy",
+    "name": "dummy",
+    "path": "folders/Sprites/zombie/dummy.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_zombie_part_right_arm_upper",

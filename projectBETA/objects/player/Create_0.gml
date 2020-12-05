@@ -145,18 +145,16 @@ function fireGun() {
 	
 	if instance_position(XX,YY, zombie) {
 			var ID = instance_position(XX,YY, zombie)
-			//loop = false
-			var array = []
-			array[0] = instance_position(XX,YY, zombie)
-			array[1] = XX
-			array[2] = YY
+			
+			//debug.log("hit zombie!")
 			
 			var createBloodSquib = false
 			var dead = false
 			//	Bodypart hit detection
 			for(var i=0;i<array_length(ID.bodyparts);i++) {
 				var struct = ID.bodyparts[i][bodyparts_struct]
-				var spriteString = struct.spriteBaseString + string(floor(ID.image_index + 1))
+				var firstString = string_copy(sprite_get_name(ID.sprite_index),string_pos("_",sprite_get_name(ID.sprite_index))+1,string_length(sprite_get_name(ID.sprite_index))-string_pos("_",sprite_get_name(ID.sprite_index))+1 )
+				var spriteString = firstString + struct.sprite + string(floor(ID.image_index + 1))
 				var genX = ID.x - (sprite_get_xoffset(ID.sprite_index)*ID.image_xscale)
 				var genY = ID.y - sprite_get_yoffset(ID.sprite_index)
 				var spriteIndex = asset_get_index(spriteString)
@@ -187,8 +185,6 @@ function fireGun() {
 					//	Create blood wall splat
 					var splat = instance_create_layer(XX,YY,"Instances",class_particle)
 					splat.sprite_index = s_bloodsplat_0
-					//if startX > ID.x splat.image_xscale = -1
-					//else splat.image_xscale = 1
 					splat.image_angle = point_direction(startX,startY, XX,YY)
 				
 					//	Create blood decal
@@ -213,13 +209,18 @@ function fireGun() {
 				//	Blood squib
 				var Particle = instance_create_layer(XX,YY,"Instances",class_particle)
 				Particle.sprite_index = s_bloodsquib
-				//if startX > ID.x Particle.image_xscale = 1
-				//else Particle.image_xscale = -1
 				Particle.depth = -5
 				Particle.fix.id = ID
 				Particle.fix.x = XX - ID.x
 				Particle.fix.y = YY - ID.y
 				Particle.image_angle = point_direction(XX,YY, startX,startY)
+			}
+			//	Missed
+			else {
+				//	Create bulletScorch particle
+				var Particle = instance_create_layer(XX,YY,"Instances",class_particle)
+				Particle.sprite_index = s_bulletScorch
+				Particle.image_angle = irandom_range(0,359)	
 			}
 			
 			bulletArray[0] = XX
@@ -242,12 +243,7 @@ function fireGun() {
 			//array[0].add_blood(XX,YY)
 			
 		} else if instance_position(XX,YY, class_bodypart) {
-			//loop = false
 			var ID = instance_position(XX,YY,class_bodypart) 
-			var array = []
-			array[0] = instance_position(XX,YY, class_bodypart)
-			array[1] = XX
-			array[2] = YY
 			
 			bulletArray[0] = XX
 			bulletArray[1] = YY
@@ -281,19 +277,10 @@ function fireGun() {
 			
 		
 		} else if instance_place(XX,YY, lock) and !instance_place(XX,YY, lock).dead {
-			//loop = false
-			
-			//bulletArray[0] = XX
-			//bulletArray[1] = YY
-			//bulletArray[2] = startX
-			//bulletArray[3] = startY
 			
 			instance_place(XX,YY, lock).die()
 			
-		
 		} else if point_distance(XX,YY, endX,endY) < 2 {
-			//loop = false
-			
 			bulletArray[0] = XX
 			bulletArray[1] = YY
 			bulletArray[2] = startX

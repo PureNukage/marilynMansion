@@ -24,33 +24,33 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"af6df19d-a47d-467f-96ca-64aeed2139fb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"a777d424-2f8a-4550-a653-227e95ac6630","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"c4771943-c6c5-4e97-a332-da48c5b5678b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_walk/zombie_walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"af6df19d-a47d-467f-96ca-64aeed2139fb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"a777d424-2f8a-4550-a653-227e95ac6630","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"c4771943-c6c5-4e97-a332-da48c5b5678b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_Walk/zombie_Walk.yy",},"LayerId":{"name":"b40eb80d-4e7d-4d20-b0b9-86ace7f2ba5e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},
+    "spriteId": {"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 6.0,
@@ -62,14 +62,14 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c328792f-3d7f-42fd-b7ce-928adb563dd1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"145c530c-48dd-405f-b9f1-2a0aefa6e966","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c00d30c9-6fd0-45bf-ab8d-daa82fddbfd5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1bc58140-c72d-4dbf-ac0e-c1069b43f498","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"44df06fe-4039-4947-a448-437488e1463c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"42d864e9-d383-47b6-be28-7b44fe796032","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"e78e2406-951e-4105-80b9-25dbac9da0c5","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"2f1cf70c-edca-49cd-b462-51eef5250dcc","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_walk/zombie_walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c328792f-3d7f-42fd-b7ce-928adb563dd1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c918eb2a-ca9a-4bea-b9be-cb36dd67edd6","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"145c530c-48dd-405f-b9f1-2a0aefa6e966","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"af6df19d-a47d-467f-96ca-64aeed2139fb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"c00d30c9-6fd0-45bf-ab8d-daa82fddbfd5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a777d424-2f8a-4550-a653-227e95ac6630","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1bc58140-c72d-4dbf-ac0e-c1069b43f498","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e8c1a70-8d1c-46f4-b46d-20ff8c92171e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"44df06fe-4039-4947-a448-437488e1463c","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8c89c594-26d8-4f6a-8f24-b6fae513b1eb","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"42d864e9-d383-47b6-be28-7b44fe796032","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4771943-c6c5-4e97-a332-da48c5b5678b","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e78e2406-951e-4105-80b9-25dbac9da0c5","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"620f4ab0-d63c-4cb0-adee-06b38f602c8e","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2f1cf70c-edca-49cd-b462-51eef5250dcc","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9bc2ea22-ea11-4ad8-8bb4-b4f024b9eac0","path":"sprites/zombie_Walk/zombie_Walk.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -86,9 +86,9 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"zombie_walk","path":"sprites/zombie_walk/zombie_walk.yy",},
+    "parent": {"name":"zombie_Walk","path":"sprites/zombie_Walk/zombie_Walk.yy",},
     "resourceVersion": "1.3",
-    "name": "zombie_walk",
+    "name": "zombie_Walk",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -100,7 +100,7 @@
     "path": "folders/Sprites/zombie.yy",
   },
   "resourceVersion": "1.0",
-  "name": "zombie_walk",
+  "name": "zombie_Walk",
   "tags": [],
   "resourceType": "GMSprite",
 }

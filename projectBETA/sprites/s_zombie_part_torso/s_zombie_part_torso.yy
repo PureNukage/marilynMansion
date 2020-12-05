@@ -25,7 +25,7 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0c1c07e3-273e-461a-80e4-cc372b4049b8","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"LayerId":null,"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0c1c07e3-273e-461a-80e4-cc372b4049b8","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"LayerId":{"name":"1b90f95b-886f-44e3-82b4-d0225a5e1a2c","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"resourceVersion":"1.0","name":null,"tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0c1c07e3-273e-461a-80e4-cc372b4049b8","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"LayerId":{"name":"1b90f95b-886f-44e3-82b4-d0225a5e1a2c","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_zombie_part_torso","path":"sprites/s_zombie_part_torso/s_zombie_part_torso.yy",},"resourceVersion":"1.0","name":"0c1c07e3-273e-461a-80e4-cc372b4049b8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1b90f95b-886f-44e3-82b4-d0225a5e1a2c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "zombie",
-    "path": "folders/Sprites/zombie.yy",
+    "name": "dummy",
+    "path": "folders/Sprites/zombie/dummy.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_zombie_part_torso",

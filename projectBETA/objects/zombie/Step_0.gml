@@ -1,7 +1,7 @@
 switch(states) {
 	case states.free:
 	
-		sprite_index = zombie_idle
+		sprite_index = zombie_Idle
 	
 		//	Idle
 		if timer > -1 timer-- 
@@ -21,7 +21,7 @@ switch(states) {
 			hspd = clamp(hspd,-maxSpeed,maxSpeed)
 			
 			image_xscale = sign(goalX - x)
-			sprite_index = zombie_walk
+			sprite_index = zombie_Walk
 			
 			//	Slow speed after each foot step
 			if floor(image_index) == 1 or floor(image_index) == 5 {
