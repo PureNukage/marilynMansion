@@ -16,6 +16,10 @@ enum states {
 #macro bodyparts_fixture 3
 #macro bodyparts_sprites 4
 
+#macro floor_floor 0
+#macro floor_ceiling 1
+#macro floor_ceiling_y 2
+
 enum bodypart {
 	torso,
 	head,

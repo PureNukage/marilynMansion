@@ -7,6 +7,8 @@ var clampX2 = room_width
 var clampY1 = 0
 var clampY2 = room_height
 
+floorManager()
+
 //	Looting
 if (player.inventory[player.inventoryIndex].item != item.gun) and states == states.free {
 	states = states.looting

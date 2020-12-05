@@ -223,3 +223,31 @@ function change_room(next_room, duration, doorID) {
 				
 	room_goto(roomChange)
 }
+	
+////	Floors
+floors[0][floor_floor] = "Tiles_2"
+floors[0][floor_ceiling] = "Tiles_3"
+
+floors[1][floor_floor] = "Tiles_Floor1_floor"
+floors[1][floor_ceiling] = ""
+floors[1][floor_ceiling_y] = 320
+	
+function floorManager() {
+	//switch(player.Floor) {
+	//	case 0:
+	//		layer_set_visible("Tiles_Floor1_floor", false)
+	//	break
+	//	case 1:
+	//		layer_set_visible("Tiles_Floor1_floor", true)
+	//	break
+	//}
+	
+	if player.Floor+1 <= array_length(floors)-1 {
+		var playerVision = player.bbox_top + 8
+		if playerVision <= floors[player.Floor+1][floor_ceiling_y] {
+			layer_set_visible(floors[player.Floor+1][floor_floor], true)	
+			layer_depth(floors[player.Floor+1][floor_floor], -10)
+		}
+	}
+	
+}

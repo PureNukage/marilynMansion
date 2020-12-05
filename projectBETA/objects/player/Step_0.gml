@@ -13,6 +13,23 @@ switch(states)
 	
 				xx += hspd
 				
+				//	Stairs
+				if (input.keyUp or input.keyDown) and place_meeting(x,y,stairs) {
+					var Stairs = instance_place(x,y,stairs)
+					if Floor == Stairs.bottomFloor {
+						if x <= Stairs.leftX {
+							onStairs = Stairs
+						}
+					}
+					else if Floor == Stairs.topFloor {
+						if x >= Stairs.rightX-8 and x <= Stairs.rightX+8 {
+							onStairs = Stairs
+						}
+					}
+				}
+				if onStairs and !place_meeting(x,y,stairs) onStairs = false
+				
+				
 			}
 
 			else if !game.lootingMoving {
@@ -58,6 +75,8 @@ switch(states)
 					case item.flashlight: sprite_index = s_player_flashlight break
 				}
 			}
+			
+
 				
 			//	Aiming
 			if input.mouseRightPress {
@@ -100,7 +119,18 @@ switch(states)
 				for(var XX=0;XX<abs(xx);XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
-
+						//var ID = instance_place(x + sign(xx), y, block)
+						//if ID.Floor > Floor x += sign(xx)
+						if onStairs x += sign(xx)
+					}
+					if onStairs {
+						//	If going down, make sure we're not on the bottom floor
+						//if (sign(xx) < 0) {
+							if bbox_bottom - sign(xx) <= onStairs.bbox_bottom {
+								y -= sign(xx)	
+							}
+						//}
+						//else y -= sign(xx)
 					}
 				}
 				xx = 0
@@ -179,7 +209,18 @@ switch(states)
 				for(var XX=0;XX<abs(xx);XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
-			
+						//var ID = instance_place(x + sign(xx), y, block)
+						//if ID.Floor > Floor x += sign(xx)
+						if onStairs x += sign(xx)
+					}
+					if onStairs {
+						//	If going down, make sure we're not on the bottom floor
+						//if (sign(xx) < 0) {
+							if bbox_bottom - sign(xx) <= onStairs.bbox_bottom {
+								y -= sign(xx)	
+							}
+						//}
+						//else y -= sign(xx)
 					}
 				}
 				xx = 0
@@ -220,6 +261,10 @@ switch(states)
 
 }
 
-if !place_meeting(x,y-32,block) onGround = false
+if Floor == 1 {
+	layer_set_visible("Tiles_4",false)		
+}
+
+if !place_meeting(x,y-32,block) and !onStairs onGround = false
 
 if !onGround applyThrust()

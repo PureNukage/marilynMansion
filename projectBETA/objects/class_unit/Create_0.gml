@@ -2,6 +2,7 @@ input = -1
 hspd = 0
 xx = 0
 yy = 0 
+Floor = 0
 thrust = 0
 hpMax = 10
 hp = hpMax
@@ -30,6 +31,10 @@ function applyThrust() {
 		}
 		//	Landed
 		else {
+			
+			var ID = instance_place(x,y-thrust,block) 
+			if instance_exists(ID) and ID.Floor != Floor Floor = ID.Floor
+			
 			onGround = true
 			thrust = 0
 			groundY = y

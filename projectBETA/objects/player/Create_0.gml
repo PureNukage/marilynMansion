@@ -6,6 +6,9 @@ depth = -5
 
 input = instance_create_layer(0,0,"Instances",playerInput)
 
+layer_depth("Tiles_4",-100)
+Floor = 0
+
 hspd = 0
 maxSpeed = 1.25
 
@@ -25,6 +28,7 @@ bulletArcDraw = -1
 bulletArray = []
 
 groundY = y
+onStairs = false
 
 inventory[0] = new create_item(item.hand)
 inventory[1] = new create_item(item.gun)
