@@ -27,17 +27,6 @@ switch(states)
 			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
 			
 			if arm0 > -1 draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
-			
-			if inventory[inventoryIndex].item == item.gun {
-			
-				window_set_cursor(cr_none)
-			
-				draw_set_color(c_black)
-				draw_circle(mouse_x,mouse_y,reticle.radius,true)	
-			
-				reticle.aim_calculate()
-				
-			}
 		
 		break	
 	#endregion

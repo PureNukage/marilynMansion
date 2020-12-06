@@ -246,7 +246,7 @@ function floorManager() {
 		var playerVision = player.bbox_top + 8
 		if playerVision <= floors[player.Floor+1][floor_ceiling_y] {
 			layer_set_visible(floors[player.Floor+1][floor_floor], true)	
-			layer_depth(floors[player.Floor+1][floor_floor], -10)
+			layer_depth(floors[player.Floor+1][floor_floor], 0)
 		}
 	}
 	

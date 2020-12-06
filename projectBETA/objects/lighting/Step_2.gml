@@ -21,13 +21,26 @@ if surface_exists(surface) {
 	draw_rectangle(0,0,room_width,room_height,false)
 	draw_rectangle(0,0,room_width,room_height,false)
 	
-	//	Prep body surface if the flashlight is on
-	if instance_exists(player) and player.flashlightOn and player.inventory[player.inventoryIndex].item == item.flashlight {
-		//var playerSurface = create_surface(player.sprite_width,player.sprite_height)
-		//surface_set_target(playerSurface)
-		//var originX = sprite_get_xoffset(player.sprite_index)
-		//var originY = sprite_get_yoffset(player.sprite_index)
-		//draw_sprite_ext(player.sprite_index,player.image_xscale,originX,originY,player.image_xscale,player.image_yscale,player.image_angle,c_white,1)
+		//	Floor fog of war
+	draw_set_alpha(1)
+	if instance_exists(collisionFloor) with collisionFloor {
+		if player.bbox_top <= bbox_top {
+	
+			//	Draw black box
+			var height = 128
+			draw_set_color(c_black)
+			draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+height,false)
+	
+		}
+
+		else {
+	
+			//	Draw black box above ceiling
+			var height = 128
+			draw_set_color(c_black)
+			draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-height,false)
+	
+		}	
 	}
 	
 	gpu_set_blendmode(bm_subtract)
@@ -63,7 +76,7 @@ if surface_exists(surface) {
 	
 	gpu_set_blendmode(bm_normal)
 	
-	draw_set_alpha(1)
+
 	
 	surface_reset_target()
 }

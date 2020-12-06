@@ -6,7 +6,7 @@ depth = -5
 
 input = instance_create_layer(0,0,"Instances",playerInput)
 
-layer_depth("Tiles_4",-100)
+//layer_depth("Tiles_4",-100)
 Floor = 0
 
 hspd = 0

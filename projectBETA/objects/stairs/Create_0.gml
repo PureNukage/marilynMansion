@@ -6,6 +6,5 @@ topY = bbox_top
 topFloor = 1
 bottomFloor = 0
 
-depth = 99
-
+depth = 400
 mask_index = s_stairs_ramp

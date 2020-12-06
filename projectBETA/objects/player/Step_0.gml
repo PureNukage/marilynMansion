@@ -179,6 +179,23 @@ switch(states)
 				
 						//if hspd != 0 sprite_index = s_player_flashlight_walk
 						//else sprite_index = s_player_flashlight	
+						
+						//	Stairs
+						if (input.keyUp or input.keyDown) and place_meeting(x,y,stairs) {
+							var Stairs = instance_place(x,y,stairs)
+							if Floor == Stairs.bottomFloor {
+								if x <= Stairs.leftX {
+									onStairs = Stairs
+								}
+							}
+							else if Floor == Stairs.topFloor {
+								if x >= Stairs.rightX-8 and x <= Stairs.rightX+8 {
+									onStairs = Stairs
+								}
+							}
+						}
+						if onStairs and !place_meeting(x,y,stairs) onStairs = false
+						
 					}
 					
 					else if !game.lootingMoving {
@@ -195,6 +212,22 @@ switch(states)
 						else {
 							sprite_index = s_player_flashlight	
 						}
+						
+						//	Stairs
+						if (input.keyUp or input.keyDown) and place_meeting(x,y,stairs) {
+							var Stairs = instance_place(x,y,stairs)
+							if Floor == Stairs.bottomFloor {
+								if x <= Stairs.leftX {
+									onStairs = Stairs
+								}
+							}
+							else if Floor == Stairs.topFloor {
+								if x >= Stairs.rightX-8 and x <= Stairs.rightX+8 {
+									onStairs = Stairs
+								}
+							}
+						}
+						if onStairs and !place_meeting(x,y,stairs) onStairs = false
 	
 					}
 					
@@ -262,7 +295,7 @@ switch(states)
 }
 
 if Floor == 1 {
-	layer_set_visible("Tiles_4",false)		
+	//layer_set_visible("Tiles_4",false)		
 }
 
 if !place_meeting(x,y-32,block) and !onStairs onGround = false
