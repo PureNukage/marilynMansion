@@ -238,6 +238,8 @@ switch(states)
 			
 			////	Collision Checking
 			if xx != 0 {
+				
+				image_speed = abs(hspd)/maxSpeed
 	
 				for(var XX=0;XX<abs(xx);XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
