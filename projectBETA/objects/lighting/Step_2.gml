@@ -21,27 +21,33 @@ if surface_exists(surface) {
 	draw_rectangle(0,0,room_width,room_height,false)
 	draw_rectangle(0,0,room_width,room_height,false)
 	
-		//	Floor fog of war
-	draw_set_alpha(1)
-	if instance_exists(collisionFloor) with collisionFloor {
-		if player.bbox_top <= bbox_top {
+	////	Floor fog of war
+	//draw_set_alpha(1)
+	//if instance_exists(collisionFloor) with collisionFloor {
+	//	if player.bbox_top <= bbox_top {
 	
-			//	Draw black box
-			var height = 128
-			draw_set_color(c_black)
-			draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+height,false)
+	//		//	Draw black box
+	//		var height = 128
+	//		draw_set_color(c_black)
+	//		draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+height,false)
 	
-		}
+	//	}
 
-		else {
+	//	else {
 	
-			//	Draw black box above ceiling
-			var height = 128
-			draw_set_color(c_black)
-			draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-height,false)
+	//		//	Draw black box above ceiling
+	//		var height = 128
+	//		draw_set_color(c_black)
+	//		draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-height,false)
 	
-		}	
-	}
+	//	}	
+	//}
+	
+	//draw_set_color(c_black)
+	//draw_set_alpha(1)
+	//if instance_exists(shadowcast_wall) with shadowcast_wall if draw {
+	//	box_draw_shadow(player.x,player.y-12, 32, 640)	
+	//}
 	
 	gpu_set_blendmode(bm_subtract)
 	if instance_exists(class_light) with class_light {
@@ -76,7 +82,38 @@ if surface_exists(surface) {
 	
 	gpu_set_blendmode(bm_normal)
 	
+	surface_reset_target()
+	
+	////	Shadowcasting
+	var surfaceShadowcast = create_surface(room_width,room_height)
+	surface_set_target(surfaceShadowcast)
+	
+	draw_set_color(c_black)
+	draw_set_alpha(1)
+	if instance_exists(shadowcast_wall) with shadowcast_wall if draw {
+		box_draw_shadow(player.x,player.y-32, 640)	
+	}
 
+	gpu_set_blendmode(bm_subtract)
+	draw_set_color(c_white)
+	if instance_exists(shadowcast_wall) with shadowcast_wall {
+		draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+	}
+	if instance_exists(collisionFloor) with collisionFloor if !drawingCeiling {
+		draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+	}
+	
+	gpu_set_blendmode(bm_normal)
 	
 	surface_reset_target()
+	
+	surface_set_target(surface)
+	draw_surface(surfaceShadowcast,0,0)
+	surface_reset_target()
+	
+	surface_free(surfaceShadowcast)
+	
+	draw_set_alpha(1)
+	
+	//surface_reset_target()
 }

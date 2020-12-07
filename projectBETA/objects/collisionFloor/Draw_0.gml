@@ -1,5 +1,6 @@
 //	Draw floor
 if player.bbox_top <= bbox_top {
+	drawingCeiling = false
 	var Width = abs(bbox_right-bbox_left)
 	var Height = abs(bbox_bottom-bbox_top)
 	
@@ -13,6 +14,7 @@ if player.bbox_top <= bbox_top {
 }
  //	Draw ceiling
 else  {
+	drawingCeiling = true
 	var Width = abs(bbox_right-bbox_left)
 	var Height = abs(bbox_bottom-bbox_top)
 	

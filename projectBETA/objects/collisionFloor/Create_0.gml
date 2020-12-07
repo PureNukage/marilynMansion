@@ -1,5 +1,7 @@
 Floor = 0
 
+drawingCeiling = false
+
 function create_floor() {
 	var Width = abs(bbox_right-bbox_left)
 	var Height = abs(bbox_bottom-bbox_top)
