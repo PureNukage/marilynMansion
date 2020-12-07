@@ -3,6 +3,14 @@ switch(states)
 	#region Free 
 		case states.free:
 			if input.keyRight or input.keyLeft {
+				
+				if cooldown < 1 {
+					sound.playSoundEffect(choose(Step1, Step2, Step3, Step4,Step5,Step6))
+					cooldown = 25
+				}
+				
+				cooldown = cooldown -1
+				
 				if game.lootingMoving {
 					game.lootingMoving = false
 					game.lootingID = -1

@@ -1,5 +1,7 @@
 event_inherited()
 
+cooldown = 0
+
 mask_index = s_player_collision
 
 depth = -5
