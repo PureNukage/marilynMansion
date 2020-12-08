@@ -45,7 +45,13 @@ if surface_exists(surface) {
 			var floorID = id	
 			if floorID.Floor > lightID.Floor {
 				gpu_set_blendmode(bm_subtract)
-				draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				//draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				var Width = abs(bbox_right-bbox_left)
+				var Height = abs(bbox_bottom-bbox_top)
+				var Surface = create_surface(Width, Height)
+				buffer_set_surface(floorSurfaceBuffer,Surface,0)
+				draw_surface_ext(Surface,x,y,1,1,0,c_black,1)
+				surface_free(Surface)
 				gpu_set_blendmode(bm_normal)	
 			}
 		}
@@ -69,7 +75,13 @@ if surface_exists(surface) {
 			//debug.log("floorID.depth: "+string(floorID.depth))
 			if floorID.depth < lightID.depth {
 				gpu_set_blendmode(bm_subtract)
-				draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				//draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				var Width = abs(bbox_right-bbox_left)
+				var Height = abs(bbox_bottom-bbox_top)
+				var Surface = create_surface(Width, Height)
+				buffer_set_surface(floorSurfaceBuffer,Surface,0)
+				draw_surface_ext(Surface,x,y,1,1,0,c_black,1)
+				surface_free(Surface)
 				gpu_set_blendmode(bm_normal)
 			}
 			else {
