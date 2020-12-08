@@ -31,6 +31,11 @@ function looting() {
 		if ID > -1 {
 			lootingString = object_get_name(ID.object_index)
 			
+			//	Candle DEBUG
+			if ID.object_index == candle {
+				debug.log(string(ID.depth))
+			}
+			
 			if playerInput.mouseLeftPress {
 				if ID.object_index == candle {
 					lootingID = ID

@@ -22,7 +22,7 @@ if on {
 			var spriteString = firstString + struct.sprite + string(floor(image_index)+1)
 			var sprite = asset_get_index(spriteString)
 			
-			var genX = x - sprite_get_xoffset(sprite_index)
+			var genX = x + (-sprite_get_xoffset(sprite_index)*image_xscale)
 			var genY = y - sprite_get_yoffset(sprite_index)
 			
 			var oldOffsetX = sprite_get_xoffset(sprite)
@@ -30,7 +30,7 @@ if on {
 			
 			sprite_set_offset(sprite,0,0)
 			
-			var _bbox_left = sprite_get_bbox_left(sprite) var _bbox_right = sprite_get_bbox_right(sprite)
+			var _bbox_left = sprite_get_bbox_left(sprite)*image_xscale var _bbox_right = sprite_get_bbox_right(sprite)*image_xscale
 			var _bbox_top = sprite_get_bbox_top(sprite) var _bbox_bottom = sprite_get_bbox_bottom(sprite)
 			
 			draw_set_color(c_red)

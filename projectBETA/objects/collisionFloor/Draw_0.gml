@@ -9,7 +9,20 @@ if player.bbox_top <= bbox_top {
 	
 	draw_surface(surface,x,y)
 	
-	surface_free(surface)		
+	surface_free(surface)
+	
+	//if place_meeting(x,y,class_unit) {
+	//	var list = ds_list_create()
+	//	var amount = instance_place_list(x,y,class_unit,list,true)
+	//	for(var i=0;i<amount;i++) {
+	//		var ID = list[| i]
+	//		if ID.Floor < Floor ID.depth = 600
+	//	}
+	//}
+	
+	//if Floor > 0 {
+	//	
+	//}
 	
 }
  //	Draw ceiling

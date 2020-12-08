@@ -3,12 +3,12 @@ event_inherited()
 on = false
 light = -1
 
-depth = 100
-
 function interact(on_or_off) {
 	//	On
 	if on_or_off {
 		light = instance_create_layer(x,y,"Instances",class_light)
+		light.depth = depth
+		light.Floor = Floor
 		sprite_index = s_candle
 		image_index = 0
 	}

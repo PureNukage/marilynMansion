@@ -21,42 +21,108 @@ if surface_exists(surface) {
 	draw_rectangle(0,0,room_width,room_height,false)
 	draw_rectangle(0,0,room_width,room_height,false)
 	
-	////	Floor fog of war
-	//draw_set_alpha(1)
-	//if instance_exists(collisionFloor) with collisionFloor {
-	//	if player.bbox_top <= bbox_top {
+	surface_reset_target()
 	
-	//		//	Draw black box
-	//		var height = 128
-	//		draw_set_color(c_black)
-	//		draw_rectangle(bbox_left,bbox_bottom,bbox_right,bbox_bottom+height,false)
+	//var lightSurface = create_surface(room_width, room_height)
+	//surface_set_target(lightSurface)
 	
-	//	}
-
-	//	else {
-	
-	//		//	Draw black box above ceiling
-	//		var height = 128
-	//		draw_set_color(c_black)
-	//		draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_top-height,false)
-	
-	//	}	
-	//}
-	
-	//draw_set_color(c_black)
-	//draw_set_alpha(1)
-	//if instance_exists(shadowcast_wall) with shadowcast_wall if draw {
-	//	box_draw_shadow(player.x,player.y-12, 32, 640)	
-	//}
-	
-	gpu_set_blendmode(bm_subtract)
+	//gpu_set_blendmode(bm_subtract)
 	if instance_exists(class_light) with class_light {
+		var lightID = id
+		var lightSurface = create_surface(room_width, room_height)
+		var shadowSurface = create_surface(room_width, room_height)
+		surface_set_target(lightSurface)
+		
 		var scatterX = irandom_range(-5,5)
 		var scatterY = irandom_range(-5,5)
-		draw_sprite_ext(sprite_index,0,x+scatterX,y+scatterY,1.5,1.5,image_angle,c_black,brightness)
+		
+		var lightX = x+scatterX
+		var lightY = y+scatterY
+		
+		draw_sprite_ext(sprite_index,0,lightX,lightY,1.5,1.5,image_angle,c_black,brightness)
+		
+		if instance_exists(collisionFloor) with collisionFloor if !drawingCeiling {
+			var floorID = id	
+			if floorID.Floor > lightID.Floor {
+				gpu_set_blendmode(bm_subtract)
+				draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				gpu_set_blendmode(bm_normal)	
+			}
+		}
+		
+		surface_reset_target()
+		surface_set_target(shadowSurface)
+		
+		//gpu_set_blendmode(bm_subtract)
+		draw_set_alpha(1)
+		draw_set_color(c_black)
+		if instance_exists(shadowcast_wall) with shadowcast_wall {
+			box_draw_shadow(lightX,lightY, 640)	
+		}
+		if instance_exists(shadowcast_wall) with shadowcast_wall {
+			//draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+		}
+		//debug.log(string(depth))
+		if instance_exists(collisionFloor) with collisionFloor if !drawingCeiling {
+			var floorID = id
+			//debug.log("lightID.depth: "+string(lightID.depth))
+			//debug.log("floorID.depth: "+string(floorID.depth))
+			if floorID.depth < lightID.depth {
+				gpu_set_blendmode(bm_subtract)
+				draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)
+				gpu_set_blendmode(bm_normal)
+			}
+			else {
+				draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false)	
+			}
+		}
+		//gpu_set_blendmode(bm_normal)
+		
+		surface_reset_target()
+		
+		surface_set_target(lightSurface)
+		gpu_set_blendmode(bm_subtract)
+		draw_surface(shadowSurface,0,0)
+		surface_reset_target()
+		
+		
+		//surface_reset_target()
+		//gpu_set_blendmode(bm_subtract)
+		surface_set_target(lighting.surface)
+		draw_surface(lightSurface,0,0)
+		draw_surface(lightSurface,0,0)
+		gpu_set_blendmode(bm_normal)
+		surface_reset_target()
+		
+		//surface_save(shadowSurface, "shadowSurface"+string(lightID)+".png")
+		//surface_save(lightSurface, "lightSurface"+string(lightID)+".png")
+		//surface_save(shadowSurface,"shadowSurface.png")
+		
+		surface_free(lightSurface)
+		surface_free(shadowSurface)
+		
 		//draw_set_alpha(brightness)
 		//draw_circle(x+scatterX,y+scatterY,128,false)
 	}
+	
+	//draw_set_alpha(1)
+	//gpu_set_blendmode(bm_subtract)
+	//if instance_exists(class_light) with class_light {
+	//	if instance_exists(shadowcast_wall) with shadowcast_wall {
+	//		box_draw_shadow(other.x,other.y, 640)	
+	//	}
+	//}
+	//gpu_set_blendmode(bm_normal)
+	
+	//surface_reset_target()
+	surface_set_target(surface)
+	
+	//surface_save(lightSurface,"lightSurface.png")
+	
+	gpu_set_blendmode(bm_subtract)
+	
+	//draw_surface(lightSurface,0,0)
+	//draw_surface(lightSurface,0,0)
 	
 	//	Flashlight
 	if instance_exists(player) {
