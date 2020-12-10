@@ -1,6 +1,6 @@
 Floor = 0
 
-drawingCeiling = false
+drawingCeiling = true
 
 function create_floor() {
 	var Width = abs(bbox_right-bbox_left)

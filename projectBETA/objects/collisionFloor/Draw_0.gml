@@ -1,5 +1,7 @@
 //	Draw floor
 if player.bbox_top <= bbox_top {
+	var oldDrawing = drawingCeiling 
+	
 	drawingCeiling = false
 	var Width = abs(bbox_right-bbox_left)
 	var Height = abs(bbox_bottom-bbox_top)
@@ -11,22 +13,16 @@ if player.bbox_top <= bbox_top {
 	
 	surface_free(surface)
 	
-	//if place_meeting(x,y,class_unit) {
-	//	var list = ds_list_create()
-	//	var amount = instance_place_list(x,y,class_unit,list,true)
-	//	for(var i=0;i<amount;i++) {
-	//		var ID = list[| i]
-	//		if ID.Floor < Floor ID.depth = 600
-	//	}
-	//}
-	
-	//if Floor > 0 {
-	//	
-	//}
+	if oldDrawing != drawingCeiling {
+		//lighting.refreshLights = true
+		if instance_exists(class_light) with class_light create_light()
+	}
 	
 }
  //	Draw ceiling
 else  {
+	var oldDrawing = drawingCeiling 
+		
 	drawingCeiling = true
 	var Width = abs(bbox_right-bbox_left)
 	var Height = abs(bbox_bottom-bbox_top)
@@ -37,4 +33,9 @@ else  {
 	draw_surface(surface,x,y)
 	
 	surface_free(surface)
+	
+	if oldDrawing != drawingCeiling {
+		//lighting.refreshLights = true
+		if instance_exists(class_light) with class_light create_light()
+	}
 }

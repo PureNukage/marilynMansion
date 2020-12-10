@@ -12,3 +12,16 @@ draw_rectangle(0,0,room_width,room_height,false)
 surface_reset_target()
 
 draw_set_alpha(1)
+
+refreshLights = false
+lightsIndex = 0
+
+list = ds_list_create()
+
+function add_light(ID) {
+	ds_list_add(list, ID)
+}
+
+function remove_light(index) {
+	ds_list_delete(list, index)	
+}

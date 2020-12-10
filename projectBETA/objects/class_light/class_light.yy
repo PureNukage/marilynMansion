@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_light_gradient",
-    "path": "sprites/s_light_gradient/s_light_gradient.yy",
+    "name": "s_light_gradient2",
+    "path": "sprites/s_light_gradient2/s_light_gradient2.yy",
   },
   "solid": false,
   "visible": true,
