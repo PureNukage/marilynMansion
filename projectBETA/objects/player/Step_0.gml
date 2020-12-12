@@ -27,15 +27,19 @@ switch(states)
 					if Floor == Stairs.bottomFloor {
 						if x <= Stairs.leftX {
 							onStairs = Stairs
+							y -= 1
 						}
 					}
 					else if Floor == Stairs.topFloor {
-						if x >= Stairs.rightX-8 and x <= Stairs.rightX+8 {
+						if x >= Stairs.rightX-4 and x <= Stairs.rightX+8 {
 							onStairs = Stairs
+							y += 1
 						}
 					}
 				}
-				if onStairs and !place_meeting(x,y,stairs) onStairs = false
+				if onStairs {
+					if (bbox_bottom <= onStairs.bbox_top) or (bbox_bottom >= onStairs.bbox_bottom) onStairs = false
+				}
 				
 				
 			}
