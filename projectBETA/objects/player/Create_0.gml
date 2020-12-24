@@ -17,12 +17,12 @@ maxSpeed = 1.25
 flashlightOn = game.Player.flashlightOn
 
 arm0 = s_player_arm_aim
-arm0_offsetX = -6
-arm0_offsetY = -11
+arm0_offsetX = 5
+arm0_offsetY = -6
 
 arm1 = s_player_arm_support
-arm1_offsetX = 6
-arm1_offsetY = -11
+arm1_offsetX = -3
+arm1_offsetY = -8
 
 gunRotation = -1
 
@@ -47,11 +47,11 @@ function change_inventory(new_index) {
 		break
 		case item.gun:
 			arm0 = s_player_arm_aim
-			arm1 = s_player_arm_support
+			arm1 = -1
 		break
 		case item.flashlight:
-			arm0 = s_player_arm_flashlight
-			arm1 = -1
+			arm1 = s_player_arm_flashlight
+			arm0 = -1
 		break
 	}
 	var e = []
