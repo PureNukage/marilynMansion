@@ -28,8 +28,8 @@ if surface_exists(surface) {
 	//	Flashlight
 	if instance_exists(player) {
 		if player.flashlightOn and player.inventory[player.inventoryIndex].item == item.flashlight {
-			var rawDirection = point_direction(player.x + (player.arm1_offsetX*player.image_xscale),player.y+player.arm1_offsetY, player.x + (12 * player.image_xscale),player.y-12)
-			var rawDist = point_distance(player.x + (player.arm1_offsetX*player.image_xscale),player.y+player.arm1_offsetY, player.x + (12 * player.image_xscale),player.y-12)
+			var rawDirection = point_direction(player.x + (player.arm1_offsetX*player.image_xscale),player.y+player.arm1_offsetY, player.x + (3 * player.image_xscale),player.y-14)
+			var rawDist = point_distance(player.x + (player.arm1_offsetX*player.image_xscale),player.y+player.arm1_offsetY, player.x + (3 * player.image_xscale),player.y-14)
 			if player.image_xscale rawDirection += player.gunRotation
 			else rawDirection += player.gunRotation - 180
 			var X = player.x + (player.arm1_offsetX*player.image_xscale) + lengthdir_x(rawDist, rawDirection)

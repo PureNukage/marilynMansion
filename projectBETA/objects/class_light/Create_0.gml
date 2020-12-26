@@ -1,5 +1,5 @@
 brightness = 1
-scale = 1
+scale = 1.25
 Floor = 0
 lightSprite = -1
 

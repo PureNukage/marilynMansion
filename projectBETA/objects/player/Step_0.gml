@@ -73,11 +73,11 @@ switch(states)
 					case item.flashlight: sprite_index = s_player_flashlight_walk break
 				}
 				if old_xscale != image_xscale {
-					var X = (x + (arm0_offsetX*old_xscale)) + lengthdir_x(50, gunRotation)
-					var Y = y+arm0_offsetY + lengthdir_y(50, gunRotation)
-					var newWidth = abs(X - (x + (arm0_offsetX*old_xscale)))
-					var newX = (x + (arm0_offsetX*image_xscale)) + (image_xscale * newWidth)
-					gunRotation = point_direction((x + (arm0_offsetX*image_xscale)),y+arm0_offsetY, newX,Y)
+					var X = (x + (arm1_offsetX*old_xscale)) + lengthdir_x(50, gunRotation)
+					var Y = y+arm1_offsetY + lengthdir_y(50, gunRotation)
+					var newWidth = abs(X - (x + (arm1_offsetX*old_xscale)))
+					var newX = (x + (arm1_offsetX*image_xscale)) + (image_xscale * newWidth)
+					gunRotation = point_direction((x + (arm1_offsetX*image_xscale)),y+arm1_offsetY, newX,Y)
 				}
 			}
 			else {
@@ -86,6 +86,7 @@ switch(states)
 					case item.gun: sprite_index = s_player_idle break
 					case item.flashlight: sprite_index = s_player_flashlight break
 				}
+				image_speed = 1
 			}
 			
 
@@ -157,10 +158,27 @@ switch(states)
 	#region Aim
 		case states.aim:
 			
-			gunRotation = point_direction(x+arm0_offsetX,y+arm0_offsetY, mouse_x,mouse_y)
+			var offsetX = 0
+			var offsetY = 0
+			if inventory[inventoryIndex].item == item.flashlight {
+				offsetX = arm1_offsetX
+				offsetY = arm1_offsetY
+			}
+			else {
+				offsetX = arm0_offsetX
+				offsetY = arm0_offsetY
+			}
+			gunRotation = point_direction(x+(offsetX*image_xscale),y+offsetY, mouse_x,mouse_y)
+			
+			//	Firing gun
+			if firingGun > -1 and firingGun.done {
+				instance_destroy(firingGun)
+				firingGun = -1
+				arm0 = s_player_arm_aim
+			}
 			
 			//	Stop aiming
-			if input.mouseRightRelease {
+			if input.mouseRightRelease and firingGun == -1 {
 				states = states.free
 				window_set_cursor(cr_default)
 			}
@@ -170,7 +188,7 @@ switch(states)
 				
 				break
 				case item.gun:
-					if arm0 == s_player_arm_aim_fire arm0 = s_player_arm_aim	
+					//if arm0 == s_player_arm_aim_fire arm0 = s_player_arm_aim	
 				break
 				case item.flashlight:
 				
@@ -276,9 +294,14 @@ switch(states)
 			
 			//	Use item in hand
 			if input.mouseLeftPress {
-				if inventory[inventoryIndex].item == item.gun {
+				if inventory[inventoryIndex].item == item.gun and firingGun == -1 {
 					fireGun()
 					arm0 = s_player_arm_aim_fire
+					
+					firingGun = instance_create_layer(0,0,"Instances",animationTimer)
+					firingGun.ID = id
+					firingGun.sprite_index = arm0
+					firingGun.image_index = 0
 					
 					//reticle.radius += reticle.radius/2 + 8
 					var dist = point_distance(x,y, mouse_x,mouse_y)

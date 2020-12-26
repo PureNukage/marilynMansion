@@ -86,6 +86,7 @@
     {"id":{"name":"Idle_head_2","path":"sprites/Idle_head_2/Idle_head_2.yy",},"order":81,},
     {"id":{"name":"Walk_Back_Leg_back_upper_leg_8","path":"sprites/Walk_Back_Leg_back_upper_leg_8/Walk_Back_Leg_back_upper_leg_8.yy",},"order":87,},
     {"id":{"name":"Idle_Front_Arm_front_upper_arm_8","path":"sprites/Idle_Front_Arm_front_upper_arm_8/Idle_Front_Arm_front_upper_arm_8.yy",},"order":63,},
+    {"id":{"name":"animationTimer","path":"objects/animationTimer/animationTimer.yy",},"order":24,},
     {"id":{"name":"Idle_Front_Leg_front_upper_leg_1","path":"sprites/Idle_Front_Leg_front_upper_leg_1/Idle_Front_Leg_front_upper_leg_1.yy",},"order":72,},
     {"id":{"name":"Walk_Back_arm_back_lower_arm_2","path":"sprites/Walk_Back_arm_back_lower_arm_2/Walk_Back_arm_back_lower_arm_2.yy",},"order":49,},
     {"id":{"name":"s_bulletScorch","path":"sprites/s_bulletScorch/s_bulletScorch.yy",},"order":1,},

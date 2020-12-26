@@ -7,8 +7,8 @@ switch(states)
 				if arm0 > -1 draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
 				
 				draw_self()
-			
-				if arm1 > -1 draw_sprite_ext(arm1,0,x + (arm1_offsetX*image_xscale), y + arm1_offsetY, image_xscale,1,gunRotation+gunRotation,c_white,1)	
+				
+				if arm1 > -1 draw_sprite_ext(arm1,0,x + (arm1_offsetX*image_xscale), y + arm1_offsetY, 1,image_xscale,gunRotation,c_white,1)	
 			}
 			else {
 				draw_self()	
@@ -22,11 +22,13 @@ switch(states)
 		
 			if mouse_x > x image_xscale = 1 else image_xscale = -1
 		
-			if arm0 > -1 draw_sprite_ext(arm0,0,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
+			var index = 0
+			if firingGun > -1 index = firingGun.image_index
+			if arm0 > -1 draw_sprite_ext(arm0,index,x + (arm0_offsetX*image_xscale), y + arm0_offsetY, 1, image_xscale,gunRotation,c_white,1)	
 		
 			draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,1)
 			
-			if arm1 > -1 draw_sprite_ext(arm1,0,x + (arm1_offsetX*image_xscale), y + arm1_offsetY, image_xscale,1,gunRotation+gunRotation,c_white,1)
+			if arm1 > -1 draw_sprite_ext(arm1,0, x + (arm1_offsetX*image_xscale), y + arm1_offsetY, 1,image_xscale,gunRotation,c_white,1)
 		
 		break	
 	#endregion

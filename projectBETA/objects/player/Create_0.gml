@@ -123,6 +123,7 @@ function lootMoving() {
 	}	
 }
 
+firingGun = -1
 function fireGun() {
 	
 	var startX = x + (-8 * image_xscale)
