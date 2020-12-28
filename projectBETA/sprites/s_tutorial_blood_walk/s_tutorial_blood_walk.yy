@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"90d37b62-1829-4ac5-b7aa-55fb942a7305","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "tutorial blood",
+    "path": "folders/Sprites/tutorial blood.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_tutorial_blood_walk",

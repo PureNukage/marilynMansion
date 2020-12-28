@@ -1,15 +1,23 @@
 switch(states) {
 	case states.free:
 	
-		sprite_index = zombie_Idle
+		if !knocked {
+			sprite_index = zombie_Idle
 	
-		//	Idle
-		if timer > -1 timer-- 
+			//	Idle
+			if timer > -1 timer-- 
+			else {
+				states = states.walk
+				var dist = 100
+				goalX = irandom_range(x-dist,x+dist)
+				goalX = clamp(goalX,0,room_width)
+			}
+		}
+		//	Knocked
 		else {
-			states = states.walk
-			var dist = 100
-			goalX = irandom_range(x-dist,x+dist)
-			goalX = clamp(goalX,0,room_width)
+			if animation_end {
+				knocked = false	
+			}
 		}
 		
 	break

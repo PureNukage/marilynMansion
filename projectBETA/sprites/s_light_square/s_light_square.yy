@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b143c4b8-cc71-4865-90a7-e52d389f6c76","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "lights",
+    "path": "folders/Sprites/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_light_square",

@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":{"name":"95d07b7f-0fdc-461b-bf0a-6e3898135e07","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":{"name":"1a3783a3-1670-461e-b516-de6f758dec67","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"LayerId":{"name":"95d07b7f-0fdc-461b-bf0a-6e3898135e07","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_tutorial_blood_aiming","path":"sprites/s_tutorial_blood_aiming/s_tutorial_blood_aiming.yy",},"resourceVersion":"1.0","name":"1b8fa1a1-5520-415a-9086-ad171d7e4c4c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -70,8 +70,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"95d07b7f-0fdc-461b-bf0a-6e3898135e07","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "tutorial blood",
+    "path": "folders/Sprites/tutorial blood.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_tutorial_blood_aiming",

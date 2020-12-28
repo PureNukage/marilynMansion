@@ -89,7 +89,10 @@ switch(states)
 				image_speed = 1
 			}
 			
-
+			//	Reload gun
+			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammo < ammoMax {
+				reload()
+			}
 				
 			//	Aiming
 			if input.mouseRightPress {
@@ -128,8 +131,7 @@ switch(states)
 			
 			////	Collision Checking
 			if xx != 0 {
-	
-				for(var XX=0;XX<abs(xx);XX++) {
+				for(var XX=0;XX<floor(abs(xx));XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
 						//var ID = instance_place(x + sign(xx), y, block)
@@ -141,6 +143,24 @@ switch(states)
 						//if (sign(xx) < 0) {
 							if bbox_bottom - sign(xx) <= onStairs.bbox_bottom {
 								y -= sign(xx)	
+							}
+						//}
+						//else y -= sign(xx)
+					}
+				}
+				if abs(xx) > 0 {
+					var _xx = (abs(xx) - floor(abs(xx))) * sign(xx)
+					if !instance_place(x + _xx, y, block) x += _xx
+					else {
+						//var ID = instance_place(x + sign(xx), y, block)
+						//if ID.Floor > Floor x += sign(xx)
+						if onStairs x += _xx
+					}
+					if onStairs {
+						//	If going down, make sure we're not on the bottom floor
+						//if (sign(xx) < 0) {
+							if bbox_bottom - _xx <= onStairs.bbox_bottom {
+								y -= _xx	
 							}
 						//}
 						//else y -= sign(xx)
@@ -294,7 +314,8 @@ switch(states)
 			
 			//	Use item in hand
 			if input.mouseLeftPress {
-				if inventory[inventoryIndex].item == item.gun and firingGun == -1 {
+				if inventory[inventoryIndex].item == item.gun and firingGun == -1 and ammo > 0 {
+					ammo--
 					fireGun()
 					arm0 = s_player_arm_aim_fire
 					
@@ -324,6 +345,22 @@ switch(states)
 					e[bodypart.back_leg_lower] = "leftLegLower"
 				
 				}
+			}
+				
+			//	Reload gun
+			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammo < ammoMax {
+				reload()
+			}
+			
+		break
+	#endregion
+	
+	#region Reloading
+		case states.reloading:
+			
+			if animation_end {
+				states = states.free
+				reloadStatePrev = -1
 			}
 			
 		break

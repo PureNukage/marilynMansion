@@ -14,14 +14,17 @@ Floor = 0
 hspd = 0
 maxSpeed = 1.25
 
+ammo = 8
+ammoMax = 8
+
 flashlightOn = game.Player.flashlightOn
 
 arm0 = s_player_arm_aim
-arm0_offsetX = 5
+arm0_offsetX = 4
 arm0_offsetY = -6
 
 arm1 = s_player_arm_support
-arm1_offsetX = -3
+arm1_offsetX = -4
 arm1_offsetY = -8
 
 gunRotation = -1
@@ -47,7 +50,7 @@ function change_inventory(new_index) {
 		break
 		case item.gun:
 			arm0 = s_player_arm_aim
-			arm1 = -1
+			arm1 = s_player_arm_support
 		break
 		case item.flashlight:
 			arm1 = s_player_arm_flashlight
@@ -230,6 +233,11 @@ function fireGun() {
 				Particle.image_angle = irandom_range(0,359)	
 			}
 			
+			//	Knock zombie
+			if !dead {
+				ID.knockBack(XX)
+			}
+			
 			bulletArray[0] = XX
 			bulletArray[1] = YY
 			bulletArray[2] = startX
@@ -301,6 +309,17 @@ function fireGun() {
 			
 		}
 	
+}
+	
+reloadStatePrev = -1
+function reload() {
+	ammo = ammoMax
+	sprite_index = s_player_reloading
+	image_index = 0
+	image_speed = 1
+	//reloadStatePrev = states
+	states = states.reloading
+	sound.playSoundEffect(snd_reload)
 }
 	
 reticle = {

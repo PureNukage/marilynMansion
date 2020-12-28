@@ -8,6 +8,8 @@ states = states.free
 sprite = zombie_Walk
 sprite_index = sprite
 
+knocked = false
+
 bloodSurface = -1
 bloodSurface = surface_create(sprite_get_width(sprite_index),sprite_get_height(sprite_index))
 surface_set_target(bloodSurface)
@@ -41,6 +43,29 @@ function add_blood(x, y) {
 		
 	//}
 	
+}
+	
+function knockBack(XX) {
+	var ID = id
+	ID.knocked = true
+	//	Zombies facing left and we shot him in the front
+	if XX < ID.x and ID.image_xscale < 0 {
+		ID.sprite_index = zombie_Knockback_Back
+	}
+	//	Zombies facing left and we shot him in the back
+	else if XX > ID.x and ID.image_xscale < 0 {
+		ID.sprite_index = zombie_Knockback_front
+	}
+	//	Zombies facing right and we shot him in the back
+	else if XX < ID.x and ID.image_xscale > 0 {
+		ID.sprite_index = zombie_Knockback_front
+	}
+	else {
+		ID.sprite_index = zombie_Knockback_Back	
+	}
+	image_index = 0
+	states = states.free
+	goalX = -1
 }
 
 states = states.free

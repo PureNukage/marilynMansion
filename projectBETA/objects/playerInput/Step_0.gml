@@ -18,6 +18,8 @@ keyInteract = keyboard_check_pressed(ord("E"))
 
 keyFlashlight = keyboard_check_pressed(ord("F"))
 
+keyReload = keyboard_check_pressed(ord("R"))
+
 keyLoot = keyboard_check_pressed(vk_tab)
 
 keyLeftHand = keyboard_check_pressed(ord("1"))

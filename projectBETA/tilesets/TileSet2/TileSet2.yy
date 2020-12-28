@@ -74,8 +74,8 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "tiles",
+    "path": "folders/Sprites/tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "TileSet2",

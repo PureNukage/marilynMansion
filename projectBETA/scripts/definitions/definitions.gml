@@ -1,6 +1,7 @@
 enum states {
 	free,
 	aim,
+	reloading,
 	looting,
 	walk
 }

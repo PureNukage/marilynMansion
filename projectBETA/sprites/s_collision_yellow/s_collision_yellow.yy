@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"72766526-a1d7-46fa-b3bf-0b5b3f62076f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "collision",
+    "path": "folders/Sprites/collision.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_collision_yellow",

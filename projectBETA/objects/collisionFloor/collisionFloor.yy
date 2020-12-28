@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Game.yy",
+    "name": "collision",
+    "path": "folders/Game/collision.yy",
   },
   "resourceVersion": "1.0",
   "name": "collisionFloor",

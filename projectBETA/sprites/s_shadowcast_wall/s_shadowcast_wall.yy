@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eb6945a1-91f8-4479-81ca-75a60992126d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "lights",
+    "path": "folders/Sprites/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_shadowcast_wall",

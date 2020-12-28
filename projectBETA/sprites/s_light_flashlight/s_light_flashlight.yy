@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d47f96af-08b2-4aac-89ee-d9bac0019d44","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "lights",
+    "path": "folders/Sprites/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_light_flashlight",

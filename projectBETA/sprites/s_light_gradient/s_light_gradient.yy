@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9acc0ef-f88e-4297-b9ce-c45afe892033","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "lights",
+    "path": "folders/Sprites/lights.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_light_gradient",

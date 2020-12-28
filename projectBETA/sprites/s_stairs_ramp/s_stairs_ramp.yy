@@ -25,10 +25,10 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":{"name":"3b097553-cf1e-4551-ab5f-a94e09e4dfdd","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":{"name":"80304961-f575-438d-8356-ca297b12789f","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":{"name":"a6bf75fe-45f3-4218-a66f-a870135a5e16","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":{"name":"03c75b36-1099-4fc7-9c77-52abebe9508b","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"LayerId":{"name":"3b097553-cf1e-4551-ab5f-a94e09e4dfdd","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_stairs_ramp","path":"sprites/s_stairs_ramp/s_stairs_ramp.yy",},"resourceVersion":"1.0","name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -74,8 +74,8 @@
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"03c75b36-1099-4fc7-9c77-52abebe9508b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "misc",
+    "path": "folders/Sprites/misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_stairs_ramp",
