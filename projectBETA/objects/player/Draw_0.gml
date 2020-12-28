@@ -22,7 +22,7 @@ switch(states)
 		
 			if mouse_x > x image_xscale = 1 else image_xscale = -1
 			
-			sprite_index = s_player_body
+			//sprite_index = s_player_body
 		
 			var index = 0
 			if firingGun > -1 index = firingGun.image_index

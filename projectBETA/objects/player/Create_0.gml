@@ -224,6 +224,11 @@ function fireGun() {
 				Particle.fix.x = XX - ID.x
 				Particle.fix.y = YY - ID.y
 				Particle.image_angle = point_direction(XX,YY, startX,startY)
+				
+				//	Knock zombie
+				if !dead {
+					ID.knockBack(XX)
+				}
 			}
 			//	Missed
 			else {
@@ -231,11 +236,6 @@ function fireGun() {
 				var Particle = instance_create_layer(XX,YY,"Instances",class_particle)
 				Particle.sprite_index = s_bulletScorch
 				Particle.image_angle = irandom_range(0,359)	
-			}
-			
-			//	Knock zombie
-			if !dead {
-				ID.knockBack(XX)
 			}
 			
 			bulletArray[0] = XX

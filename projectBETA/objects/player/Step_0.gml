@@ -288,10 +288,7 @@ switch(states)
 			
 			////	Collision Checking
 			if xx != 0 {
-				
-				image_speed = abs(hspd)/maxSpeed
-	
-				for(var XX=0;XX<abs(xx);XX++) {
+				for(var XX=0;XX<floor(abs(xx));XX++) {
 					if !instance_place(x + sign(xx), y, block) x += sign(xx)
 					else {
 						//var ID = instance_place(x + sign(xx), y, block)
@@ -308,7 +305,27 @@ switch(states)
 						//else y -= sign(xx)
 					}
 				}
+				if abs(xx) > 0 {
+					var _xx = (abs(xx) - floor(abs(xx))) * sign(xx)
+					if !instance_place(x + _xx, y, block) x += _xx
+					else {
+						//var ID = instance_place(x + sign(xx), y, block)
+						//if ID.Floor > Floor x += sign(xx)
+						if onStairs x += _xx
+					}
+					if onStairs {
+						//	If going down, make sure we're not on the bottom floor
+						//if (sign(xx) < 0) {
+							if bbox_bottom - _xx <= onStairs.bbox_bottom {
+								y -= _xx	
+							}
+						//}
+						//else y -= sign(xx)
+					}
+				}
 				xx = 0
+				
+				//reticle.radius += 2
 	
 			}
 			
