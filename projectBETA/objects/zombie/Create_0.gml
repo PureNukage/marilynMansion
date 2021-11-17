@@ -143,7 +143,7 @@ function die() {
 	ragDoll.image_index = image_index
 	ragDoll.bodyparts = bodyparts
 	ragDoll.image_xscale = image_xscale
-	ragDoll.spawn_ragdoll()	
-	
+	ragDoll.spawn_ragdoll()
 	instance_destroy()	
+	return ragDoll
 }

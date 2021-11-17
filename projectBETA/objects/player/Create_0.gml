@@ -190,7 +190,7 @@ function fireGun() {
 				}
 				sprite_set_offset(spriteIndex,oldOffsetX,oldOffsetY)
 				if ID.hp <= 0 {
-					ID.die()
+					var ragDoll = ID.die()
 				
 					//	Create blood wall splat
 					var splat = instance_create_layer(XX,YY,"Instances",class_particle)
@@ -200,10 +200,10 @@ function fireGun() {
 					//	Create blood decal
 					var Decal = instance_create_layer(XX,YY,"Instances",class_decal)
 					Decal.sprite_index = s_bloodhole_0
-					Decal.applyDecal(ID.bodyparts[i][bodyparts_id])
+					Decal.applyDecal(ragDoll.bodyparts[i][bodyparts_id])
 				
 					//	Apply force to bodypart
-					with ID.bodyparts[i][bodyparts_id] {
+					with ragDoll.bodyparts[i][bodyparts_id] {
 						var xForce = 0
 						if startX > x xForce = -5000
 						else xForce = 5000
