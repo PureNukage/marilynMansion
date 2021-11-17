@@ -4,7 +4,7 @@ cooldown = 0
 
 mask_index = s_player_collision
 
-depth = -5
+depth = -102
 
 input = instance_create_layer(0,0,"Instances",playerInput)
 
