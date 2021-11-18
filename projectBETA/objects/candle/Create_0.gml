@@ -9,6 +9,8 @@ function interact(on_or_off) {
 		light = instance_create_layer(x,y,"Instances",class_light)
 		light.depth = depth
 		light.Floor = Floor
+		light.create_light()
+		lighting.add_light(light)
 		sprite_index = s_candle
 		image_index = 0
 	}
