@@ -45,6 +45,10 @@ function looting() {
 					lootingID = ID
 					lootingMoving = true
 				}
+				else if ID.object_index == ammobox {
+					lootingID = ID
+					lootingMoving = true
+				}
 			}
 		}
 		else {
