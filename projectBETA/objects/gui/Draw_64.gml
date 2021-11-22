@@ -29,3 +29,9 @@ if instance_exists(player) {
 	
 	draw_reset()
 }
+	
+////	RADIAL MENU
+if playerInput.keyInteract {
+	draw_set_color(c_white)
+	draw_circle(display_get_gui_width()/2,display_get_gui_height()/2,60,0)
+}
