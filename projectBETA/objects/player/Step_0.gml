@@ -90,7 +90,7 @@ switch(states)
 			}
 			
 			//	Reload gun
-			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammo < ammoMax {
+			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammoRsv > 0 {
 				reload()
 			}
 				
@@ -365,7 +365,7 @@ switch(states)
 			}
 				
 			//	Reload gun
-			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammo < ammoMax {
+			if input.keyReload and inventory[inventoryIndex].item == item.gun and ammoRsv > 0 {
 				reload()
 			}
 			

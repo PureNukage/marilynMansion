@@ -24,7 +24,7 @@ if instance_exists(player) {
 	draw_text_outlined(xx,yy,e[player.inventory[player.inventoryIndex].item],c_white,c_black) yy += 15
 	
 	if player.inventory[player.inventoryIndex].item = item.gun {
-		draw_text_outlined(xx,yy,string(player.ammo)+"/"+string(player.ammoMax),c_white,c_black)	
+		draw_text_outlined(xx,yy,string(player.ammo)+"/"+string(player.ammoRsv),c_white,c_black)	
 	}
 	
 	draw_reset()
