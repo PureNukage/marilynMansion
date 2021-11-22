@@ -43,6 +43,7 @@
     {"id":{"name":"Idle_Back_Leg_back_upper_leg_8","path":"sprites/Idle_Back_Leg_back_upper_leg_8/Idle_Back_Leg_back_upper_leg_8.yy",},"order":39,},
     {"id":{"name":"Knockback_Back_Front_Arm_front_upper_arm_1","path":"sprites/Knockback_Back_Front_Arm_front_upper_arm_1/Knockback_Back_Front_Arm_front_upper_arm_1.yy",},"order":49,},
     {"id":{"name":"Knockback_Back_Back_arm_back_hand_5","path":"sprites/Knockback_Back_Back_arm_back_hand_5/Knockback_Back_Back_arm_back_hand_5.yy",},"order":4,},
+    {"id":{"name":"ammobox","path":"objects/ammobox/ammobox.yy",},"order":0,},
     {"id":{"name":"Knockback_front_head_5","path":"sprites/Knockback_front_head_5/Knockback_front_head_5.yy",},"order":74,},
     {"id":{"name":"Knockback_Back_Back_arm_back_lower_arm_2","path":"sprites/Knockback_Back_Back_arm_back_lower_arm_2/Knockback_Back_Back_arm_back_lower_arm_2.yy",},"order":8,},
     {"id":{"name":"bookshelf_fg","path":"objects/bookshelf_fg/bookshelf_fg.yy",},"order":5,},
@@ -131,6 +132,7 @@
     {"id":{"name":"Knockback_Back_Back_Leg_back_upper_leg_2","path":"sprites/Knockback_Back_Back_Leg_back_upper_leg_2/Knockback_Back_Back_Leg_back_upper_leg_2.yy",},"order":29,},
     {"id":{"name":"Knockback_front_Back_arm_back_hand_5","path":"sprites/Knockback_front_Back_arm_back_hand_5/Knockback_front_Back_arm_back_hand_5.yy",},"order":4,},
     {"id":{"name":"Walk_Back_Leg_back_upper_leg_8","path":"sprites/Walk_Back_Leg_back_upper_leg_8/Walk_Back_Leg_back_upper_leg_8.yy",},"order":87,},
+    {"id":{"name":"s_ammo","path":"sprites/s_ammo/s_ammo.yy",},"order":10,},
     {"id":{"name":"Knockback_front_Back_arm_back_hand_4","path":"sprites/Knockback_front_Back_arm_back_hand_4/Knockback_front_Back_arm_back_hand_4.yy",},"order":3,},
     {"id":{"name":"Idle_Front_Arm_front_upper_arm_8","path":"sprites/Idle_Front_Arm_front_upper_arm_8/Idle_Front_Arm_front_upper_arm_8.yy",},"order":63,},
     {"id":{"name":"Knockback_Back_Front_Arm_front_hand_5","path":"sprites/Knockback_Back_Front_Arm_front_hand_5/Knockback_Back_Front_Arm_front_hand_5.yy",},"order":39,},
@@ -563,6 +565,7 @@
     {"folderPath":"folders/Art/misc.yy","order":11,"resourceVersion":"1.0","name":"misc","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Game/system.yy","order":0,"resourceVersion":"1.0","name":"system","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Game/collision.yy","order":16,"resourceVersion":"1.0","name":"collision","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Game/items.yy","order":17,"resourceVersion":"1.0","name":"items","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

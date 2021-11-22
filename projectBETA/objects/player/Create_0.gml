@@ -102,6 +102,9 @@ function lootMoving() {
 			else if game.lootingID.object_index == door {
 				game.lootingID.interact(game.lootingID.ID)	
 			}
+			else if game.lootingID.object_index == ammobox {
+				game.lootingID.interact()	
+			}
 					
 			game.lootingID = -1
 		}
