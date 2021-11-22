@@ -14,7 +14,7 @@ mouseMiddle = mouse_check_button(mb_middle)
 mouseMiddlePress = mouse_check_button_pressed(mb_middle)
 mouseMiddleRelease = mouse_check_button_released(mb_middle)
 
-keyInteract = keyboard_check_pressed(ord("E"))
+keyInteract = keyboard_check(ord("E"))
 
 keyFlashlight = keyboard_check_pressed(ord("F"))
 

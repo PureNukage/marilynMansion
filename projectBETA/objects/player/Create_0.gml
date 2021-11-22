@@ -15,7 +15,8 @@ hspd = 0
 maxSpeed = 1.25
 
 ammo = 8
-ammoMax = 8
+magCap = 8
+ammoRsv = 8
 
 flashlightOn = game.Player.flashlightOn
 
@@ -317,7 +318,14 @@ function fireGun() {
 	
 reloadStatePrev = -1
 function reload() {
-	ammo = ammoMax
+	var ammoLack = magCap - ammo
+	if ammoRsv > 0 && ammoLack != 0 {
+		if ammoLack > ammoRsv {
+			ammoLack = ammoRsv
+		}
+		ammo += ammoLack
+		ammoRsv -= ammoLack
+	}
 	sprite_index = s_player_reloading
 	image_index = 0
 	image_speed = 1

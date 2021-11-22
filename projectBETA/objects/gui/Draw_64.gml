@@ -24,8 +24,14 @@ if instance_exists(player) {
 	draw_text_outlined(xx,yy,e[player.inventory[player.inventoryIndex].item],c_white,c_black) yy += 15
 	
 	if player.inventory[player.inventoryIndex].item = item.gun {
-		draw_text_outlined(xx,yy,string(player.ammo)+"/"+string(player.ammoMax),c_white,c_black)	
+		draw_text_outlined(xx,yy,string(player.ammo)+"/"+string(player.ammoRsv),c_white,c_black)	
 	}
 	
 	draw_reset()
+}
+	
+////	RADIAL MENU
+if playerInput.keyInteract {
+	draw_set_color(c_white)
+	draw_circle(display_get_gui_width()/2,display_get_gui_height()/2,60,0)
 }

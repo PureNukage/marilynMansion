@@ -1,6 +1,6 @@
 event_inherited()
 
 function interact() {
-	player.ammo += 8
+	player.ammoRsv += 8
 	instance_destroy()
 }
