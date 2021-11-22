@@ -1,3 +1,5 @@
+if live_call() return live_result;
+
 if instance_exists(player) and game.states == states.looting {
 	var xx = display_get_gui_width()/2
 	var yy = 45
@@ -32,6 +34,10 @@ if instance_exists(player) {
 	
 ////	RADIAL MENU
 if playerInput.keyInteract {
-	draw_set_color(c_white)
-	draw_circle(display_get_gui_width()/2,display_get_gui_height()/2,60,0)
+	draw_set_color(c_gray)
+	var XX = 120
+	var YY = 40
+	var Width = 80
+	var Height = 80
+	draw_rectangle(XX,YY,XX+Width,YY+Height,false)
 }
