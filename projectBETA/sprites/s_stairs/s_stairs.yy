@@ -44,7 +44,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"22bff7c7-13d9-4ae9-9799-15e311ddd987","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b12e6357-9321-4ea0-aa9f-ee40ddd10cc4","path":"sprites/s_stairs/s_stairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -71,9 +71,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 3","resourceVersion":"1.0","name":"a6bf75fe-45f3-4218-a66f-a870135a5e16","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"03c75b36-1099-4fc7-9c77-52abebe9508b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "misc",
-    "path": "folders/Sprites/misc.yy",
+    "path": "folders/Art/misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_stairs",

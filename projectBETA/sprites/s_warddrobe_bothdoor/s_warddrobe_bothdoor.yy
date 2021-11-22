@@ -25,9 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"LayerId":{"name":"4c701197-9127-48e0-b73a-1ee6a8cc40ba","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"LayerId":{"name":"110b7497-a4ed-481c-9680-96e17e5a0cea","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"LayerId":{"name":"4c701197-9127-48e0-b73a-1ee6a8cc40ba","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"s_warddrobe_bothdoor","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"resourceVersion":"1.0","name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -44,7 +43,7 @@
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"fde9a6bd-adac-45f6-aafc-967e64058632","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f0dfc62-db36-44f2-8ea9-8ea9e6dec714","path":"sprites/s_warddrobe_bothdoor/s_warddrobe_bothdoor.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,9 +69,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"110b7497-a4ed-481c-9680-96e17e5a0cea","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4c701197-9127-48e0-b73a-1ee6a8cc40ba","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "furniture",
-    "path": "folders/Sprites/furniture.yy",
+    "path": "folders/Art/furniture.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_warddrobe_bothdoor",

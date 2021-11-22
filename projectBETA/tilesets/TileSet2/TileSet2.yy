@@ -75,7 +75,7 @@
   },
   "parent": {
     "name": "tiles",
-    "path": "folders/Sprites/tiles.yy",
+    "path": "folders/Art/tiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "TileSet2",
