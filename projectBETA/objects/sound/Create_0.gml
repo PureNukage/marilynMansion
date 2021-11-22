@@ -5,4 +5,5 @@ function playSoundEffect(index) {
 	audio_play_sound(index, 0, false)
 	audio_sound_gain(index, volumeSound, 0)
 	debug.log("Playing sound: "+string_upper(audio_get_name(index)))
+	return index
 }

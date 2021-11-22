@@ -151,7 +151,8 @@ function fireGun() {
 	startX += lengthdir_x(32, Direction)
 	startY += lengthdir_y(32, Direction)
 	
-	sound.playSoundEffect(choose(snd_45_1,snd_45_2,snd_45_3))
+	var gunshot = sound.playSoundEffect(choose(snd_45_1,snd_45_2,snd_45_3))
+	audio_sound_pitch(gunshot,random_range(0.9,1.1))
 	
 	if instance_position(XX,YY, zombie) {
 			var ID = instance_position(XX,YY, zombie)
