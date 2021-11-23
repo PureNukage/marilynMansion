@@ -8,7 +8,7 @@ if place_meeting(x,y,player) {
 		if player.onStairs and player.onStairs.bottomFloor < Floor {
 			//	The player is climbing through the stair hole
 			if player.bbox_bottom >= bbox_top+16 {
-				depth = -50	
+				depth = -500
 			} 
 			//	The player is standing on the floor
 			else {
